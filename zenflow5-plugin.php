@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       ZenFlow 5
+ * Plugin Name:       ZenFlow 5 Pro
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
