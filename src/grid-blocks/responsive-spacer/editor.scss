@@ -1,0 +1,23 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// .zenflow5-responsive-spacer{
+//     background: repeating-linear-gradient(
+//     -55deg,
+//     #eeeeee25,
+//     #eeeeee25 10px,
+//     #ffffff00 10px,
+//     #ffffff00 20px
+//   );
+// }
+
+.zenflow5-responsive-spacer{
+	margin: 0 20px 0 20px;
+}
+
+.editor-styles-wrapper .wp-block[data-type="zenflow5/responsive-spacer"]{
+	width: 98%;
+}

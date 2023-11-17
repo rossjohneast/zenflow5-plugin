@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/responsive-spacer",
+	"version": "0.1.0",
+	"title": "Responsive Spacer",
+	"attributes": {
+		"paddingB": {
+			"type": "number"
+		},
+		"paddingSMB": {
+			"type": "number"
+		},
+		"paddingMDB": {
+			"type": "number"
+		},
+		"paddingLGB": {
+			"type": "number"
+		},
+		"paddingXLB": {
+			"type": "number"
+		},
+		"paddingXXLB": {
+			"type": "number"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "welcome-widgets-menus",
+	"description": "Responsive spacer.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "responsive-spacer",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,15 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g>
+	<path fill="#FFFFFF" d="M16.547,17.142c0,0.55-0.45,1-1,1H4.963c-0.55,0-1-0.45-1-1v-14.5c0-0.55,0.45-1,1-1h10.584
+		c0.55,0,1,0.45,1,1V17.142z"/>
+	<path fill="none" stroke="#1C75BC" stroke-miterlimit="10" d="M16.547,17.142c0,0.55-0.45,1-1,1H4.963c-0.55,0-1-0.45-1-1v-14.5
+		c0-0.55,0.45-1,1-1h10.584c0.55,0,1,0.45,1,1V17.142z"/>
+</g>
+<rect x="6.032" y="4.116" fill="none" stroke="#1C75BC" stroke-miterlimit="10" width="8.445" height="4.768"/>
+<rect x="8.7" y="7.428" display="none" fill="none" stroke="#2BABE2" stroke-miterlimit="10" width="3" height="4.578"/>
+<rect x="4.3" y="7.474" display="none" fill="none" stroke="#2BABE2" stroke-miterlimit="10" width="3" height="4.579"/>
+<rect x="13" y="7.474" display="none" fill="none" stroke="#2BABE2" stroke-miterlimit="10" width="3" height="4.579"/>
+<line fill="none" stroke="#1C75BC" stroke-miterlimit="10" x1="15.05" y1="12.092" x2="5.46" y2="12.092"/>
+<line fill="none" stroke="#1C75BC" stroke-miterlimit="10" x1="14.967" y1="14.925" x2="5.377" y2="14.925"/>
+</svg>

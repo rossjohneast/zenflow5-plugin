@@ -1,0 +1,86 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/section-cover",
+	"version": "0.1.0",
+	"title": "Section",
+	"attributes": {
+		"backgroundColor": {
+			"type": "string"
+		},
+		"backgroundImage": {
+			"type": "string",
+			"default": null
+		},
+		"backgroundImageAttachment": {
+			"type": "string"
+		},
+		"backgroundImageSize": {
+			"type": "string"
+		},
+		"backgroundImagePos": {
+			"type": "string"
+		},
+		"backgroundImageRepeat": {
+			"type": "string"
+		},
+		"backgroundImageTint": {
+			"type": "string"
+		},
+		"layoutContainerOption": {
+			"type": "string",
+			"default": "container"
+		},
+		"paddingSection": {
+			"type": "number"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"minHeightSection": {
+			"type": "number"
+		},
+		"backgroundColorTheme": {
+			"type": "string"
+		},
+		"textColorTheme": {
+			"type": "string"
+		},
+		"animation": {
+			"type": "string"
+		},
+		"animationOffset": {
+			"type": "number",
+			"default": 120
+		},
+		"animationDuration": {
+			"type": "number",
+			"default": 400
+		},
+		"animationDelay": {
+			"type": "number"
+		},
+		"animationEasing": {
+			"type": "string"
+		},
+		"animationOnce": {
+			"type": "boolean"
+		},
+		"animationMirror": {
+			"type": "boolean"
+		},
+		"animationPlacement": {
+			"type": "string"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "welcome-widgets-menus",
+	"description": "Build a layout with a background, of all shapes and sizes thanks to a twelve column system and six default responsive tiers.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "section-cover",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

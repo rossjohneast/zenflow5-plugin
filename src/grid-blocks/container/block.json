@@ -1,0 +1,65 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/container",
+	"version": "0.1.0",
+	"title": "Container",
+	"attributes": {
+		"focalPointX": {
+			"type": "number",
+			"default": 0.5
+		},
+		"focalPointY": {
+			"type": "number",
+			"default": 0.5
+		},
+		"urlImage": {
+			"type": "string"
+		},
+		"imgID": {
+            "type": "number"
+        },
+		"id": {
+			"type": "number"
+		},
+		"minHeightContainer": {
+			"type": "number"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"backgroundImage": {
+			"type": "string",
+			"default": null
+		},
+		"backgroundImageSize": {
+			"type": "string"
+		},
+		"backgroundImagePos": {
+			"type": "string"
+		},
+		"backgroundImageRepeat": {
+			"type": "string"
+		},
+		"backgroundColorTheme": {
+			"type": "string"
+		},
+		"layoutContainerOption": {
+			"type": "string",
+			"default": "container"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "welcome-widgets-menus",
+	"description": "Containers are used to contain, pad, and (sometimes) center the rows within them. While containers can be nested, most layouts do not require a nested container.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "container",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
