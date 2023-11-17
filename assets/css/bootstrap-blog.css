@@ -1,0 +1,154 @@
+/*------------------------------------
+  Global site styles
+------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+  Components (C)
+    C - Cards
+  WordPress (X)
+    X - XX
+  Modules (MO)
+    XX - XX
+
+--------------------------------------------------------------*/
+
+/*------------------------------------
+  C - Cards
+------------------------------------*/
+
+.shape-container {
+    overflow: hidden;
+}
+
+.zen-post-cards__card__card-img,
+.zen-post-cards__card__card-img .wp-block-cover__image-background {
+    border-bottom-right-radius: var(--bs-card-inner-border-radius);
+    border-bottom-left-radius: var(--bs-card-inner-border-radius);
+    overflow: hidden;
+    position: relative;
+}
+
+.zen-post-cards__card__card-img .wp-block-cover {
+    height: 260px;
+    align-items: center;
+    background-position: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.zen-post-cards__card__card-img.zen-post-cards__card__card-img__top .wp-block-cover {
+    height: 260px;
+}
+
+.zen-post-cards__card__card-img .wp-block-cover__image-background {
+    border: none;
+    box-shadow: none;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    -o-object-fit: cover;
+    object-fit: cover;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card-stretched-vertical .card-footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (min-width: 576px) { 
+
+    .zen-post-cards__card__card-img .wp-block-cover {
+        height: 260px;
+    }
+    
+    .zen-post-cards__card__card-img.zen-post-cards__card__card-img__top .wp-block-cover {
+        height: 140px;
+    }
+
+}
+
+@media (min-width: 768px) { 
+
+    .zen-post-cards__card__card-img .wp-block-cover {
+        height: 350px;
+    }
+    
+    .zen-post-cards__card__card-img.zen-post-cards__card__card-img__top .wp-block-cover {
+        height: 190px;
+    }
+
+}
+
+@media (min-width: 992px) { 
+
+    .zen-post-cards__card__card-img .wp-block-cover {
+        height: 310px;
+    }
+
+    .card-stretched-vertical .shape-container,
+    .card-stretched-vertical .zen-post-cards__card__card-img,
+    .card-stretched-vertical .zen-post-cards__card__card-img .wp-block-cover {
+        min-height: 310px;
+        height: 100%;
+    }
+    
+    .zen-post-cards__card__card-img.zen-post-cards__card__card-img__top .wp-block-cover {
+        height: 170px;
+    }
+
+}
+
+@media (min-width: 1200px) { 
+
+    .card-stretched-vertical .zen-post-cards__card__card-img .wp-block-cover {
+        min-height: 400px;
+    }
+    
+    .zen-post-cards__card__card-img.zen-post-cards__card__card-img__top .wp-block-cover {
+        height: 200px;
+    }
+
+}
+
+.wp-block-zen-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-block-zen-card .wp-block-button {
+    z-index: 0;
+}
+
+.wp-block-zen-card .card-link-overlay {
+    position: absolute !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    border: none !important;
+    border-radius: 0;
+    background: none !important;
+    padding: 0;
+    text-indent: -9999999px;
+    z-index: 3 !important;
+    opacity: 0;
+}
+
+.wp-block-zen-card .card-img-top {
+    height: 356px;
+}
+
+.wp-block-zen-card .card-title {
+    margin-bottom: 0 !important;
+}
