@@ -833,9 +833,64 @@ endif;
 
 
 
+//START: PATTERNS
+
+function zen_b_p_register_block_patterns() {
+
+	require 'inc/patterns/hero-banners/hero-banners.php';
+
+	require 'inc/patterns/icon-cols/icon-cols.php';
+
+	require 'inc/patterns/text-and-imgs/text-and-imgs.php';
+
+	require 'inc/patterns/text/text.php';
+
+	require 'inc/patterns/cta/cta.php';
+
+	
+}
+add_action( 'init', 'zen_b_p_register_block_patterns' );
 
 
-// CAUSING AN ERROR??
+/**
+ * Registers the pattern category
+ */
+function custom_register_pattern_category() {
+   
+	register_block_pattern_category(
+        'call-to-action',
+        array(
+            'label' => __('Call to action', 'zen-b-p'),
+        )
+    );
+   
+	register_block_pattern_category(
+        'hero-banner',
+        array(
+            'label' => __('Hero banner', 'zen-b-p'),
+        )
+    );
+
+	register_block_pattern_category(
+        'text-and-icons',
+        array(
+            'label' => __('Text and icons', 'zen-b-p'),
+        )
+    );
+
+	register_block_pattern_category(
+        'text-and-images',
+        array(
+            'label' => __('Text and images', 'zen-b-p'),
+        )
+    );
+
+}
+add_action('init', 'custom_register_pattern_category');
+//END: PATTERNS
+
+
+
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 function zenflow5_plugin_update_check_with_license() {
