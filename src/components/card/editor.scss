@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-zenflow5-card {
+
+	overflow: visible;
+
+	.block-editor-media-placeholder {
+		position: relative;
+		z-index: 9;
+	}
+
+	.img-wrapper {
+		position: relative;
+	}
+
+	.components-spinner {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	.card {
+		width: 100%;
+		max-width: none;
+	}
+
+	.card-background-img-tint {
+		z-index: 0;
+	}
+
+	.block-editor-inner-blocks{
+		z-index: 1;
+		position: relative;
+	}
+
+}

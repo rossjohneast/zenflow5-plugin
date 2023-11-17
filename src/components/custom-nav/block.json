@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/custom-nav",
+	"version": "0.1.0",
+	"title": "Classic Navigation",
+	"category": "zenflow5",
+	"icon": "menu",
+	"description": "Edit this menus structure in Appearance > Menus in the Dashboard.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "custom-nav",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,256 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-zenflow5-icon {
+	display: inline-block;
+}
+
+.zen-accordion-icon-option-inner-panel{
+	display: block;
+    width: 100%;
+}
+
+.zen-accordion-icon-option .components-base-control__field {
+
+	.components-flex {
+		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap:wrap;
+	}
+
+	.components-base-control__label {
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		word-wrap: normal !important;
+	}
+
+	.components-radio-control__option {
+		position: relative;
+		flex: 0 1 42px;
+
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border: 0;
+			border-radius: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		input:checked + label {
+			outline: 2px solid #1e1e1e;
+		}
+
+		label {
+			display: block;
+			aspect-ratio: 1/1;
+			/* Hidden Text */
+			text-indent: -999px;
+			overflow: hidden;
+			max-width: 44px;
+		}
+
+        input[value="caret"] + label {
+            background: transparent url("../../../assets/img/bsicons/caret.svg") center / 28px no-repeat;
+        }
+
+        input[value="plusMinus"] + label {
+            background: transparent url("../../../assets/img/bsicons/plusminus.svg") center / 28px no-repeat;
+        }
+
+        input[value="arrowUpShort"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-up-short.svg") center / 28px no-repeat;
+        }
+
+        input[value="arrowRight"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-right.svg") center / 28px no-repeat;
+        }
+
+		input[value="clipboardHeart"] + label {
+            background: transparent url("../../../assets/img/bsicons/clipboard-heart.svg") center / 28px no-repeat;
+        }
+
+		input[value="cloudRainHeavy"] + label {
+            background: transparent url("../../../assets/img/bsicons/cloud-rain-heavy.svg") center / 28px no-repeat;
+        }
+
+		input[value="facebook"] + label {
+            background: transparent url("../../../assets/img/bsicons/facebook.svg") center / 28px no-repeat;
+        }
+
+		input[value="instagram"] + label {
+            background: transparent url("../../../assets/img/bsicons/instagram.svg") center / 28px no-repeat;
+        }
+
+		input[value="twitter"] + label {
+            background: transparent url("../../../assets/img/bsicons/twitter.svg") center / 28px no-repeat;
+        }
+
+		input[value="tiktok"] + label {
+            background: transparent url("../../../assets/img/bsicons/tiktok.svg") center / 28px no-repeat;
+        }
+
+		input[value="youtube"] + label {
+            background: transparent url("../../../assets/img/bsicons/youtube.svg") center / 28px no-repeat;
+        }
+
+		input[value="arrowRight"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-right.svg") center / 28px no-repeat;
+        }
+
+		input[value="arrowLeft"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-left.svg") center / 28px no-repeat;
+        }
+
+		input[value="arrowLeftCircle"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-left-circle.svg") center / 28px no-repeat;
+        }
+
+		input[value="arrowRightCircle"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-right-circle.svg") center / 28px no-repeat;
+        }
+
+		input[value="boxArrowInUpRight"] + label {
+            background: transparent url("../../../assets/img/bsicons/box-arrow-in-up-right.svg") center / 28px no-repeat;
+        }
+
+		input[value="cloudArrowDown"] + label {
+            background: transparent url("../../../assets/img/bsicons/cloud-arrow-down.svg") center / 28px no-repeat;
+        }
+
+		input[value="fileZip"] + label {
+            background: transparent url("../../../assets/img/bsicons/file-zip.svg") center / 28px no-repeat;
+        }
+
+		input[value="playCircle"] + label {
+            background: transparent url("../../../assets/img/bsicons/play-circle.svg") center / 28px no-repeat;
+        }
+
+		input[value="arrowRight"] + label {
+            background: transparent url("../../../assets/img/bsicons/arrow-right.svg") center / 28px no-repeat;
+        }
+
+		input[value="phone"] + label {
+            background: transparent url("../../../assets/img/bsicons/phone.svg") center / 28px no-repeat;
+        }
+
+		input[value="display"] + label {
+            background: transparent url("../../../assets/img/bsicons/display.svg") center / 28px no-repeat;
+        }
+
+		input[value="hddDisplay"] + label {
+            background: transparent url("../../../assets/img/bsicons/hdd-rack.svg") center / 28px no-repeat;
+        }
+
+		input[value="database"] + label {
+            background: transparent url("../../../assets/img/bsicons/database.svg") center / 28px no-repeat;
+        }
+		input[value="activity"] + label {
+            background: transparent url("../../../assets/img/bsicons/activity.svg") center / 28px no-repeat;
+        }
+		input[value="at"] + label {
+            background: transparent url("../../../assets/img/bsicons/at.svg") center / 28px no-repeat;
+        }
+		input[value="award"] + label {
+            background: transparent url("../../../assets/img/bsicons/award.svg") center / 28px no-repeat;
+        }
+		input[value="bag"] + label {
+            background: transparent url("../../../assets/img/bsicons/bag.svg") center / 28px no-repeat;
+        }
+		input[value="basket3"] + label {
+            background: transparent url("../../../assets/img/bsicons/basket3.svg") center / 28px no-repeat;
+        }
+		input[value="box"] + label {
+            background: transparent url("../../../assets/img/bsicons/box.svg") center / 28px no-repeat;
+        }
+		input[value="boxes"] + label {
+            background: transparent url("../../../assets/img/bsicons/boxes.svg") center / 28px no-repeat;
+        }
+		input[value="braces"] + label {
+            background: transparent url("../../../assets/img/bsicons/braces.svg") center / 28px no-repeat;
+        }
+		input[value="briefcase"] + label {
+            background: transparent url("../../../assets/img/bsicons/briefcase.svg") center / 28px no-repeat;
+        }
+		input[value="brightnessHigh"] + label {
+            background: transparent url("../../../assets/img/bsicons/brightness-high.svg") center / 28px no-repeat;
+        }
+		input[value="brush"] + label {
+            background: transparent url("../../../assets/img/bsicons/brush.svg") center / 28px no-repeat;
+        }
+		input[value="building"] + label {
+            background: transparent url("../../../assets/img/bsicons/building.svg") center / 28px no-repeat;
+        }
+		input[value="buildings"] + label {
+            background: transparent url("../../../assets/img/bsicons/buildings.svg") center / 28px no-repeat;
+        }
+		input[value="buildings"] + label {
+            background: transparent url("../../../assets/img/bsicons/buildings.svg") center / 28px no-repeat;
+        }
+		input[value="calculator"] + label {
+            background: transparent url("../../../assets/img/bsicons/calculator.svg") center / 28px no-repeat;
+        }
+		input[value="calendar"] + label {
+            background: transparent url("../../../assets/img/bsicons/calendar.svg") center / 28px no-repeat;
+        }
+		input[value="camera"] + label {
+            background: transparent url("../../../assets/img/bsicons/camera.svg") center / 28px no-repeat;
+        }
+		input[value="cardChecklist"] + label {
+            background: transparent url("../../../assets/img/bsicons/card-checklist.svg") center / 28px no-repeat;
+        }
+		input[value="cardText"] + label {
+            background: transparent url("../../../assets/img/bsicons/card-text.svg") center / 28px no-repeat;
+        }
+		input[value="cart"] + label {
+            background: transparent url("../../../assets/img/bsicons/cart.svg") center / 28px no-repeat;
+        }
+		input[value="cart2"] + label {
+            background: transparent url("../../../assets/img/bsicons/cart2.svg") center / 28px no-repeat;
+        }
+		input[value="cart3"] + label {
+            background: transparent url("../../../assets/img/bsicons/cart3.svg") center / 28px no-repeat;
+        }
+		input[value="cart4"] + label {
+            background: transparent url("../../../assets/img/bsicons/cart4.svg") center / 28px no-repeat;
+        }
+		input[value="chat"] + label {
+            background: transparent url("../../../assets/img/bsicons/chat.svg") center / 28px no-repeat;
+        }
+		input[value="check2"] + label {
+            background: transparent url("../../../assets/img/bsicons/check2.svg") center / 28px no-repeat;
+        }
+		input[value="checkCircle"] + label {
+            background: transparent url("../../../assets/img/bsicons/check-circle.svg") center / 28px no-repeat;
+        }
+		input[value="checkSquare"] + label {
+            background: transparent url("../../../assets/img/bsicons/check-square.svg") center / 28px no-repeat;
+        }
+		input[value="linkedin"] + label {
+            background: transparent url("../../../assets/img/bsicons/linkedin.svg") center / 28px no-repeat;
+        }
+		input[value="pinterest"] + label {
+            background: transparent url("../../../assets/img/bsicons/pinterest.svg") center / 28px no-repeat;
+        }
+		input[value="vimeo"] + label {
+            background: transparent url("../../../assets/img/bsicons/vimeo.svg") center / 28px no-repeat;
+        }
+	
+	}
+}

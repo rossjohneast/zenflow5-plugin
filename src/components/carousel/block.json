@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/carousel",
+	"version": "0.1.0",
+	"title": "Carousel",
+	"attributes": {
+		"id": {
+			"type": "string",
+            "default": ""
+		},
+		"innerBlockCount": {
+			"type": "number"
+		},
+		"minHeight": {
+			"type": "number",
+            "default": "500"
+		},
+		"maxWidth": {
+			"type": "number"
+		},
+		"crossFade": {
+			"type": "boolean"
+		},
+		"zoomAnimation": {
+			"type": "boolean"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "images-alt2",
+	"description": "A carousel for images. Alternatively insert a row to create a more advanced layout for your slide item.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"inserter": true
+	},
+	"textdomain": "carousel",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

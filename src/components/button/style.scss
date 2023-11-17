@@ -1,0 +1,29 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.zenflow5-btn {
+    position: relative;
+    // display: inline-flex!important;
+    justify-content: center;
+    align-items: center;
+
+    .wp-block-zenflow5-icon .icon-with-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        margin-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .btn-icon-wrapper{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

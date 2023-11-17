@@ -1,0 +1,53 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-zenflow5-icon {
+
+	position: relative;
+	display: inline-block;
+
+	.zenbuilder-icon-wrapper {
+		display: inline-block;
+		position: relative;
+	}
+
+	.zenbuilder-icon-wrapper svg {
+		position: relative;
+	}
+
+	.zenbuilder-icon-wrapper.icon-with-bg svg,
+	.icon-link{
+		position: absolute; 
+		left: 0; 
+		right: 0; 
+		top: 0;
+		bottom: 0;
+		margin: auto; 
+	}
+
+	.icon-link{
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.hidden-icon-size{
+		opacity: 0;
+	}
+
+	.abs-pos-icon{
+		position: absolute; 
+		left: 0; 
+		right: 0; 
+		top: 0;
+		bottom: 0;
+		margin: auto; 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+}

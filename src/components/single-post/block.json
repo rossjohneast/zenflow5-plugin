@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/single-post",
+	"version": "0.1.0",
+	"title": "Single Post",
+	"category": "zenflow5",
+	"icon": "smiley",
+	"description": "A custom singple post block.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "single-post",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

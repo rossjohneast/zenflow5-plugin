@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/page",
+	"version": "0.1.0",
+	"title": "Page",
+	"category": "zenflow5",
+	"icon": "smiley",
+	"description": "Custom page layout.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "page",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

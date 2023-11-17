@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/carousel-item",
+	"version": "0.1.0",
+	"title": "Carousel Item",
+	"attributes": {
+		"interval": {
+			"type": "number",
+            "default": 5000
+		}
+	},
+	"category": "zenflow5",
+	"icon": "format-image",
+	"description": "Carousel slide item. Can be an image or an advanced layout using a section.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "carousel-item",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

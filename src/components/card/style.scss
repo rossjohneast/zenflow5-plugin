@@ -1,0 +1,76 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-zenflow5-card {
+	// background-color: #21759b;
+	// color: #fff;
+	// padding: 2px;
+}
+
+.wp-block-zenflow5-card {
+	
+	overflow: hidden;
+
+	.card-img-top{
+		position: relative;
+		padding-top: 56.25%;
+		overflow: hidden;
+	}
+
+	.card-img-top > img{
+		position: absolute;
+		top:0;
+	}
+
+	.card-img-overlay,
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		z-index: 1;
+	}
+
+	.card-body {
+		z-index: 2;
+	}
+
+	.card-body {
+		position: relative;
+	}
+
+	.card-bg-link-overlay{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 3;
+	}
+
+	.card-background-img-tint,
+	.card-background-img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.card-background-img{
+		z-index: 0;
+		transition: transform .5s;
+	}
+
+	.card-background-img-tint{
+		z-index: 1;
+	}
+
+}
+
+.wp-block-zenflow5-card:hover .card-background-img{
+	transform: scale(1.1); 
+}

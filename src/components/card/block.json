@@ -1,0 +1,274 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zenflow5/card",
+	"version": "0.1.0",
+	"title": "Card",
+	"attributes": {
+		"imgID": {
+			"type": "number"
+		},
+		"imgURL": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "src",
+			"selector": "img"
+		},
+		"imgAlt": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "alt",
+			"selector": "img"
+		},
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": ".card-title"
+		},
+		"text": {
+			"type": "string",
+			"source": "text",
+			"selector": ".card-text"
+		},
+		"btn": {
+			"type": "string",
+			"source": "text",
+			"selector": ".btn-ph"
+		},
+		"alignItems": {
+			"type": "string"
+		},
+		"justifyContent": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href",
+			"__experimentalRole": "content"
+		},
+		"linkText": {
+			"type": "string",
+			"source": "html",
+			"selector": "a",
+			"__experimentalRole": "content"
+		},
+		"linkTarget": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "target",
+			"__experimentalRole": "content"
+		},
+		"linkRel": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "rel",
+			"__experimentalRole": "content"
+		},
+		"focalPointX": {
+			"type": "number",
+			"default": 0.5
+		},
+		"focalPointY": {
+			"type": "number",
+			"default": 0.5
+		},
+		"urlImage": {
+			"type": "string"
+		},
+		"urlImageFocalPointX": {
+			"type": "number",
+			"default": 0.5
+		},
+		"urlImageFocalPointY": {
+			"type": "number",
+			"default": 0.5
+		},
+		"displayCardImgTop": {
+            "type": "boolean",
+			"default": true
+        },
+		"minHeightCard": {
+			"type": "number"
+		},
+		"equalCardHeights": {
+            "type": "boolean",
+			"default": false
+        },
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"backgroundColorTheme": {
+			"type": "string"
+		},
+		"textColorTheme": {
+			"type": "string"
+		},
+		"bgTintColor": {
+			"type": "string"
+		},
+		"bgTintColorTheme": {
+			"type": "string"
+		},
+		"bgTintOpacity": {
+			"type": "string",
+			"default": "0.5"
+		},
+		"shadow": {
+			"type": "string",
+			"default": "shadow-none"
+		},
+		"border": {
+			"type": "string"
+		},
+		"backgroundSize": {
+			"type": "string",
+			"default": "cover"
+		},
+		"padding": {
+			"type": "number"
+		},
+		"paddingT": {
+			"type": "number"
+		},
+		"paddingB": {
+			"type": "number"
+		},
+		"paddingL": {
+			"type": "number"
+		},
+		"paddingR": {
+			"type": "number"
+		},
+		"paddingX": {
+			"type": "number"
+		},
+		"paddingY": {
+			"type": "number"
+		},
+		"paddingSM": {
+			"type": "number"
+		},
+		"paddingSMT": {
+			"type": "number"
+		},
+		"paddingSMB": {
+			"type": "number"
+		},
+		"paddingSML": {
+			"type": "number"
+		},
+		"paddingSMR": {
+			"type": "number"
+		},
+		"paddingSMX": {
+			"type": "number"
+		},
+		"paddingSMY": {
+			"type": "number"
+		},
+		"paddingMD": {
+			"type": "number"
+		},
+		"paddingMDT": {
+			"type": "number"
+		},
+		"paddingMDB": {
+			"type": "number"
+		},
+		"paddingMDL": {
+			"type": "number"
+		},
+		"paddingMDR": {
+			"type": "number"
+		},
+		"paddingMDX": {
+			"type": "number"
+		},
+		"paddingMDY": {
+			"type": "number"
+		},
+		"paddingLG": {
+			"type": "number"
+		},
+		"paddingLGT": {
+			"type": "number"
+		},
+		"paddingLGB": {
+			"type": "number"
+		},
+		"paddingLGL": {
+			"type": "number"
+		},
+		"paddingLGR": {
+			"type": "number"
+		},
+		"paddingLGX": {
+			"type": "number"
+		},
+		"paddingLGY": {
+			"type": "number"
+		},
+		"paddingXL": {
+			"type": "number"
+		},
+		"paddingXLT": {
+			"type": "number"
+		},
+		"paddingXLB": {
+			"type": "number"
+		},
+		"paddingXLL": {
+			"type": "number"
+		},
+		"paddingXLR": {
+			"type": "number"
+		},
+		"paddingXLX": {
+			"type": "number"
+		},
+		"paddingXLY": {
+			"type": "number"
+		},
+		"paddingXXL": {
+			"type": "number"
+		},
+		"paddingXXLT": {
+			"type": "number"
+		},
+		"paddingXXLB": {
+			"type": "number"
+		},
+		"paddingXXLL": {
+			"type": "number"
+		},
+		"paddingXXLR": {
+			"type": "number"
+		},
+		"paddingXXLX": {
+			"type": "number"
+		},
+		"paddingXXLY": {
+			"type": "number"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "index-card",
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false,
+		"background": true,
+		"text": true,
+		"gradients": true
+	},
+	"textdomain": "card",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

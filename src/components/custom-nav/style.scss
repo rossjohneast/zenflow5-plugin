@@ -1,0 +1,40 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+ 
+body header .navbar-toggler{
+	margin-left: auto;
+	padding: 0.5rem;
+	width: 38px;
+	height: 38px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body header .navbar-toggler svg{
+	width: 20px;
+	height: 20px;
+}
+
+.navbar-toggler .navbar-toggler-toggled, 
+.navbar-toggler[aria-expanded=true] .navbar-toggler-default {
+    display: none;
+}
+
+.navbar-toggler[aria-expanded=true] .navbar-toggler-toggled {
+    display: flex;
+}
+
+
+// Small devices (desktops, 992px and up)
+@media (max-width: 992px) { 
+	.dropdown-toggle::after {
+		right: 0;
+		position: absolute;
+	}	
+ }
