@@ -836,27 +836,27 @@ endif;
 
 
 // CAUSING AN ERROR??
-// use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-// function zenflow5_update_check_with_license() {
+function zenflow5_plugin_update_check_with_license() {
 
-// 	// We need to check the plugin is active and that the website has an approved license
-// 	if ( is_plugin_active('zen-license-activator/zen-license-activator.php') && live_valid_themezen_license_check() ) { 
+	// We need to check the plugin is active and that the website has an approved license
+	if ( is_plugin_active('zen-license-activator/zen-license-activator.php') && live_valid_themezen_license_check() ) { 
 
-// 		//3rd party check for updates
-// 		//https://github.com/YahnisElsts/plugin-update-checker
-// 		//In order to make a new release update the below .json file on the server
-// 		require plugin_dir_path( __FILE__ ).'assets/plugin-update-checker/plugin-update-checker.php';
+		//3rd party check for updates
+		//https://github.com/YahnisElsts/plugin-update-checker
+		//In order to make a new release update the below .json file on the server
+		require plugin_dir_path( __FILE__ ).'assets/plugin-update-checker/plugin-update-checker.php';
 
-// 		//The below was causing an error
-// 		// $myUpdateCheckerThemeCheck = Puc_v4_Factory::buildUpdateChecker(
-// 			$myUpdateCheckerThemeCheck = PucFactory::buildUpdateChecker(
-// 			'https://www.geminternet.com/gemrepository-two/plugin-zen-bootstrap-grid-blocks.json',
-// 			__FILE__, //Full path to the main plugin file or functions.php.
-// 			'zenflow5'
-// 		);
+		//The below was causing an error
+		// $myUpdateCheckerThemeCheck = Puc_v4_Factory::buildUpdateChecker(
+			$myUpdateCheckerThemeCheck = PucFactory::buildUpdateChecker(
+			'https://www.geminternet.com/gemrepository-two/plugin-zen-bootstrap-grid-blocks.json',
+			__FILE__, //Full path to the main plugin file or functions.php.
+			'zenflow5'
+		);
 
-// 	}
+	}
 
-// }
-// add_action( 'admin_init', 'zenflow5_update_check_with_license' );
+}
+add_action( 'admin_init', 'zenflow5_plugin_update_check_with_license' );
