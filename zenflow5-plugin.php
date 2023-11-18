@@ -916,3 +916,29 @@ function zenflow5_plugin_update_check_with_license() {
 
 }
 add_action( 'admin_init', 'zenflow5_plugin_update_check_with_license' );
+
+
+/*
+ * Blacklist specific Gutenberg blocks
+ *
+ * @author Misha Rudrastyh
+ * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html#blacklist-blocks
+ */
+add_filter( 'allowed_block_types_all', 'misha_blacklist_blocks' );
+ 
+function misha_blacklist_blocks( $allowed_blocks ) {
+	// get all the registered blocks
+	$blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+
+	// then disable some of them
+	unset( $blocks[ 'zenflow5/blog-single-post' ] );
+	unset( $blocks[ 'zenflow5/blog-archive' ] );
+	unset( $blocks[ 'zenflow5/page' ] );
+	unset( $blocks[ 'zenflow5/custom-nav' ] );
+
+	// return the new list of allowed blocks
+	return array_keys( $blocks );
+	
+}
+
+?>
