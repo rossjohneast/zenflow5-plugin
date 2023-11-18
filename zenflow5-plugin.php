@@ -22,6 +22,7 @@ if (!function_exists('add_action')) {
 //Create a constant for referencing the plugin when enqueued
 define('ZENFLOW_PLUGIN_URL', __FILE__);
 
+include_once('inc/license-activator/zen-license-activator.php');
 
 //START: GRID BLOCKS
 /**
