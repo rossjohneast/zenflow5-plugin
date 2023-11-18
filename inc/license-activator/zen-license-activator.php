@@ -13,7 +13,7 @@ define('THEMEZEN_ITEM_REFERENCE', 'ThemeZen themes and plugins'); //Rename this 
 add_action('admin_menu', 'themezen_license_menu');
 
 function themezen_license_menu() {
-    add_options_page('ThemeZen License Activation Menu', 'ThemeZen License', 'manage_options', __FILE__, 'themezen_license_management_page');
+    add_options_page('ThemeZen License Activation Menu', 'ZenFlow 5 License', 'manage_options', __FILE__, 'themezen_license_management_page');
 }
 
 function valid_themezen_license_check() {
@@ -111,7 +111,7 @@ function live_valid_themezen_license_status() {
 
 function themezen_license_management_page() {
     echo '<div class="wrap">';
-    echo '<h2>ThemeZen License Activator</h2>';
+    echo '<h2>ZenFlow 5 License Activator</h2>';
 
     /*** License activate button was clicked ***/
     if (isset($_REQUEST['activate_license'])) {
