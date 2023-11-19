@@ -95,7 +95,7 @@ add_action('after_setup_theme', 'add__editor_styles');
 function create_block_zen_bootstrap_components_block_init() {
 	register_block_type(__DIR__ . '/build/components/page',
 	array( 
-		'render_callback' =>'zbsc_blocks_page_render'
+		'render_callback' =>'zenflow5_blocks_page_render'
 	));
 	register_block_type(__DIR__ . '/build/components/button');
 	register_block_type(__DIR__ . '/build/components/carousel');
@@ -104,7 +104,7 @@ function create_block_zen_bootstrap_components_block_init() {
 	register_block_type(__DIR__ . '/build/components/icon');
 	register_block_type(__DIR__ . '/build/components/custom-nav',
 		array( 
-			'render_callback' =>'zbsc_blocks_custom_nav_content_render'
+			'render_callback' =>'zenflow5_custom_nav_render'
 		));
 }
 add_action( 'init', 'create_block_zen_bootstrap_components_block_init' );
@@ -145,7 +145,7 @@ add_action('wp_enqueue_scripts', 'zenflow5_fe_enqueue_scripts');
 // add_action( 'after_setup_theme', 'zen_components_features' );
 
 
-function zbsc_blocks_page_render( $atts, $content ) {
+function zenflow5_blocks_page_render( $atts, $content ) {
 
 	$post_id = '';
 	$single_post_ft_img = '';
@@ -186,7 +186,7 @@ function zbsc_blocks_page_render( $atts, $content ) {
 
 
 
-function zbsc_blocks_custom_nav_content_render($atts, $content)
+function zenflow5_custom_nav_render($atts, $content)
 {
 
 	//Theme button
@@ -236,7 +236,7 @@ register_nav_menus( array(
 
 
 /**
- * Register Custom Navigation Walker
+ * Register Custom Bootstrap Navigation Walker
  */
 function register_navwalker(){
 	require_once __DIR__ . '/inc/classes/class-wp-bootstrap-navwalker.php';
@@ -244,7 +244,7 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 /**
- * The walker also adds a data attribute for dropdown toggles via the start_el() method. 
+ * This walker also adds a data attribute for dropdown toggles via the start_el() method. 
  * Make the walker use the infixed data attibute
  */
 add_filter( 'nav_menu_link_attributes', 'prefix_bs5_dropdown_data_attribute', 20, 3 );
@@ -290,11 +290,11 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 			);
 
 			// set text domain
-			load_plugin_textdomain( 'zen-bootstrap-blog', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
+			//load_plugin_textdomain( 'zen-bootstrap-blog', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 
 			// add_action( 'init', array( $this, 'create_block_zen_bootstrap_blog_block_init'), 20 );
 
-			add_action( 'init', array( $this, 'zen_bootstrap_blog_blocks_init'), 20 );
+			add_action( 'init', array( $this, 'zenflow5_bootstrap_blog_blocks_init'), 20 );
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'zen_bootstrap_blog_scripts_and_styles'), 20 );
 
@@ -315,15 +315,15 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 		 *
 		 * @see https://developer.wordpress.org/reference/functions/register_block_type/
 		 */
-		function zen_bootstrap_blog_blocks_init() {
+		function zenflow5_bootstrap_blog_blocks_init() {
 			register_block_type( __DIR__ . '/build/bootstrap-blog/blog-archive',
 			array( 
-				'render_callback' => array($this, 'zen_bootstrap_blog_news_blog_content_render')
+				'render_callback' => array($this, 'zenflow5_bootstrap_news_blog_archive_render')
 				)
 			);
 			register_block_type( __DIR__ . '/build/bootstrap-blog/blog-single-post',
 			array( 
-				'render_callback' => array($this, 'zen_bootstrap_blog_single_post_content_render')
+				'render_callback' => array($this, 'zenflow5_bootstrap_blog_single_post_render')
 				)
 			);
 		}
@@ -365,7 +365,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 		}
 
 
-		function zen_bootstrap_blog_news_blog_content_render( $atts, $content ) {
+		function zenflow5_bootstrap_news_blog_archive_render( $atts, $content ) {
 
 				//Get and display the categories
 				$category_single_link = '';
@@ -397,7 +397,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 				$news_all_posts = '';
 
 				//Page title
-				$news_all_posts .= '<div class="wp-block-zenbsblocks-responsive-spacer zenbsblocks-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>';
+				$news_all_posts .= '<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>';
 					
 					$news_all_posts .= '<div class="container content-space-b-1 content-space-b-md-2">';
 							
@@ -405,7 +405,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 								
 							$news_all_posts .= '<h1 class="display-4">' . esc_html__( 'News', 'zen-bootstrap-blog' ) . '</h1>';
 							
-						$news_all_posts .= '<p class="lead">' . esc_html__( $page_title, 'zen-bootstrap-blog' ) . '</p>';
+						// $news_all_posts .= '<p class="lead">' . esc_html__( $page_title, 'zen-bootstrap-blog' ) . '</p>';
 						
 					$news_all_posts .= '</div>';
 				
@@ -422,7 +422,9 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 
 								$news_all_posts .= '<div class="d-md-flex align-items-md-center text-center text-md-start">';
 
-									$news_all_posts .= '<span class="d-block me-md-3 mb-2 mb-md-1">' . esc_html__('Categories:', 'zen-bootstrap-blog') . '</span>' . $category_single_link_all .$all_category_links;
+									//$news_all_posts .= '<span class="d-block me-md-3 mb-2 mb-md-1">' . esc_html__('Categories:', 'zen-bootstrap-blog') . '</span>' . $category_single_link_all .$all_category_links;
+
+									$news_all_posts .=  $category_single_link_all .$all_category_links;
 
 								$news_all_posts .= '</div>';
 
@@ -480,7 +482,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 								$news_ft_meta_value[0] = 0;
 							}
 
-							//FAW Cards
+							//ZenFlow5 Cards
 							$post_img = get_post_thumbnail_id( $post_id );
 							$post_img_size = 'full';
 							$post_img_src = wp_get_attachment_image_src( $post_img, $post_img_size );
@@ -749,80 +751,51 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 		}
 
 
-		function zen_bootstrap_blog_single_post_content_render( $atts, $content ) {
-
-			$post_id = '';
-			$single_post_ft_img = '';
-			$single_post_title = '';
-			$single_post_excerpt = '';
-			$single_post_content = '';
-			$single_post_cat_list = '';
+		function zenflow5_bootstrap_blog_single_post_render( $atts, $content ) {
 
 			$single_post_output = "<main><div class='container'><div class='row'>";
 
-				$single_post_output .= "<div class='row'><div class='wp-block-zenbsblocks-responsive-spacer zenbsblocks-responsive-spacer pb-8 pb-md-11' aria-hidden='true'></div></div>";
+				$single_post_output .= "<div class='row'><div class='wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11' aria-hidden='true'></div></div>";
 
 				$single_post_output .= "<div class='col-12 col-lg-8 offset-lg-2'>";
-						
-					while (have_posts()) {
-						the_post();
-						// Get the current post's information
-						$post_id = get_the_ID();
-						$single_post_ft_img = get_the_post_thumbnail($post_id, 'large', array('class' => 'w-100'));
-						$single_post_title = sanitize_text_field(get_the_title());
-						$single_post_excerpt = sanitize_text_field(get_the_excerpt());
-						$single_post_content = get_the_content();
-						$single_post_cat_list = get_the_category_list(', ');
-
-						$single_post_post_date = get_the_date('M j, Y');
-
-
-						// Get previous and next post links
-						$prevLink = get_previous_post_link();
-						$nextLink = get_next_post_link();
-					}
 				
-					$single_post_output .= "<h1>$single_post_title</h1>";
-					$single_post_output .= "<div class='d-block small mb-3'>$single_post_post_date</div>";
+					$single_post_output .= '<h1>' . sanitize_text_field( get_the_title() ) . '</h1>';
+					
+					$single_post_output .= '<div class="d-block small mb-3">' . get_the_date('M j, Y') . '</div>';
 
-					$single_post_output .= "<div class='col-12'>$single_post_ft_img</h1>";					
+					$single_post_output .= '<div class="col-12">' . get_the_post_thumbnail( get_the_ID(), 'large', array('class' => 'w-100')) . '</h1>';								
 				
-					// $single_post_output .= "<em>$single_post_excerpt</em>";
+					$single_post_output .= '<p>' . get_the_content() . '</p>';
 				
-					$single_post_output .= "<p>$single_post_content</p>";
-				
-					$single_post_output .= "<p>$single_post_cat_list</p>";
+					$single_post_output .= '<p>' . get_the_category_list(', ') . '</p>';
 		
-				$single_post_output .= "</div>";
+				$single_post_output .= '</div>';
 			
-				$single_post_output .= "<div class='row'><div class='wp-block-zenbsblocks-responsive-spacer zenbsblocks-responsive-spacer pb-8 pb-md-11' aria-hidden='true'></div></div>";
+				$single_post_output .= '<div class="row"><div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div></div>';
 
+				$single_post_output .= '<div class="row">';
+					
+					$single_post_output .= '<div class="col-12 d-flex">';
+					
+						if ( !empty(get_previous_post_link() ) ) {
+							$single_post_output .= '<span class="btn previous-button text-start">' . get_previous_post_link() . '</span>';
+						}
+						
+						if ( !empty(get_next_post_link() ) ) {
+							$single_post_output .= '<span class="btn next-button ms-auto text-end">' . get_next_post_link() . '</span>';
+						}
+					
+					$single_post_output .= '</div>';
+				
+				$single_post_output .= '</div>';
 
+				$single_post_output .= '<div class="row"><div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div></div>';
 
-				$single_post_output .= "<div class='row'>";
-					$single_post_output .= "<div class='col-12 d-flex'>";
-					if (!empty($prevLink)) {
-						$single_post_output .= "<span class='btn previous-button text-start'>$prevLink</span>";
-					}
-					if (!empty($nextLink)) {
-						$single_post_output .= "<span class='btn next-button ms-auto text-end'>$nextLink</span>";
-					}
-					$single_post_output .= "</div>";
-				$single_post_output .= "</div>";
-
-
-				$single_post_output .= "<div class='row'><div class='wp-block-zenbsblocks-responsive-spacer zenbsblocks-responsive-spacer pb-8 pb-md-11' aria-hidden='true'></div></div>";
-
-
-			$single_post_output .= "</div></div></main>";
+			$single_post_output .= '</div></div></main>';
 		
 			return $single_post_output;
 		
 		}
-
-
-
-
 
 	}
 
@@ -924,9 +897,9 @@ add_action( 'admin_init', 'zenflow5_plugin_update_check_with_license' );
  * @author Misha Rudrastyh
  * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html#blacklist-blocks
  */
-add_filter( 'allowed_block_types_all', 'misha_blacklist_blocks' );
+add_filter( 'allowed_block_types_all', 'zenflow5_blacklist_blocks' );
  
-function misha_blacklist_blocks( $allowed_blocks ) {
+function zenflow5_blacklist_blocks( $allowed_blocks ) {
 	// get all the registered blocks
 	$blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
 
