@@ -884,7 +884,7 @@ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 function zenflow5_plugin_update_check_with_license() {
 
 	// We need to check the plugin is active and that the website has an approved license
-	if ( is_plugin_active('zen-license-activator/zen-license-activator.php') && live_valid_themezen_license_check() ) { 
+	if ( live_valid_themezen_license_check() ) { 
 
 		//3rd party check for updates
 		//https://github.com/YahnisElsts/plugin-update-checker
