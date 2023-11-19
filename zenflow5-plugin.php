@@ -22,6 +22,8 @@ if (!function_exists('add_action')) {
 //Create a constant for referencing the plugin when enqueued
 define('ZENFLOW_PLUGIN_URL', __FILE__);
 
+$zenflow5_plugin_version = '1.0.0';
+
 include_once('inc/license-activator/zen-license-activator.php');
 
 //START: GRID BLOCKS
@@ -65,7 +67,10 @@ function admin_style()
 	//https://github.com/twbs/bootstrap/tree/v5.2.3/dist/css
 	wp_enqueue_style(
 		'admin-styles-bs-grid',
-		plugins_url('/assets/css/bootstrap-5-2/bootstrap-grid.css', ZENFLOW_PLUGIN_URL)
+		plugins_url('/assets/css/bootstrap-5-2/bootstrap-grid.css', ZENFLOW_PLUGIN_URL),
+		array(),
+		$zenflow5_plugin_version,
+		'all'
 	);
 }
 add_action('admin_enqueue_scripts', 'admin_style');
@@ -121,7 +126,10 @@ function admin_style_components()
 	//https://github.com/twbs/bootstrap/tree/v5.2.3/dist/css
 	wp_enqueue_style(
 		'admin-styles-bs-components',
-		plugins_url('/assets/css/bootstrap-5-2/components.css', ZENFLOW_PLUGIN_URL)
+		plugins_url('/assets/css/bootstrap-5-2/components.css', ZENFLOW_PLUGIN_URL),
+		array(),
+		$zenflow5_plugin_version,
+		'all'
 	);
 }
 
@@ -303,7 +311,13 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 
 		function zen_bootstrap_blog_scripts_and_styles() {
     
-			wp_enqueue_style( 'zenflow5-bs-blog-blocks-style', plugins_url('assets/css/bootstrap-blog.css', __FILE__) );
+			wp_enqueue_style( 
+				'zenflow5-bs-blog-blocks-style', 
+				plugins_url('assets/css/bootstrap-blog.css', __FILE__),
+				array(),
+				$this->settings['version'],
+				'all'
+			);
 				
 		}
 
