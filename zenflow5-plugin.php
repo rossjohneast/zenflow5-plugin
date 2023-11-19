@@ -894,7 +894,7 @@ function zenflow5_plugin_update_check_with_license() {
 		//The below was causing an error
 		// $myUpdateCheckerThemeCheck = Puc_v4_Factory::buildUpdateChecker(
 			$myUpdateCheckerThemeCheck = PucFactory::buildUpdateChecker(
-			'https://www.geminternet.com/gemrepository-two/plugin-zen-bootstrap-grid-blocks.json',
+			'https://theme-zen.com/themezenrepository-three/plugin-zen-bootstrap-grid-blocks.json',
 			__FILE__, //Full path to the main plugin file or functions.php.
 			'zenflow5'
 		);
