@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
@@ -22,7 +22,7 @@ if (!function_exists('add_action')) {
 //Create a constant for referencing the plugin when enqueued
 define('ZENFLOW_PLUGIN_URL', __FILE__);
 
-$zenflow5_plugin_version = '1.0.0';
+// $zenflow5_plugin_version = '1.0.1';
 
 include_once('inc/license-activator/zen-license-activator.php');
 
@@ -69,7 +69,7 @@ function admin_style()
 		'admin-styles-bs-grid',
 		plugins_url('/assets/css/bootstrap-5-2/bootstrap-grid.css', ZENFLOW_PLUGIN_URL),
 		array(),
-		$zenflow5_plugin_version,
+		'1.0.1',
 		'all'
 	);
 }
@@ -128,7 +128,7 @@ function admin_style_components()
 		'admin-styles-bs-components',
 		plugins_url('/assets/css/bootstrap-5-2/components.css', ZENFLOW_PLUGIN_URL),
 		array(),
-		$zenflow5_plugin_version,
+		'1.0.1',
 		'all'
 	);
 }
@@ -292,7 +292,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 			// vars
 			$this->settings = array(
 				'plugin'			=> 'Zen Bootstrap Blog',
-				'version'			=> '1.0.0',
+				'version'			=> '1.0.1',
 				'url'				=> plugin_dir_url( __FILE__ ),
 				'path'				=> plugin_dir_path( __FILE__ ),
 			);
@@ -419,7 +419,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 								
 							$news_all_posts .= '<h1 class="display-4">' . esc_html__( 'News', 'zen-bootstrap-blog' ) . '</h1>';
 							
-						// $news_all_posts .= '<p class="lead">' . esc_html__( $page_title, 'zen-bootstrap-blog' ) . '</p>';
+						$news_all_posts .= '<p class="lead">' . esc_html__( $page_title, 'zen-bootstrap-blog' ) . '</p>';
 						
 					$news_all_posts .= '</div>';
 				
