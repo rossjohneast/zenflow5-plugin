@@ -894,7 +894,7 @@ function zenflow5_plugin_update_check_with_license() {
 		//The below was causing an error
 		// $myUpdateCheckerThemeCheck = Puc_v4_Factory::buildUpdateChecker(
 			$myUpdateCheckerThemeCheck = PucFactory::buildUpdateChecker(
-			'https://theme-zen.com/themezenrepository-three/plugin/zenflow5-plugin.json',
+			'https://theme-zen.com/themezenrepository-three/plugin-zenflow5.json',
 			__FILE__, //Full path to the main plugin file or functions.php.
 			'zenflow5'
 		);
