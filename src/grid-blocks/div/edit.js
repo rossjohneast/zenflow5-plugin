@@ -247,7 +247,7 @@ export default function Edit(props) {
 				</PanelBody>
 
 
-				<PanelBody title={__('Bootstrap Colors', 'zenflow5')} initialOpen={false}>
+				<PanelBody title={__('Theme Colors', 'zenflow5')} initialOpen={false}>
 					<PanelRow className="w-100">
 						<SelectControl
 							label={__('Background Color', 'zenflow5')}

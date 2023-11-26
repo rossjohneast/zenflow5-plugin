@@ -89,7 +89,7 @@ export default function Edit(props) {
 		  </PanelBody>
   
 		  <PanelBody
-			title={__("Section Bootstrap colors", "zenflow5")}
+			title={__("Section Theme colors", "zenflow5")}
 			initialOpen={true}
 		  >
 			<PanelRow className="w-100">

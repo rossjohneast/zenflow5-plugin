@@ -456,7 +456,7 @@ import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 					{sharedMarginInspCnt(props)}
 
 					<PanelBody
-						title={__("Bootstrap Colors", "zenflow5")}
+						title={__("Theme Colors", "zenflow5")}
 						initialOpen={true}
 					>
 						<PanelRow className="w-100">

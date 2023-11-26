@@ -852,7 +852,7 @@ export default function Edit(props) {
           </PanelBody>
 
           <PanelBody
-            title={__("Bootstrap colors", "zenflow5")}
+            title={__("Theme colors", "zenflow5")}
             initialOpen={false}
           >
             <PanelRow className="w-100">
@@ -1181,102 +1181,195 @@ export default function Edit(props) {
             </PanelRow>
           </PanelBody> */}
 
-<PanelBody
-            title={__("Display settings", "zenflow5")}
+
+         <PanelBody
+            title={__("Order", "zenflow5")}
             initialOpen={false}
           >
-            <PanelRow className="w-100">
-              <SelectControl
-                label={__("Display", "zenflow5")}
-                value={props.attributes.display}
-                options={[
-                  { value: "d-block", label: "Block" },
-                  { value: "d-none", label: "None" },
-                  { value: "d-inline", label: "Inline" },
-                  { value: "d-inline-block", label: "Inline-block" },
-                  { value: "d-grid", label: "Grid" },
-                  { value: "d-table", label: "Table" },
-                  { value: "d-table-cell", label: "Table-cell" },
-                  { value: "d-table-row", label: "Table-row" },
-                  { value: "d-flex", label: "Flex" },
-                  { value: "d-inline-flex", label: "Inline-flex" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ display: new_val });
-                }}
-              />
-            </PanelRow>
+            {/* <div className="zen-gut-panel-help">
+              <p>
+                The smaller grid settings also apply to larger screens unless
+                overriden specifically for larger screens. Therefore, you only
+                need to use the setting for the smallest device width you want to
+                support.
+              </p>
+            </div> */}
+
+            <TabPanel
+              className="zen-gut-tab-panel"
+              activeClass="zen-gut-tab-panel-tab-active-tab"
+              initialTabName="tab3"
+              tabs={[
+                {
+                  name: "tab0",
+                  title: block_icons.bpmobile,
+                  className: "zen-gut-tab-panel-tab",
+                  content: [
+                    <div>
+                      <div>
+                        <strong>Mobile portrait</strong>
+                      </div>
+                      <div>Smallest device width and greater</div>
+                      <hr></hr>
+                    </div>,
+
+                    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.order}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ order: new_val_w });
+                      }}
+                    />,
+                  ],
+                },
+                {
+                  name: "tab1",
+                  title: block_icons.bpmobileland,
+                  className: "zen-gut-tab-panel-tab",
+                  content: [
+                    <div>
+                      <div>
+                        <strong>Mobile landscape</strong>
+                      </div>
+                      <div>Width equal or greater than 576px</div>
+                      <hr></hr>
+                    </div>,
+                    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderSm}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderSm: new_val_w });
+                      }}
+                    />,
+                  ],
+                },
+                {
+                  name: "tab2",
+                  title: block_icons.bptablet,
+                  className: "zen-gut-tab-panel-tab",
+                  content: [
+                    <div>
+                      <div>
+                        <strong>Tablet portrait</strong>
+                      </div>
+                      <div>Width equal or greater than 768px</div>
+                      <hr></hr>
+                    </div>,
+                    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderMd}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderMd: new_val_w });
+                      }}
+                    />,
+                  ],
+                },
+                {
+                  name: "tab3",
+                  title: block_icons.bplaptop,
+                  className: "zen-gut-tab-panel-tab",
+                  content: [
+                    <div>
+                      <div>
+                        <strong>Desktops</strong>
+                      </div>
+                      <div>Width equal or greater than 992px</div>
+                      <hr></hr>
+                    </div>,
+                    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderLg}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderLg: new_val_w });
+                      }}
+                    />,
+                  ],
+                },
+                {
+                  name: "tab4",
+                  title: block_icons.bpdesktop,
+                  className: "zen-gut-tab-panel-tab",
+                  content: [
+                    <div>
+                      <div>
+                        <strong>Large desktop</strong>
+                      </div>
+                      <div>Width equal or greater than 1200px</div>
+                      <hr></hr>
+                    </div>,
+
+                    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderXl}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderXl: new_val_w });
+                      }}
+                    />,
+                  ],
+                },
+                {
+                  name: "tab5",
+                  title: block_icons.bpdesktopxxl,
+                  className: "zen-gut-tab-panel-tab",
+                  content: [
+                    <div>
+                      <div>
+                        <strong>Larger desktop</strong>
+                      </div>
+                      <div>Width equal or greater than 1400px</div>
+                      <hr></hr>
+                    </div>,
+                    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderXxl}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderXxl: new_val_w });
+                      }}
+                    />,
+                  ],
+                },
+              ]}
+            >
+              {(tab) => <p>{tab.content}</p>}
+            </TabPanel>
 
 
 
-            {/* <PanelRow className="w-100">
-              <SelectControl
-                label={__("Align Text", "zenflow5")}
-                value={props.attributes.textAlign}
-                options={[
-                  { value: "text-left", label: "Left" },
-                  { value: "text-center", label: "Center" },
-                  { value: "text-right", label: "Right" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ textAlign: new_val });
-                }}
-              />
-            </PanelRow> */}
 
-            <PanelRow className="w-100">
-              <SelectControl
-                label={__("Align Content", "zenflow5")}
-                value={props.attributes.alignItems}
-                options={[
-                  { value: "align-items-start", label: "Start" },
-                  { value: "align-items-end", label: "End" },
-                  { value: "align-items-center", label: "Center" },
-                  { value: "align-items-baseline", label: "Baseline" },
-                  { value: "align-items-stretch", label: "Stretch" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ alignItems: new_val });
-                }}
-              />
-            </PanelRow>
-
-            <PanelRow className="w-100">
-              <SelectControl
-                label={__("Justify Content", "zenflow5")}
-                value={props.attributes.justifyContent}
-                options={[
-                  { value: "justify-content-start", label: "Start" },
-                  { value: "justify-content-end", label: "End" },
-                  { value: "justify-content-center", label: "Center" },
-                  { value: "justify-content-between", label: "Space-between" },
-                  { value: "justify-content-around", label: "Space-around" },
-                  { value: "justify-content-evenly", label: "Space-evenly" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ justifyContent: new_val });
-                }}
-              />
-            </PanelRow>
-
-            {props.attributes.display === 'd-flex' ? sharedDisplayInspCnt(props) : null}
-
-         </PanelBody>
-
-
- 
-
-
-          {sharedPaddingInspCnt(props)}
-
-          {sharedMarginInspCnt(props)}
-         
-     
-
-          {sharedTextAlignInspCnt(props)}
+          </PanelBody>
 
           <PanelBody
-            title={__("Left offset", "zenflow5")}
+            title={__("Offset (From left)", "zenflow5")}
             initialOpen={false}
           >
             {/* <div className="zen-gut-panel-help">
@@ -1465,196 +1558,100 @@ export default function Edit(props) {
             </TabPanel>
           </PanelBody>
 
-          {sharedAnimationsInspCnt(props)}
+
+          {sharedPaddingInspCnt(props)}
+
+          {sharedMarginInspCnt(props)}
+         
+     
+
+          {sharedTextAlignInspCnt(props)}
 
           <PanelBody
-            title={__("Responsive ordering", "zenflow5")}
+            title={__("Display settings", "zenflow5")}
             initialOpen={false}
           >
-            {/* <div className="zen-gut-panel-help">
-              <p>
-                The smaller grid settings also apply to larger screens unless
-                overriden specifically for larger screens. Therefore, you only
-                need to use the setting for the smallest device width you want to
-                support.
-              </p>
-            </div> */}
-
-            <TabPanel
-              className="zen-gut-tab-panel"
-              activeClass="zen-gut-tab-panel-tab-active-tab"
-              initialTabName="tab3"
-              tabs={[
-                {
-                  name: "tab0",
-                  title: block_icons.bpmobile,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Mobile portrait</strong>
-                      </div>
-                      <div>Smallest device width and greater</div>
-                      <hr></hr>
-                    </div>,
-
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.order}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ order: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab1",
-                  title: block_icons.bpmobileland,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Mobile landscape</strong>
-                      </div>
-                      <div>Width equal or greater than 576px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderSm}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderSm: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab2",
-                  title: block_icons.bptablet,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Tablet portrait</strong>
-                      </div>
-                      <div>Width equal or greater than 768px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderMd}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderMd: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab3",
-                  title: block_icons.bplaptop,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Desktops</strong>
-                      </div>
-                      <div>Width equal or greater than 992px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderLg}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderLg: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab4",
-                  title: block_icons.bpdesktop,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Large desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1200px</div>
-                      <hr></hr>
-                    </div>,
-
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderXl}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderXl: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab5",
-                  title: block_icons.bpdesktopxxl,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Larger desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1400px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderXxl}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderXxl: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-              ]}
-            >
-              {(tab) => <p>{tab.content}</p>}
-            </TabPanel>
+            <PanelRow className="w-100">
+              <SelectControl
+                label={__("Display", "zenflow5")}
+                value={props.attributes.display}
+                options={[
+                  { value: "d-block", label: "Block" },
+                  { value: "d-none", label: "None" },
+                  { value: "d-inline", label: "Inline" },
+                  { value: "d-inline-block", label: "Inline-block" },
+                  { value: "d-grid", label: "Grid" },
+                  { value: "d-table", label: "Table" },
+                  { value: "d-table-cell", label: "Table-cell" },
+                  { value: "d-table-row", label: "Table-row" },
+                  { value: "d-flex", label: "Flex" },
+                  { value: "d-inline-flex", label: "Inline-flex" },
+                ]}
+                onChange={(new_val) => {
+                  props.setAttributes({ display: new_val });
+                }}
+              />
+            </PanelRow>
 
 
 
+            {/* <PanelRow className="w-100">
+              <SelectControl
+                label={__("Align Text", "zenflow5")}
+                value={props.attributes.textAlign}
+                options={[
+                  { value: "text-left", label: "Left" },
+                  { value: "text-center", label: "Center" },
+                  { value: "text-right", label: "Right" },
+                ]}
+                onChange={(new_val) => {
+                  props.setAttributes({ textAlign: new_val });
+                }}
+              />
+            </PanelRow> */}
 
-          </PanelBody>
+            {/* <PanelRow className="w-100">
+              <SelectControl
+                label={__("Align Content", "zenflow5")}
+                value={props.attributes.alignItems}
+                options={[
+                  { value: "align-items-start", label: "Start" },
+                  { value: "align-items-end", label: "End" },
+                  { value: "align-items-center", label: "Center" },
+                  { value: "align-items-baseline", label: "Baseline" },
+                  { value: "align-items-stretch", label: "Stretch" },
+                ]}
+                onChange={(new_val) => {
+                  props.setAttributes({ alignItems: new_val });
+                }}
+              />
+            </PanelRow>
+
+            <PanelRow className="w-100">
+              <SelectControl
+                label={__("Justify Content", "zenflow5")}
+                value={props.attributes.justifyContent}
+                options={[
+                  { value: "justify-content-start", label: "Start" },
+                  { value: "justify-content-end", label: "End" },
+                  { value: "justify-content-center", label: "Center" },
+                  { value: "justify-content-between", label: "Space-between" },
+                  { value: "justify-content-around", label: "Space-around" },
+                  { value: "justify-content-evenly", label: "Space-evenly" },
+                ]}
+                onChange={(new_val) => {
+                  props.setAttributes({ justifyContent: new_val });
+                }}
+              />
+            </PanelRow> */}
+
+            {props.attributes.display === 'd-flex' ? sharedDisplayInspCnt(props) : null}
+
+         </PanelBody>
 
 
-    
+          {sharedAnimationsInspCnt(props)}
+
         </InspectorControls>
         <div
           className={classnames(

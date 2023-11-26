@@ -5,7 +5,7 @@ const { RangeControl, TabPanel, PanelBody, PanelRow, SelectControl } = wp.compon
 
 const sharedTextAlignInspCnt = (props) => {
   return (
-    <PanelBody title={__("Text alignment", "zenflow5")} initialOpen={false}>
+    <PanelBody title={__("Text align", "zenflow5")} initialOpen={false}>
       {/* <div className="zen-gut-panel-help">
         <p>
           The smaller grid settings also apply to larger screens unless
