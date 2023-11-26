@@ -112,6 +112,30 @@
 			"type": "boolean",
 			"default": false
 		},
+		"colWidthAuto": {
+			"type": "boolean",
+			"default": false
+		},
+		"colWidthSmAuto": {
+			"type": "boolean",
+			"default": false
+		},
+		"colWidthMdAuto": {
+			"type": "boolean",
+			"default": false
+		},
+		"colWidthLgAuto": {
+			"type": "boolean",
+			"default": false
+		},
+		"colWidthXlAuto": {
+			"type": "boolean",
+			"default": false
+		},
+		"colWidthXxlAuto": {
+			"type": "boolean",
+			"default": false
+		},
 		"colWidthPH": {
 			"type": "string",
 			"default": "col-"

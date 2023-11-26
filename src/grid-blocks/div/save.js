@@ -52,8 +52,7 @@ export default function save(props) {
 		className: 
             classnames(
                 "zenflow5-div",
-                sharedColWidthClassnames(props),
-                sharedColOffsetsClassnames(props),
+
                 [`${props.attributes.display !== undefined ? `${props.attributes.display}` : ''}`],
                 sharedMarginClassnames(props),
                 sharedPaddingClassnames(props),

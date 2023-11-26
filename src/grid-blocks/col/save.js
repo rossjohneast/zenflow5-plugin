@@ -57,7 +57,6 @@ export default function save(props) {
 		className: 
     classnames(
       "zenflow5-col",
-      "col",
       sharedColWidthClassnames(props),
       sharedColOffsetsClassnames(props),
       sharedtextAlignClassnames(props),

@@ -20,7 +20,8 @@ import {
   RangeControl,
   ToggleControl,
   TabPanel,
-	FocalPointPicker
+	FocalPointPicker,
+  RadioControl
 } from '@wordpress/components';
 import { createHigherOrderComponent } from '@wordpress/compose';
 
@@ -215,6 +216,13 @@ export default function Edit(props) {
     const colWidthXlFlexible = attributes.colWidthXlFlexible;
     const colWidthXxlFlexible = attributes.colWidthXxlFlexible;
 
+    const colWidthAuto = attributes.colWidthAuto;
+    const colWidthSmAuto = attributes.colWidthSmAuto;
+    const colWidthMdAuto = attributes.colWidthMdAuto;
+    const colWidthLgAuto = attributes.colWidthLgAuto;
+    const colWidthXlAuto = attributes.colWidthXlAuto;
+    const colWidthXxlAuto = attributes.colWidthXxlAuto;
+
     //Start: focal point management
     const [focalPoint, setFocalPoint] = useState({
       x: attributes.focalPointX,
@@ -341,23 +349,48 @@ export default function Edit(props) {
                       <hr></hr>
                     </div>,
 
-                    <ToggleControl
-                    label="Flexible sizing"
-                    help={
-                    props.attributes.colWidthFlexible
-                    ? 'Has flexible sizing.'
-                    : 'No flexible sizing.'
-                    }
-                    checked={props.attributes.colWidthFlexible}
-                    onChange={() => {
-                      props.setAttributes({
-                        colWidthFlexible: !props.attributes.colWidthFlexible,
-                        colWidth: '', // Assuming you want to update colWidth to an empty string
-                      });
-                    }}
-                    />,
+
+<RadioControl
+  label="Column widths"
+  onChange={(value) => {
+    let newAttributes = {
+      colWidth: '', // Assuming you want to update colWidth to an empty string
+    };
+
+    if (value === '') {
+      newAttributes.colWidthFlexible = false;
+      newAttributes.colWidthAuto = false;
+    } else if (value === 'flexible') {
+      newAttributes.colWidthFlexible = true;
+      newAttributes.colWidthAuto = false;
+    } else if (value === 'auto') {
+      newAttributes.colWidthFlexible = false;
+      newAttributes.colWidthAuto = true;
+    }
+
+    props.setAttributes(newAttributes);
+  }}
+
+  options={[
+    {
+      label: 'Set width (%)',
+      value: ''
+    },
+    {
+      label: 'Equal width',
+      value: 'flexible'
+    },
+    {
+      label: 'Variable width (Auto fit content)',
+      value: 'auto'
+    }
+  ]}
+  selected={props.attributes.colWidthFlexible ? 'flexible' : (props.attributes.colWidthAuto ? 'auto' : '')}
+/>
+,
+
                     <div>
-                      {!colWidthFlexible && (
+                      {!colWidthFlexible && !colWidthAuto && (
                         <RangeControl
                           min={0}
                           max={12}
@@ -388,24 +421,48 @@ export default function Edit(props) {
                       <hr></hr>
                     </div>,
 
-                      <ToggleControl
-                      label="Flexible sizing small"
-                      help={
-                      props.attributes.colWidthSmFlexible
-                      ? 'Has flexible sizing.'
-                      : 'No flexible sizing.'
-                      }
-                      checked={props.attributes.colWidthSmFlexible}
-                      onChange={() => {
-                        props.setAttributes({
-                          colWidthSmFlexible: !props.attributes.colWidthSmFlexible,
-                          colWidthSm: '', // Assuming you want to update colWidthSm to an empty string
-                        });
-                      }}
-                      />,
+
+<RadioControl
+  label="Column widths"
+  onChange={(value) => {
+    let newAttributes = {
+      colWidthSm: '', // Assuming you want to update colWidth to an empty string
+    };
+
+    if (value === '') {
+      newAttributes.colWidthSmFlexible = false;
+      newAttributes.colWidthSmAuto = false;
+    } else if (value === 'flexible') {
+      newAttributes.colWidthSmFlexible = true;
+      newAttributes.colWidthSmAuto = false;
+    } else if (value === 'auto') {
+      newAttributes.colWidthSmFlexible = false;
+      newAttributes.colWidthSmAuto = true;
+    }
+
+    props.setAttributes(newAttributes);
+  }}
+
+  options={[
+    {
+      label: 'Set width (%)',
+      value: ''
+    },
+    {
+      label: 'Equal width',
+      value: 'flexible'
+    },
+    {
+      label: 'Variable width (Auto fit content)',
+      value: 'auto'
+    }
+  ]}
+  selected={props.attributes.colWidthSmFlexible ? 'flexible' : (props.attributes.colWidthSmAuto ? 'auto' : '')}
+/>
+,
 
                       <div>
-                        {!colWidthSmFlexible && (
+                         {!colWidthSmFlexible && !colWidthSmAuto && (
                             <RangeControl
                               min={0}
                               max={12}
@@ -437,24 +494,49 @@ export default function Edit(props) {
                       <hr></hr>
                     </div>,
 
-                      <ToggleControl
-                      label="Flexible sizing medium"
-                      help={
-                      props.attributes.colWidthMdFlexible
-                      ? 'Has flexible sizing.'
-                      : 'No flexible sizing.'
-                      }
-                      checked={props.attributes.colWidthMdFlexible}
-                      onChange={() => {
-                        props.setAttributes({
-                          colWidthMdFlexible: !props.attributes.colWidthMdFlexible,
-                          colWidthMd: '', // Assuming you want to update colWidthMd to an empty string
-                        });
-                      }}
-                      />,
+
+<RadioControl
+  label="Column widths"
+  onChange={(value) => {
+    let newAttributes = {
+      colWidthMd: '', // Assuming you want to update colWidth to an empty string
+    };
+
+    if (value === '') {
+      newAttributes.colWidthMdFlexible = false;
+      newAttributes.colWidthMdAuto = false;
+    } else if (value === 'flexible') {
+      newAttributes.colWidthMdFlexible = true;
+      newAttributes.colWidthMdAuto = false;
+    } else if (value === 'auto') {
+      newAttributes.colWidthMdFlexible = false;
+      newAttributes.colWidthMdAuto = true;
+    }
+
+    props.setAttributes(newAttributes);
+  }}
+
+  options={[
+    {
+      label: 'Set width (%)',
+      value: ''
+    },
+    {
+      label: 'Equal width',
+      value: 'flexible'
+    },
+    {
+      label: 'Variable width (Auto fit content)',
+      value: 'auto'
+    }
+  ]}
+  selected={props.attributes.colWidthMdFlexible ? 'flexible' : (props.attributes.colWidthMdAuto ? 'auto' : '')}
+/>
+,
+
 
                       <div>
-                        {!colWidthMdFlexible && (
+                         {!colWidthMdFlexible && !colWidthMdAuto && (
                             <RangeControl
                               min={0}
                               max={12}
@@ -485,24 +567,49 @@ export default function Edit(props) {
                       <hr></hr>
                     </div>,
 
-                    <ToggleControl
-                    label="Flexible sizing large"
-                    help={
-                    props.attributes.colWidthLgFlexible
-                    ? 'Has flexible sizing.'
-                    : 'No flexible sizing.'
-                    }
-                    checked={props.attributes.colWidthLgFlexible}
-                    onChange={() => {
-                      props.setAttributes({
-                        colWidthLgFlexible: !props.attributes.colWidthLgFlexible,
-                        colWidthLg: '', // Assuming you want to update colWidthLg to an empty string
-                      });
-                    }}
-                    />,
+
+<RadioControl
+  label="Column widths"
+  onChange={(value) => {
+    let newAttributes = {
+      colWidthLg: '', // Assuming you want to update colWidth to an empty string
+    };
+
+    if (value === '') {
+      newAttributes.colWidthLgFlexible = false;
+      newAttributes.colWidthLgAuto = false;
+    } else if (value === 'flexible') {
+      newAttributes.colWidthLgFlexible = true;
+      newAttributes.colWidthLgAuto = false;
+    } else if (value === 'auto') {
+      newAttributes.colWidthLgFlexible = false;
+      newAttributes.colWidthLgAuto = true;
+    }
+
+    props.setAttributes(newAttributes);
+  }}
+
+  options={[
+    {
+      label: 'Set width (%)',
+      value: ''
+    },
+    {
+      label: 'Equal width',
+      value: 'flexible'
+    },
+    {
+      label: 'Variable width (Auto fit content)',
+      value: 'auto'
+    }
+  ]}
+  selected={props.attributes.colWidthLgFlexible ? 'flexible' : (props.attributes.colWidthLgAuto ? 'auto' : '')}
+/>
+,
+
 
                     <div>
-                      {!colWidthLgFlexible && (
+                      {!colWidthLgFlexible && !colWidthLgAuto && (
                           <RangeControl
                             min={0}
                             max={12}
@@ -534,24 +641,48 @@ export default function Edit(props) {
                     </div>,
 
 
-                        <ToggleControl
-                        label="Flexible sizing extra large"
-                        help={
-                        props.attributes.colWidthXlFlexible
-                        ? 'Has flexible sizing.'
-                        : 'No flexible sizing.'
-                        }
-                        checked={props.attributes.colWidthXlFlexible}
-                        onChange={() => {
-                          props.setAttributes({
-                            colWidthXlFlexible: !props.attributes.colWidthXlFlexible,
-                            colWidthXl: '', // Assuming you want to update colWidthXl to an empty string
-                          });
-                        }}
-                        />,
+<RadioControl
+  label="Column widths"
+  onChange={(value) => {
+    let newAttributes = {
+      colWidthXl: '', // Assuming you want to update colWidth to an empty string
+    };
+
+    if (value === '') {
+      newAttributes.colWidthXlFlexible = false;
+      newAttributes.colWidthXlAuto = false;
+    } else if (value === 'flexible') {
+      newAttributes.colWidthXlFlexible = true;
+      newAttributes.colWidthXlAuto = false;
+    } else if (value === 'auto') {
+      newAttributes.colWidthXlFlexible = false;
+      newAttributes.colWidthXlAuto = true;
+    }
+
+    props.setAttributes(newAttributes);
+  }}
+
+  options={[
+    {
+      label: 'Set width (%)',
+      value: ''
+    },
+    {
+      label: 'Equal width',
+      value: 'flexible'
+    },
+    {
+      label: 'Variable width (Auto fit content)',
+      value: 'auto'
+    }
+  ]}
+  selected={props.attributes.colWidthXlFlexible ? 'flexible' : (props.attributes.colWidthXlAuto ? 'auto' : '')}
+/>
+,
+
 
                         <div>
-                          {!colWidthXlFlexible && (
+                          {!colWidthXlFlexible && !colWidthXlAuto && (
                               <RangeControl
                                 min={0}
                                 max={12}
@@ -584,24 +715,48 @@ export default function Edit(props) {
                     </div>,
 
 
-                        <ToggleControl
-                        label="Flexible sizing extra extra large"
-                        help={
-                        props.attributes.colWidthXxlFlexible
-                        ? 'Has flexible sizing.'
-                        : 'No flexible sizing.'
-                        }
-                        checked={props.attributes.colWidthXxlFlexible}
-                        onChange={() => {
-                          props.setAttributes({
-                            colWidthXxlFlexible: !props.attributes.colWidthXxlFlexible,
-                            colWidthXxl: '', // Assuming you want to update colWidthXxl to an empty string
-                          });
-                        }}
-                        />,
+<RadioControl
+  label="Column widths"
+  onChange={(value) => {
+    let newAttributes = {
+      colWidthXxl: '', // Assuming you want to update colWidth to an empty string
+    };
+
+    if (value === '') {
+      newAttributes.colWidthXxlFlexible = false;
+      newAttributes.colWidthXxlAuto = false;
+    } else if (value === 'flexible') {
+      newAttributes.colWidthXxlFlexible = true;
+      newAttributes.colWidthXxlAuto = false;
+    } else if (value === 'auto') {
+      newAttributes.colWidthXxlFlexible = false;
+      newAttributes.colWidthXxlAuto = true;
+    }
+
+    props.setAttributes(newAttributes);
+  }}
+
+  options={[
+    {
+      label: 'Set width (%)',
+      value: ''
+    },
+    {
+      label: 'Equal width',
+      value: 'flexible'
+    },
+    {
+      label: 'Variable width (Auto fit content)',
+      value: 'auto'
+    }
+  ]}
+  selected={props.attributes.colWidthXxlFlexible ? 'flexible' : (props.attributes.colWidthXxlAuto ? 'auto' : '')}
+/>
+,
+
 
                         <div>
-                          {!colWidthXxlFlexible && (
+                          {!colWidthXxlFlexible && !colWidthXxlAuto && (
                               <RangeControl
                                 min={0}
                                 max={12}
