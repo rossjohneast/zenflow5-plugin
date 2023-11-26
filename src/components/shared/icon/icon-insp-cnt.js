@@ -118,6 +118,8 @@ const sharedIconInspCnt = (props) => {
                                     { label: __('Cloud arrow down'), value: 'cloudArrowDown' },
                                     { label: __('File zip'), value: 'fileZip' },
                                     { label: __('Play circle'), value: 'playCircle' },
+                                    { label: __('Telephone'), value: 'telephone' },
+                                    { label: __('Envelope'), value: 'envelope' },
 
                                 ]}
                                 onChange={(val) => props.setAttributes({ 'icon': val })}

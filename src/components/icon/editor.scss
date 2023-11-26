@@ -149,6 +149,12 @@
 		input[value="phone"] + label {
             background: transparent url("../../../assets/img/bsicons/phone.svg") center / 28px no-repeat;
         }
+		input[value="telephone"] + label {
+            background: transparent url("../../../assets/img/bsicons/telephone.svg") center / 28px no-repeat;
+        }
+		input[value="envelope"] + label {
+            background: transparent url("../../../assets/img/bsicons/envelope.svg") center / 28px no-repeat;
+        }
 
 		input[value="display"] + label {
             background: transparent url("../../../assets/img/bsicons/display.svg") center / 28px no-repeat;
