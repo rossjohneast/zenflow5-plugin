@@ -22,7 +22,7 @@ if (!function_exists('add_action')) {
 //Create a constant for referencing the plugin when enqueued
 define('ZENFLOW_PLUGIN_URL', __FILE__);
 
-// $zenflow5_plugin_version = '1.0.1';
+// $zenflow5_plugin_version = '1.0.2';
 
 include_once('inc/license-activator/zen-license-activator.php');
 
@@ -69,7 +69,7 @@ function admin_style()
 		'admin-styles-bs-grid',
 		plugins_url('/assets/css/bootstrap-5-2/bootstrap-grid.css', ZENFLOW_PLUGIN_URL),
 		array(),
-		'1.0.1',
+		'1.0.2',
 		'all'
 	);
 }
@@ -128,7 +128,7 @@ function admin_style_components()
 		'admin-styles-bs-components',
 		plugins_url('/assets/css/bootstrap-5-2/components.css', ZENFLOW_PLUGIN_URL),
 		array(),
-		'1.0.1',
+		'1.0.2',
 		'all'
 	);
 }
@@ -292,7 +292,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 			// vars
 			$this->settings = array(
 				'plugin'			=> 'Zen Bootstrap Blog',
-				'version'			=> '1.0.1',
+				'version'			=> '1.0.2',
 				'url'				=> plugin_dir_url( __FILE__ ),
 				'path'				=> plugin_dir_path( __FILE__ ),
 			);
