@@ -319,7 +319,7 @@ export default function Edit(props) {
 
 
         <PanelBody
-            title={__("Responsive widths", "zenflow5")}
+            title={__("Width (%)", "zenflow5")}
             initialOpen={true}
           >
             {/* <div className="zen-gut-panel-help">
@@ -373,7 +373,7 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (%)',
+      label: 'Set width (12 = 100%)',
       value: ''
     },
     {
@@ -421,6 +421,23 @@ export default function Edit(props) {
                       <hr></hr>
                     </div>,
 
+<div>
+{!colWidthSmFlexible && !colWidthSmAuto && (
+   <RangeControl
+     min={0}
+     max={12}
+     step={1}
+     showTooltip={true}
+     allowReset={true}
+     resetFallbackValue={undefined} // Set this to the value you want when resetting
+     value={props.attributes.colWidthSm}
+     onChange={(new_val_w) => {
+       props.setAttributes({ colWidthSm: new_val_w });
+     }}
+   />
+)}
+</div>,
+
 
 <RadioControl
   label="Column widths"
@@ -445,7 +462,7 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (%)',
+      label: 'Set width (12 = 100%)',
       value: ''
     },
     {
@@ -459,24 +476,6 @@ export default function Edit(props) {
   ]}
   selected={props.attributes.colWidthSmFlexible ? 'flexible' : (props.attributes.colWidthSmAuto ? 'auto' : '')}
 />
-,
-
-                      <div>
-                         {!colWidthSmFlexible && !colWidthSmAuto && (
-                            <RangeControl
-                              min={0}
-                              max={12}
-                              step={1}
-                              showTooltip={true}
-                              allowReset={true}
-                              resetFallbackValue={undefined} // Set this to the value you want when resetting
-                              value={props.attributes.colWidthSm}
-                              onChange={(new_val_w) => {
-                                props.setAttributes({ colWidthSm: new_val_w });
-                              }}
-                            />
-                      )}
-                      </div>
 
                     ,
                   ],
@@ -518,7 +517,7 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (%)',
+      label: 'Set width (12 = 100%)',
       value: ''
     },
     {
@@ -591,7 +590,7 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (%)',
+      label: 'Set width (12 = 100%)',
       value: ''
     },
     {
@@ -664,7 +663,7 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (%)',
+      label: 'Set width (12 = 100%)',
       value: ''
     },
     {
@@ -738,7 +737,7 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (%)',
+      label: 'Set width (12 = 100%)',
       value: ''
     },
     {
@@ -786,7 +785,7 @@ export default function Edit(props) {
           </PanelBody>
 
 
-          <PanelBody title={__("Column height", "zenflow5")} className="rangeWithMarks" initialOpen={false}>
+          <PanelBody title={__("Height", "zenflow5")} className="rangeWithMarks" initialOpen={false}>
            
             {/* <div className="zen-gut-panel-help">
               <p>
@@ -1369,7 +1368,7 @@ export default function Edit(props) {
           </PanelBody>
 
           <PanelBody
-            title={__("Offset (From left)", "zenflow5")}
+            title={__("Offset", "zenflow5")}
             initialOpen={false}
           >
             {/* <div className="zen-gut-panel-help">
@@ -1568,7 +1567,7 @@ export default function Edit(props) {
           {sharedTextAlignInspCnt(props)}
 
           <PanelBody
-            title={__("Display settings", "zenflow5")}
+            title={__("Display", "zenflow5")}
             initialOpen={false}
           >
             <PanelRow className="w-100">

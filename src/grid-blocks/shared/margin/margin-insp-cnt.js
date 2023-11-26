@@ -5,7 +5,7 @@ const { RangeControl, TabPanel, PanelBody } = wp.components;
 
 const sharedPaddingInspCnt = (props) => {
   return (
-    <PanelBody title={__("Margins", "zenflow5")} initialOpen={false}>
+    <PanelBody title={__("Margin", "zenflow5")} initialOpen={false}>
       {/* <div className="zen-gut-panel-help">
         <p>
           The smaller grid settings also apply to larger screens unless
