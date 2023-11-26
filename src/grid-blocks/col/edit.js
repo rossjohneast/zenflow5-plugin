@@ -28,6 +28,7 @@ import classnames from "classnames";
 import sharedPaddingInspCnt from "../shared/padding/padding-insp-cnt.js";
 import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
 import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
+
 import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 import sharedColWidthClassnames from "../shared/col/colwidth-classnames.js";
 import sharedColOffsetsClassnames from "../shared/col/coloffsets-classnames.js";
@@ -36,6 +37,9 @@ import sharedAnimationsPropsAtts from "../shared/animation/aos-insp-cnt.js";
 
 import sharedTextAlignInspCnt from "../shared/textalign/textalign-insp-cnt";
 import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
+
+import sharedDisplayInspCnt from "../shared/display/display-insp-cnt.js";
+import sharedDisplayClassnames from "../shared/display/display-classnames";
 
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
@@ -1100,6 +1104,8 @@ export default function Edit(props) {
               />
             </PanelRow>
 
+            {props.attributes.display === 'd-flex' ? sharedDisplayInspCnt(props) : null}
+
          </PanelBody>
 
 
@@ -1109,6 +1115,8 @@ export default function Edit(props) {
           {sharedPaddingInspCnt(props)}
 
           {sharedMarginInspCnt(props)}
+         
+     
 
           {sharedTextAlignInspCnt(props)}
 
@@ -1514,6 +1522,7 @@ export default function Edit(props) {
             sharedMarginClassnames(props),
             sharedPaddingClassnames(props),
             sharedtextAlignClassnames(props),
+            sharedDisplayClassnames(props),
             [
               `${
                 props.attributes.textColorTheme !== undefined
