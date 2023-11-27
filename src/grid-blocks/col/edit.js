@@ -342,6 +342,14 @@ export default function Edit(props) {
                   className: "zen-gut-tab-panel-tab",
                   content: [
 
+                    <div style={{ marginBottom: 8 }}>
+                    <div>
+                      <strong>Mobile portrait</strong>
+                    </div>
+                    <div>Smallest device width and greater</div>
+                 
+                  </div>,
+
           <div>
                       {!colWidthFlexible && !colWidthAuto && (
                         <RangeControl
@@ -357,16 +365,13 @@ export default function Edit(props) {
                           }}
                         />
                       )}
+
+<hr></hr>
                     </div>
+                      
                     ,
 
-                            <div>
-                      <div>
-                        <strong>Mobile portrait</strong>
-                      </div>
-                      <div>Smallest device width and greater</div>
-                      <hr></hr>
-                    </div>,
+       
 
 <RadioControl
   
@@ -415,6 +420,13 @@ export default function Edit(props) {
                   title: block_icons.bpmobileland,
                   className: "zen-gut-tab-panel-tab",
                   content: [
+                    <div style={{ marginBottom: 8 }}>
+                      <div>
+                        <strong>Mobile landscape</strong>
+                      </div>
+                      <div>Width equal or greater than 576px</div>
+                
+                    </div>,
 
 
 <div>
@@ -432,15 +444,9 @@ export default function Edit(props) {
      }}
    />
 )}
+<hr></hr>
 </div>,
 
-                    <div>
-                      <div>
-                        <strong>Mobile landscape</strong>
-                      </div>
-                      <div>Width equal or greater than 576px</div>
-                      <hr></hr>
-                    </div>,
 
 
 <RadioControl
@@ -489,7 +495,13 @@ export default function Edit(props) {
                   title: block_icons.bptablet,
                   className: "zen-gut-tab-panel-tab",
                   content: [
- 
+                    <div style={{ marginBottom: 8 }}>
+                    <div>
+                      <strong>Tablet portrait</strong>
+                    </div>
+                    <div>Width equal or greater than 768px</div>
+              
+                  </div>,
 
                       <div>
                          {!colWidthMdFlexible && !colWidthMdAuto && (
@@ -506,16 +518,11 @@ export default function Edit(props) {
                               }}
                             />
                       )}
+                      <hr></hr>
                       </div>
                     ,
 
-                                       <div>
-                      <div>
-                        <strong>Tablet portrait</strong>
-                      </div>
-                      <div>Width equal or greater than 768px</div>
-                      <hr></hr>
-                    </div>,
+         
 
 
 <RadioControl
@@ -564,7 +571,13 @@ export default function Edit(props) {
                   title: block_icons.bplaptop,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-   
+                    <div style={{ marginBottom: 8 }}>
+                    <div>
+                      <strong>Desktops</strong>
+                    </div>
+                    <div>Width equal or greater than 992px</div>
+                
+                  </div>,
 
                     <div>
                       {!colWidthLgFlexible && !colWidthLgAuto && (
@@ -581,16 +594,11 @@ export default function Edit(props) {
                             }}
                           />
                     )}
+                    <hr></hr>
                     </div>
                     ,
 
-                 <div>
-                      <div>
-                        <strong>Desktops</strong>
-                      </div>
-                      <div>Width equal or greater than 992px</div>
-                      <hr></hr>
-                    </div>,
+   
 
 
 <RadioControl
@@ -639,7 +647,13 @@ export default function Edit(props) {
                   title: block_icons.bpdesktop,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-
+                    <div style={{ marginBottom: 8 }}>
+                    <div>
+                      <strong>Large desktop</strong>
+                    </div>
+                    <div>Width equal or greater than 1200px</div>
+               
+                  </div>,
 
                         <div>
                           {!colWidthXlFlexible && !colWidthXlAuto && (
@@ -656,16 +670,11 @@ export default function Edit(props) {
                                 }}
                               />
                         )}
+                        <hr></hr>
                         </div>
                     ,
 
-                                        <div>
-                      <div>
-                        <strong>Large desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1200px</div>
-                      <hr></hr>
-                    </div>,
+    
 
 
 <RadioControl
@@ -714,6 +723,15 @@ export default function Edit(props) {
                   title: block_icons.bpdesktopxxl,
                   className: "zen-gut-tab-panel-tab",
                   content: [
+
+                    <div style={{ marginBottom: 8 }}>
+                    <div>
+                      <strong>Larger desktop</strong>
+                    </div>
+                    <div>Width equal or greater than 1400px</div>
+                
+                  </div>,
+
                         <div>
                           {!colWidthXxlFlexible && !colWidthXxlAuto && (
                               <RangeControl
@@ -729,16 +747,11 @@ export default function Edit(props) {
                                 }}
                               />
                         )}
+                        <hr></hr>
                         </div>
                     ,
 
-                                       <div>
-                      <div>
-                        <strong>Larger desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1400px</div>
-                      <hr></hr>
-                    </div>,
+     
 
 
 <RadioControl
