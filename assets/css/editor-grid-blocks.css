@@ -650,10 +650,28 @@ div[data-type="zenflow5/col"]>.col {
 .components-button.zen-gut-tab-panel-tab {
     border: 1px solid #e2e4e7;
     border-radius: 0;
+    transition: all 0.4s ease;
+}
+
+.components-button.zen-gut-tab-panel-tab:hover svg,
+.components-button.zen-gut-tab-panel-tab:hover svg path {
+    fill: #007cba!important;
+}
+
+.components-button.zen-gut-tab-panel-tab.zen-gut-tab-panel-tab-active-tab:hover svg,
+.components-button.zen-gut-tab-panel-tab.zen-gut-tab-panel-tab-active-tab:hover svg path {
+    fill: #fff!important;
 }
 
 .zen-gut-tab-panel-tab.zen-gut-tab-panel-tab-active-tab {
     border-bottom: 1px solid #007cba;
+    background: #007cba;
+    border: 1px solid #007cba;
+}
+
+.zen-gut-tab-panel-tab.zen-gut-tab-panel-tab-active-tab svg, 
+.zen-gut-tab-panel-tab.zen-gut-tab-panel-tab-active-tab svg path {
+    fill: white!important;
 }
 
 div[data-type="zenflow5/responsive-spacer"] {

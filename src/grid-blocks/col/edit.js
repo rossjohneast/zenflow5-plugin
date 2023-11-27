@@ -341,7 +341,26 @@ export default function Edit(props) {
                   title: block_icons.bpmobile,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-                    <div>
+
+          <div>
+                      {!colWidthFlexible && !colWidthAuto && (
+                        <RangeControl
+                          min={0}
+                          max={12}
+                          step={1}
+                          showTooltip={true}
+                          allowReset={true}
+                          resetFallbackValue={undefined}
+                          value={props.attributes.colWidth}
+                          onChange={(new_val_w) => {
+                            props.setAttributes({ colWidth: new_val_w });
+                          }}
+                        />
+                      )}
+                    </div>
+                    ,
+
+                            <div>
                       <div>
                         <strong>Mobile portrait</strong>
                       </div>
@@ -349,9 +368,8 @@ export default function Edit(props) {
                       <hr></hr>
                     </div>,
 
-
 <RadioControl
-  label="Column widths"
+  
   onChange={(value) => {
     let newAttributes = {
       colWidth: '', // Assuming you want to update colWidth to an empty string
@@ -373,15 +391,15 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (12 = 100%)',
+      label: 'Percentage width column',
       value: ''
     },
     {
-      label: 'Equal width',
+      label: 'Equal width column',
       value: 'flexible'
     },
     {
-      label: 'Variable width (Auto fit content)',
+      label: 'Variable width column',
       value: 'auto'
     }
   ]}
@@ -389,23 +407,7 @@ export default function Edit(props) {
 />
 ,
 
-                    <div>
-                      {!colWidthFlexible && !colWidthAuto && (
-                        <RangeControl
-                          min={0}
-                          max={12}
-                          step={1}
-                          showTooltip={true}
-                          allowReset={true}
-                          resetFallbackValue={undefined}
-                          value={props.attributes.colWidth}
-                          onChange={(new_val_w) => {
-                            props.setAttributes({ colWidth: new_val_w });
-                          }}
-                        />
-                      )}
-                    </div>
-                    ,
+          
                   ],
                 },
                 {
@@ -413,13 +415,7 @@ export default function Edit(props) {
                   title: block_icons.bpmobileland,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-                    <div>
-                      <div>
-                        <strong>Mobile landscape</strong>
-                      </div>
-                      <div>Width equal or greater than 576px</div>
-                      <hr></hr>
-                    </div>,
+
 
 <div>
 {!colWidthSmFlexible && !colWidthSmAuto && (
@@ -438,9 +434,17 @@ export default function Edit(props) {
 )}
 </div>,
 
+                    <div>
+                      <div>
+                        <strong>Mobile landscape</strong>
+                      </div>
+                      <div>Width equal or greater than 576px</div>
+                      <hr></hr>
+                    </div>,
+
 
 <RadioControl
-  label="Column widths"
+  
   onChange={(value) => {
     let newAttributes = {
       colWidthSm: '', // Assuming you want to update colWidth to an empty string
@@ -462,15 +466,15 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (12 = 100%)',
+      label: 'Percentage width column',
       value: ''
     },
     {
-      label: 'Equal width',
+      label: 'Equal width column',
       value: 'flexible'
     },
     {
-      label: 'Variable width (Auto fit content)',
+      label: 'Variable width column',
       value: 'auto'
     }
   ]}
@@ -485,7 +489,27 @@ export default function Edit(props) {
                   title: block_icons.bptablet,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-                    <div>
+ 
+
+                      <div>
+                         {!colWidthMdFlexible && !colWidthMdAuto && (
+                            <RangeControl
+                              min={0}
+                              max={12}
+                              step={1}
+                              showTooltip={true}
+                              allowReset={true}
+                              resetFallbackValue={undefined} // Set this to the value you want when resetting
+                              value={props.attributes.colWidthMd}
+                              onChange={(new_val_w) => {
+                                props.setAttributes({ colWidthMd: new_val_w });
+                              }}
+                            />
+                      )}
+                      </div>
+                    ,
+
+                                       <div>
                       <div>
                         <strong>Tablet portrait</strong>
                       </div>
@@ -495,7 +519,7 @@ export default function Edit(props) {
 
 
 <RadioControl
-  label="Column widths"
+  
   onChange={(value) => {
     let newAttributes = {
       colWidthMd: '', // Assuming you want to update colWidth to an empty string
@@ -517,15 +541,15 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (12 = 100%)',
+      label: 'Percentage width column',
       value: ''
     },
     {
-      label: 'Equal width',
+      label: 'Equal width column',
       value: 'flexible'
     },
     {
-      label: 'Variable width (Auto fit content)',
+      label: 'Variable width column',
       value: 'auto'
     }
   ]}
@@ -533,24 +557,6 @@ export default function Edit(props) {
 />
 ,
 
-
-                      <div>
-                         {!colWidthMdFlexible && !colWidthMdAuto && (
-                            <RangeControl
-                              min={0}
-                              max={12}
-                              step={1}
-                              showTooltip={true}
-                              allowReset={true}
-                              resetFallbackValue={undefined} // Set this to the value you want when resetting
-                              value={props.attributes.colWidthMd}
-                              onChange={(new_val_w) => {
-                                props.setAttributes({ colWidthMd: new_val_w });
-                              }}
-                            />
-                      )}
-                      </div>
-                    ,
                   ],
                 },
                 {
@@ -558,7 +564,27 @@ export default function Edit(props) {
                   title: block_icons.bplaptop,
                   className: "zen-gut-tab-panel-tab",
                   content: [
+   
+
                     <div>
+                      {!colWidthLgFlexible && !colWidthLgAuto && (
+                          <RangeControl
+                            min={0}
+                            max={12}
+                            step={1}
+                            showTooltip={true}
+                            allowReset={true}
+                            resetFallbackValue={undefined} // Set this to the value you want when resetting
+                            value={props.attributes.colWidthLg}
+                            onChange={(new_val_w) => {
+                              props.setAttributes({ colWidthLg: new_val_w });
+                            }}
+                          />
+                    )}
+                    </div>
+                    ,
+
+                 <div>
                       <div>
                         <strong>Desktops</strong>
                       </div>
@@ -568,7 +594,7 @@ export default function Edit(props) {
 
 
 <RadioControl
-  label="Column widths"
+  
   onChange={(value) => {
     let newAttributes = {
       colWidthLg: '', // Assuming you want to update colWidth to an empty string
@@ -590,15 +616,15 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (12 = 100%)',
+      label: 'Percentage width column',
       value: ''
     },
     {
-      label: 'Equal width',
+      label: 'Equal width column',
       value: 'flexible'
     },
     {
-      label: 'Variable width (Auto fit content)',
+      label: 'Variable width column',
       value: 'auto'
     }
   ]}
@@ -606,24 +632,6 @@ export default function Edit(props) {
 />
 ,
 
-
-                    <div>
-                      {!colWidthLgFlexible && !colWidthLgAuto && (
-                          <RangeControl
-                            min={0}
-                            max={12}
-                            step={1}
-                            showTooltip={true}
-                            allowReset={true}
-                            resetFallbackValue={undefined} // Set this to the value you want when resetting
-                            value={props.attributes.colWidthLg}
-                            onChange={(new_val_w) => {
-                              props.setAttributes({ colWidthLg: new_val_w });
-                            }}
-                          />
-                    )}
-                    </div>
-                    ,
                   ],
                 },
                 {
@@ -631,7 +639,27 @@ export default function Edit(props) {
                   title: block_icons.bpdesktop,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-                    <div>
+
+
+                        <div>
+                          {!colWidthXlFlexible && !colWidthXlAuto && (
+                              <RangeControl
+                                min={0}
+                                max={12}
+                                step={1}
+                                showTooltip={true}
+                                allowReset={true}
+                                resetFallbackValue={undefined} // Set this to the value you want when resetting
+                                value={props.attributes.colWidthXl}
+                                onChange={(new_val_w) => {
+                                  props.setAttributes({ colWidthXl: new_val_w });
+                                }}
+                              />
+                        )}
+                        </div>
+                    ,
+
+                                        <div>
                       <div>
                         <strong>Large desktop</strong>
                       </div>
@@ -641,7 +669,7 @@ export default function Edit(props) {
 
 
 <RadioControl
-  label="Column widths"
+  
   onChange={(value) => {
     let newAttributes = {
       colWidthXl: '', // Assuming you want to update colWidth to an empty string
@@ -663,15 +691,15 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (12 = 100%)',
+      label: 'Percentage width column',
       value: ''
     },
     {
-      label: 'Equal width',
+      label: 'Equal width column',
       value: 'flexible'
     },
     {
-      label: 'Variable width (Auto fit content)',
+      label: 'Variable width column',
       value: 'auto'
     }
   ]}
@@ -679,25 +707,6 @@ export default function Edit(props) {
 />
 ,
 
-
-                        <div>
-                          {!colWidthXlFlexible && !colWidthXlAuto && (
-                              <RangeControl
-                                min={0}
-                                max={12}
-                                step={1}
-                                showTooltip={true}
-                                allowReset={true}
-                                resetFallbackValue={undefined} // Set this to the value you want when resetting
-                                value={props.attributes.colWidthXl}
-                                onChange={(new_val_w) => {
-                                  props.setAttributes({ colWidthXl: new_val_w });
-                                }}
-                              />
-                        )}
-                        </div>
-
-                    ,
                   ],
                 },
                 {
@@ -705,7 +714,25 @@ export default function Edit(props) {
                   title: block_icons.bpdesktopxxl,
                   className: "zen-gut-tab-panel-tab",
                   content: [
-                    <div>
+                        <div>
+                          {!colWidthXxlFlexible && !colWidthXxlAuto && (
+                              <RangeControl
+                                min={0}
+                                max={12}
+                                step={1}
+                                showTooltip={true}
+                                allowReset={true}
+                                resetFallbackValue={undefined} // Set this to the value you want when resetting
+                                value={props.attributes.colWidthXxl}
+                                onChange={(new_val_w) => {
+                                  props.setAttributes({ colWidthXxl: new_val_w });
+                                }}
+                              />
+                        )}
+                        </div>
+                    ,
+
+                                       <div>
                       <div>
                         <strong>Larger desktop</strong>
                       </div>
@@ -715,7 +742,7 @@ export default function Edit(props) {
 
 
 <RadioControl
-  label="Column widths"
+  
   onChange={(value) => {
     let newAttributes = {
       colWidthXxl: '', // Assuming you want to update colWidth to an empty string
@@ -737,15 +764,15 @@ export default function Edit(props) {
 
   options={[
     {
-      label: 'Set width (12 = 100%)',
+      label: 'Percentage width column',
       value: ''
     },
     {
-      label: 'Equal width',
+      label: 'Equal width column',
       value: 'flexible'
     },
     {
-      label: 'Variable width (Auto fit content)',
+      label: 'Variable width column',
       value: 'auto'
     }
   ]}
@@ -754,24 +781,7 @@ export default function Edit(props) {
 ,
 
 
-                        <div>
-                          {!colWidthXxlFlexible && !colWidthXxlAuto && (
-                              <RangeControl
-                                min={0}
-                                max={12}
-                                step={1}
-                                showTooltip={true}
-                                allowReset={true}
-                                resetFallbackValue={undefined} // Set this to the value you want when resetting
-                                value={props.attributes.colWidthXxl}
-                                onChange={(new_val_w) => {
-                                  props.setAttributes({ colWidthXxl: new_val_w });
-                                }}
-                              />
-                        )}
-                        </div>
 
-                    ,
                   ],
                 },
               ]}

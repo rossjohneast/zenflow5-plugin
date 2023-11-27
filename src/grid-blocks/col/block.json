@@ -510,7 +510,7 @@
 	},
 	"category": "zenflow5",
 	"icon": "welcome-widgets-menus",
-	"description": "Use to layout content inside rows. Columns auto size to fill space.",
+	"description": "Build layouts of all shapes and sizes using a twelve column grid system.",
 	"supports": {
 		"html": false
 	},
