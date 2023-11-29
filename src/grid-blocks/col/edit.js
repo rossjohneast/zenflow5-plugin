@@ -1365,57 +1365,6 @@ export default function Edit(props) {
             </PanelRow>
 
 
-
-            {/* <PanelRow className="w-100">
-              <SelectControl
-                label={__("Align Text", "zenflow5")}
-                value={props.attributes.textAlign}
-                options={[
-                  { value: "text-left", label: "Left" },
-                  { value: "text-center", label: "Center" },
-                  { value: "text-right", label: "Right" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ textAlign: new_val });
-                }}
-              />
-            </PanelRow> */}
-
-            {/* <PanelRow className="w-100">
-              <SelectControl
-                label={__("Align Content", "zenflow5")}
-                value={props.attributes.alignItems}
-                options={[
-                  { value: "align-items-start", label: "Start" },
-                  { value: "align-items-end", label: "End" },
-                  { value: "align-items-center", label: "Center" },
-                  { value: "align-items-baseline", label: "Baseline" },
-                  { value: "align-items-stretch", label: "Stretch" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ alignItems: new_val });
-                }}
-              />
-            </PanelRow>
-
-            <PanelRow className="w-100">
-              <SelectControl
-                label={__("Justify Content", "zenflow5")}
-                value={props.attributes.justifyContent}
-                options={[
-                  { value: "justify-content-start", label: "Start" },
-                  { value: "justify-content-end", label: "End" },
-                  { value: "justify-content-center", label: "Center" },
-                  { value: "justify-content-between", label: "Space-between" },
-                  { value: "justify-content-around", label: "Space-around" },
-                  { value: "justify-content-evenly", label: "Space-evenly" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ justifyContent: new_val });
-                }}
-              />
-            </PanelRow> */}
-
             {props.attributes.display === 'd-flex' ? sharedDisplayInspCnt(props) : null}
 
          </PanelBody>
