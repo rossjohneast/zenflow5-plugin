@@ -23,22 +23,44 @@ const sharedDisplayInspCnt = (props) => {
                 <hr></hr>
               </div>,
 
-           
-              <SelectControl
-                label={__("Align Items", "zenflow5")}
-                value={props.attributes.alignItems}
-                options={[
-                  { value: "", label: "None" },
-                  { value: "start", label: "Start" },
-                  { value: "end", label: "End" },
-                  { value: "center", label: "Center" },
-                  { value: "baseline", label: "Baseline" },
-                  { value: "stretch", label: "Stretch" },
-                ]}
-                onChange={(new_val) => {
-                  props.setAttributes({ alignItems: new_val });
-                }}
-              />,
+<SelectControl
+label={__("Display", "zenflow5")}
+value={props.attributes.display}
+options={[
+  { value: "d-block", label: "Block" },
+  { value: "d-none", label: "None" },
+  { value: "d-inline", label: "Inline" },
+  { value: "d-inline-block", label: "Inline-block" },
+  { value: "d-grid", label: "Grid" },
+  { value: "d-table", label: "Table" },
+  { value: "d-table-cell", label: "Table-cell" },
+  { value: "d-table-row", label: "Table-row" },
+  { value: "d-flex", label: "Flex" },
+  { value: "d-inline-flex", label: "Inline-flex" },
+]}
+onChange={(new_val) => {
+  props.setAttributes({ display: new_val });
+}}
+/>,
+
+     
+      <SelectControl
+                  label={__("Align Items", "zenflow5")}
+                  value={props.attributes.alignItems}
+                  options={[
+                    { value: "", label: "None" },
+                    { value: "start", label: "Start" },
+                    { value: "end", label: "End" },
+                    { value: "center", label: "Center" },
+                    { value: "baseline", label: "Baseline" },
+                    { value: "stretch", label: "Stretch" },
+                  ]}
+                  onChange={(new_val) => {
+                    props.setAttributes({ alignItems: new_val });
+                  }}
+                />
+
+              ,
 
               <SelectControl
                 label={__("Justify Content", "zenflow5")}
@@ -56,6 +78,9 @@ const sharedDisplayInspCnt = (props) => {
                   props.setAttributes({ justifyContent: new_val });
                 }}
               />
+
+
+
           
             ],
           },
@@ -71,6 +96,29 @@ const sharedDisplayInspCnt = (props) => {
                 <div>Width equal or greater than 576px</div>
                 <hr></hr>
               </div>,
+
+
+<SelectControl
+label={__("Display", "zenflow5")}
+value={props.attributes.displaySm}
+options={[
+  { value: "", label: "Default" },
+  { value: "d-sm-block", label: "Block" },
+  { value: "d-sm-none", label: "None" },
+  { value: "d-sm-inline", label: "Inline" },
+  { value: "d-sm-inline-block", label: "Inline-block" },
+  { value: "d-sm-grid", label: "Grid" },
+  { value: "d-sm-table", label: "Table" },
+  { value: "d-sm-table-cell", label: "Table-cell" },
+  { value: "d-sm-table-row", label: "Table-row" },
+  { value: "d-sm-flex", label: "Flex" },
+  { value: "d-sm-inline-flex", label: "Inline-flex" },
+]}
+onChange={(new_val) => {
+  props.setAttributes({ displaySm: new_val });
+}}
+/>,
+
                            <SelectControl
                            label={__("Align Items", "zenflow5")}
                            value={props.attributes.alignItemsSM}
@@ -117,6 +165,28 @@ const sharedDisplayInspCnt = (props) => {
                 <div>Width equal or greater than 768px</div>
                 <hr></hr>
               </div>,
+
+<SelectControl
+label={__("Display", "zenflow5")}
+value={props.attributes.displayMd}
+options={[
+  { value: "", label: "Default" },
+  { value: "d-md-block", label: "Block" },
+  { value: "d-md-none", label: "None" },
+  { value: "d-md-inline", label: "Inline" },
+  { value: "d-md-inline-block", label: "Inline-block" },
+  { value: "d-md-grid", label: "Grid" },
+  { value: "d-md-table", label: "Table" },
+  { value: "d-md-table-cell", label: "Table-cell" },
+  { value: "d-md-table-row", label: "Table-row" },
+  { value: "d-md-flex", label: "Flex" },
+  { value: "d-md-inline-flex", label: "Inline-flex" },
+]}
+onChange={(new_val) => {
+  props.setAttributes({ displayMd: new_val });
+}}
+/>,
+
                 <SelectControl
                 label={__("Align Items", "zenflow5")}
                 value={props.attributes.alignItemsMD}
@@ -163,6 +233,31 @@ const sharedDisplayInspCnt = (props) => {
                 <div>Width equal or greater than 992px</div>
                 <hr></hr>
               </div>,
+
+
+<SelectControl
+label={__("Display", "zenflow5")}
+value={props.attributes.displayLg}
+options={[
+  { value: "", label: "Default" },
+  { value: "d-lg-block", label: "Block" },
+  { value: "d-lg-none", label: "None" },
+  { value: "d-lg-inline", label: "Inline" },
+  { value: "d-lg-inline-block", label: "Inline-block" },
+  { value: "d-lg-grid", label: "Grid" },
+  { value: "d-lg-table", label: "Table" },
+  { value: "d-lg-table-cell", label: "Table-cell" },
+  { value: "d-lg-table-row", label: "Table-row" },
+  { value: "d-lg-flex", label: "Flex" },
+  { value: "d-lg-inline-flex", label: "Inline-flex" },
+]}
+onChange={(new_val) => {
+  props.setAttributes({ displayLg: new_val });
+}}
+/>,
+
+
+
                 <SelectControl
                 label={__("Align Items", "zenflow5")}
                 value={props.attributes.alignItemsLG}
@@ -208,6 +303,30 @@ const sharedDisplayInspCnt = (props) => {
                 <div>Width equal or greater than 1200px</div>
                 <hr></hr>
               </div>,
+
+
+<SelectControl
+label={__("Display", "zenflow5")}
+value={props.attributes.displayXl}
+options={[
+  { value: "", label: "Default" },
+  { value: "d-xl-block", label: "Block" },
+  { value: "d-xl-none", label: "None" },
+  { value: "d-xl-inline", label: "Inline" },
+  { value: "d-xl-inline-block", label: "Inline-block" },
+  { value: "d-xl-grid", label: "Grid" },
+  { value: "d-xl-table", label: "Table" },
+  { value: "d-xl-table-cell", label: "Table-cell" },
+  { value: "d-xl-table-row", label: "Table-row" },
+  { value: "d-xl-flex", label: "Flex" },
+  { value: "d-xl-inline-flex", label: "Inline-flex" },
+]}
+onChange={(new_val) => {
+  props.setAttributes({ displayXl: new_val });
+}}
+/>,
+
+
                 <SelectControl
                 label={__("Align Items", "zenflow5")}
                 value={props.attributes.alignItemsXL}
@@ -253,6 +372,28 @@ const sharedDisplayInspCnt = (props) => {
                 <div>Width equal or greater than 1400px</div>
                 <hr></hr>
               </div>,
+
+
+<SelectControl
+label={__("Display", "zenflow5")}
+value={props.attributes.displayXxl}
+options={[
+  { value: "", label: "Default" },
+  { value: "d-xxl-block", label: "Block" },
+  { value: "d-xxl-none", label: "None" },
+  { value: "d-xxl-inline", label: "Inline" },
+  { value: "d-xxl-inline-block", label: "Inline-block" },
+  { value: "d-xxl-grid", label: "Grid" },
+  { value: "d-xxl-table", label: "Table" },
+  { value: "d-xxl-table-cell", label: "Table-cell" },
+  { value: "d-xxl-table-row", label: "Table-row" },
+  { value: "d-xxl-flex", label: "Flex" },
+  { value: "d-xxl-inline-flex", label: "Inline-flex" },
+]}
+onChange={(new_val) => {
+  props.setAttributes({ displayXxl: new_val });
+}}
+/>,
 
               <SelectControl
               label={__("Align Items", "zenflow5")}

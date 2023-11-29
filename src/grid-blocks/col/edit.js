@@ -1342,7 +1342,7 @@ export default function Edit(props) {
             title={__("Display", "zenflow5")}
             initialOpen={false}
           >
-            <PanelRow className="w-100">
+            {/* <PanelRow className="w-100">
               <SelectControl
                 label={__("Display", "zenflow5")}
                 value={props.attributes.display}
@@ -1362,10 +1362,12 @@ export default function Edit(props) {
                   props.setAttributes({ display: new_val });
                 }}
               />
-            </PanelRow>
+            </PanelRow> */}
 
+                {/* only show more options if Flex is the value */}
+            {/* {props.attributes.display === 'd-flex' ? sharedDisplayInspCnt(props) : null} */}
 
-            {props.attributes.display === 'd-flex' ? sharedDisplayInspCnt(props) : null}
+            {sharedDisplayInspCnt(props)}
 
          </PanelBody>
 

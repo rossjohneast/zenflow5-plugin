@@ -2,6 +2,14 @@ const sharedDisplayClassnames = (props) => {
     return (
        [
 
+        [`${props.attributes.display !== undefined ? `${props.attributes.display}` : "" }`, ],
+        [`${props.attributes.displaySm !== undefined ? `${props.attributes.displaySm}` : "" }`, ],
+        [`${props.attributes.displayMd !== undefined ? `${props.attributes.displayMd}` : "" }`, ],
+        [`${props.attributes.displayLg !== undefined ? `${props.attributes.displayLg}` : "" }`, ],
+        [`${props.attributes.displayXl !== undefined ? `${props.attributes.displayXl}` : "" }`, ],
+        [`${props.attributes.displayXxl !== undefined ? `${props.attributes.displayXxl}` : "" }`, ],
+
+
         [`${props.attributes.alignItems !== undefined ? `align-items-${props.attributes.alignItems}` : ''}`],
         [`${props.attributes.alignItemsSM !== undefined ? `align-items-sm-${props.attributes.alignItemsSM}` : ''}`],
         [`${props.attributes.alignItemsMD !== undefined ? `align-items-md-${props.attributes.alignItemsMD}` : ''}`],

@@ -67,13 +67,6 @@ export default function save(props) {
       [`${props.attributes.orderLg !== undefined ? `order-lg-${props.attributes.orderLg}` : ''}`],
       [`${props.attributes.orderXl !== undefined ? `order-xl-${props.attributes.orderXl}` : ''}`],
       [`${props.attributes.orderXxl !== undefined ? `order-xxl-${props.attributes.orderXxl}` : ''}`],
-      [
-        `${
-          props.attributes.display !== undefined
-            ? `${props.attributes.display}`
-            : ""
-        }`,
-      ],
       sharedMarginClassnames(props),
       sharedPaddingClassnames(props),
       [

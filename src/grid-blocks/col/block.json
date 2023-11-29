@@ -26,6 +26,18 @@
 		"display": {
 			"type": "string"
 		},
+		"displaySm": {
+			"type": "string"
+		},
+		"displayLg": {
+			"type": "string"
+		},
+		"displayXl": {
+			"type": "string"
+		},
+		"displayXxl": {
+			"type": "string"
+		},
 		"minHeightCol": {
 			"type": "number"
 		},
