@@ -397,7 +397,6 @@ export default function Edit(props) {
   </div>
 </div>
 
-
  */}
 
 
@@ -520,10 +519,6 @@ export default function Edit(props) {
 </div>
 
 
-
-
-
-
 <div className="zen-gut-responsive-select-wrapper">
   <div className="zen-gut-responsive-select-wrapper__left">
     {block_icons.bpmobile}
@@ -532,10 +527,10 @@ export default function Edit(props) {
       <SelectControl
         // label="Column width"
         value={ props.attributes.colWidth }
-        default=''
+        default='col'
         options={ [
           {
-            label: 'Equal width Column',
+            label: 'Equal width Column (Default)',
             value: '',
           },
           { label: '1 Columns - 1/12', value: '-1' },
@@ -559,13 +554,7 @@ export default function Edit(props) {
   </div>
 </div>
 
-
-
           </PanelBody>
-
-
-
-
 
         <PanelBody
             title={__("Width Old (%)", "zenflow5")}
