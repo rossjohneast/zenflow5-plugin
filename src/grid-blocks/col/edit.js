@@ -319,7 +319,256 @@ export default function Edit(props) {
 
 
         <PanelBody
-            title={__("Width (%)", "zenflow5")}
+            title={__("Width", "zenflow5")}
+            initialOpen={true}
+          >
+            {/* <div className="zen-gut-panel-help">
+              <p>
+                The smaller grid settings also apply to larger screens unless
+                overriden specifically for larger screens. Therefore, you only
+                need to use the setting for the smallest device width you want to
+                support.
+              </p>
+            </div> */}
+
+{/* 
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktop}
+    { props.attributes.colWidthXl }
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        value={ props.attributes.colWidthXl }
+        default=''
+        options={ [
+          {
+            label: 'Inherit from smaller size',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-xl-1' },
+          { label: '3 Columns - 1/4', value: '-xl-3' },
+          { label: '4 Columns - 1/3', value: '-xl-4' },
+          { label: '6 Columns - 1/2', value: '-xl-6' },
+
+          { label: '8 Columns - 2/3', value: '-xl-8' },
+          { label: '9 Columns - 3/4', value: '-xl-9' },
+
+          { label: '12 Columns - 1/1', value: '-xl-12' },
+
+          { label: 'Equal width Column', value: '-xl' },
+          { label: 'Variable width Column', value: '-xl-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidthXl: new_val_w });
+        }}
+      />
+  </div>
+</div> */}
+
+
+{/* <div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktopxxl}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        value={ props.attributes.colWidthXxl }
+        default=''
+        options={ [
+          {
+            label: 'Inherit from smaller size',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-xxl-1' },
+          { label: '3 Columns - 1/4', value: '-xxl-3' },
+          { label: '4 Columns - 1/3', value: '-xxl-4' },
+          { label: '6 Columns - 1/2', value: '-xxl-6' },
+          { label: '8 Columns - 2/3', value: '-xxl-8' },
+          { label: '9 Columns - 3/4', value: '-xxl-9' },
+          { label: '12 Columns - 1/1', value: '-xxl-12' },
+          { label: 'Equal width Column', value: '-xxl' },
+          { label: 'Variable width Column', value: '-xxl-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidthXxl: new_val_w });
+        }}
+      />
+  </div>
+</div>
+
+
+ */}
+
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bplaptop}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        // label="Column width"
+        value={ props.attributes.colWidthLg }
+        default=''
+        options={ [
+          {
+            label: 'Inherit from smaller size',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-lg-1' },
+          // { label: '2 - 1/6', value: '2' },
+          { label: '3 Columns - 1/4', value: '-lg-3' },
+          { label: '4 Columns - 1/3', value: '-lg-4' },
+          // { label: '5 - 5/12', value: '5' },
+          { label: '6 Columns - 1/2', value: '-lg-6' },
+          // { label: '7 - 7/12', value: '7' },
+          { label: '8 Columns - 2/3', value: '-lg-8' },
+          { label: '9 Columns - 3/4', value: '-lg-9' },
+          // { label: '10 - 10/12', value: '10' },
+          // { label: '11 - 11/12', value: '11' },
+          { label: '12 Columns - 1/1', value: '-lg-12' },
+          // { label: 'Equal width Column', value: '99' },
+          // { label: 'Variable width Column', value: '999' },
+          { label: 'Equal width Column', value: '-lg' },
+          { label: 'Variable width Column', value: '-lg-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidthLg: new_val_w });
+        }}
+      />
+  </div>
+</div>
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bptablet}
+    {/* { props.attributes.colWidthMd } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        // label="Column width"
+        value={ props.attributes.colWidthMd }
+        default=''
+        options={ [
+          {
+            label: 'Inherit from smaller size',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-md-1' },
+          // { label: '2 - 1/6', value: '2' },
+          { label: '3 Columns - 1/4', value: '-md-3' },
+          { label: '4 Columns - 1/3', value: '-md-4' },
+          // { label: '5 - 5/12', value: '5' },
+          { label: '6 Columns - 1/2', value: '-md-6' },
+          // { label: '7 - 7/12', value: '7' },
+          { label: '8 Columns - 2/3', value: '-md-8' },
+          { label: '9 Columns - 3/4', value: '-md-9' },
+          // { label: '10 - 10/12', value: '10' },
+          // { label: '11 - 11/12', value: '11' },
+          { label: '12 Columns - 1/1', value: '-md-12' },
+          // { label: 'Equal width Column', value: '99' },
+          // { label: 'Variable width Column', value: '999' },
+          { label: 'Equal width Column', value: '-md' },
+          { label: 'Variable width Column', value: '-md-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidthMd: new_val_w });
+        }}
+      />
+  </div>
+</div>
+
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpmobileland}
+    {/* { props.attributes.colWidthSm } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        // label="Column width"
+        value={ props.attributes.colWidthSm }
+        default=''
+        options={ [
+          {
+            label: 'Inherit from smaller size',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-sm-1' },
+          // { label: '2 - 1/6', value: '2' },
+          { label: '3 Columns - 1/4', value: '-sm-3' },
+          { label: '4 Columns - 1/3', value: '-sm-4' },
+          // { label: '5 - 5/12', value: '5' },
+          { label: '6 Columns - 1/2', value: '-sm-6' },
+          // { label: '7 - 7/12', value: '7' },
+          { label: '8 Columns - 2/3', value: '-sm-8' },
+          { label: '9 Columns - 3/4', value: '-sm-9' },
+          // { label: '10 - 10/12', value: '10' },
+          // { label: '11 - 11/12', value: '11' },
+          { label: '12 Columns - 1/1', value: '-sm-12' },
+          // { label: 'Equal width Column', value: '99' },
+          // { label: 'Variable width Column', value: '999' },
+          { label: 'Equal width Column', value: '-sm' },
+          { label: 'Variable width Column', value: '-sm-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidthSm: new_val_w });
+        }}
+      />
+  </div>
+</div>
+
+
+
+
+
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpmobile}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        // label="Column width"
+        value={ props.attributes.colWidth }
+        default=''
+        options={ [
+          {
+            label: 'Equal width Column',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-1' },
+          // { label: '2 - 1/6', value: '2' },
+          { label: '3 Columns - 1/4', value: '-3' },
+          { label: '4 Columns - 1/3', value: '-4' },
+          // { label: '5 - 5/12', value: '5' },
+          { label: '6 Columns - 1/2', value: '-6' },
+          // { label: '7 - 7/12', value: '7' },
+          { label: '8 Columns - 2/3', value: '-8' },
+          { label: '9 Columns - 3/4', value: '-9' },
+          // { label: '10 - 10/12', value: '10' },
+          // { label: '11 - 11/12', value: '11' },
+          { label: '12 Columns - 1/1', value: '-12' },
+          { label: 'Variable width Column', value: '-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidth: new_val_w });
+        }}
+      />
+  </div>
+</div>
+
+
+
+          </PanelBody>
+
+
+
+
+
+        <PanelBody
+            title={__("Width Old (%)", "zenflow5")}
             initialOpen={true}
           >
             {/* <div className="zen-gut-panel-help">

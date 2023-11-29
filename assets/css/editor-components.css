@@ -1,3 +1,22 @@
 div[data-type="zenflow5/button"] {
     display: inline-block;
  }
+
+
+ .zen-gut-responsive-select-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: -1.5rem;
+    margin-left: -1.5rem; */
+ }
+
+ .zen-gut-responsive-select-wrapper__left {
+    flex: 0 0 auto;
+    width: 20%;
+    justify-content: center;
+ }
+
+ .zen-gut-responsive-select-wrapper__right {
+    flex: 0 0 auto;
+    width: 80%;
+ }

@@ -71,22 +71,22 @@
 			"type": "number"
 		},
 		"colWidth": {
-			"type": "number"
+			"type": "string"
 		},
 		"colWidthSm": {
-			"type": "number"
+			"type": "string"
 		},
 		"colWidthMd": {
-			"type": "number"
+			"type": "string"
 		},
 		"colWidthLg": {
-			"type": "number"
+			"type": "string"
 		},
 		"colWidthXl": {
-			"type": "number"
+			"type": "string"
 		},
 		"colWidthXxl": {
-			"type": "number"
+			"type": "string"
 		},
 		"colWidthFlexible": {
 			"type": "boolean",
