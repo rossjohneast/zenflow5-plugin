@@ -73,61 +73,6 @@ const withClientIdClassNameBlockSec = createHigherOrderComponent(
 	withClientIdClassNameBlockSec
   );
 
-const marksColumns = [
-  {
-    value: 0,
-    label: '0%',
-  },
-  {
-    value: 1,
-    label: '',
-  },
-  {
-    value: 2,
-    label: '',
-  },
-  {
-    value: 3,
-    label: '25%',
-  },
-  {
-    value: 4,
-    label: '',
-  },
-  {
-    value: 5,
-    label: '',
-  },
-  {
-    value: 6,
-    label: '50%',
-  },
-  {
-    value: 7,
-    label: '',
-  },
-  {
-    value: 8,
-    label: '',
-  },
-  {
-    value: 9,
-    label: '75%',
-  },
-  {
-    value: 10,
-    label: '',
-  },
-  {
-    value: 11,
-    label: '',
-  },
-  {
-    value: 12,
-    label: '100%',
-  },
-];
-
 const marksMinHeight = [
   {
     value: 0,
@@ -148,60 +93,6 @@ const marksMinHeight = [
   {
     value: 2000,
     label: '2000',
-  }
-];
-
-const marksMargB = [
-  {
-    value: 0,
-    label: '0',
-  },
-  {
-    value: 1,
-    label: '1',
-  },
-  {
-    value: 2,
-    label: '2',
-  },
-  {
-    value: 3,
-    label: '3',
-  },
-  {
-    value: 4,
-    label: '4',
-  },
-  {
-    value: 5,
-    label: '5',
-  }
-];
-
-const marksPadding = [
-  {
-    value: 0,
-    label: '0',
-  },
-  {
-    value: 1,
-    label: '1',
-  },
-  {
-    value: 2,
-    label: '2',
-  },
-  {
-    value: 3,
-    label: '3',
-  },
-  {
-    value: 4,
-    label: '4',
-  },
-  {
-    value: 5,
-    label: '5',
   }
 ];
 
