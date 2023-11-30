@@ -28,9 +28,6 @@
         "padding": {
             "type": "number"
         },
-        "margin": {
-            "type": "number"
-        },
         "borderRadius": {
             "type": "number"
         },
