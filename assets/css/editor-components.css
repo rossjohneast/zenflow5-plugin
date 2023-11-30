@@ -20,3 +20,13 @@ div[data-type="zenflow5/button"] {
     flex: 0 0 auto;
     width: 80%;
  }
+
+/* This is to hide and show the flex display properties only if the value selected is actually 'flex' */
+ .select-controls-container.visible {
+   display: block;
+ }
+ 
+ .select-controls-container.hidden {
+   display: none;
+ }
+ /* END: This is to hide and show the flex display properties only if the value selected is actually 'flex' */

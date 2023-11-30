@@ -1377,7 +1377,6 @@ export default function Edit(props) {
         </InspectorControls>
         <div
           className={classnames(
-            "col",
             sharedColWidthClassnames(props),
             sharedColOffsetsClassnames(props),
             [`${props.attributes.order !== undefined ? `order-${props.attributes.order}` : ''}`],
@@ -1386,13 +1385,6 @@ export default function Edit(props) {
             [`${props.attributes.orderLg !== undefined ? `order-lg-${props.attributes.orderLg}` : ''}`],
             [`${props.attributes.orderXl !== undefined ? `order-xl-${props.attributes.orderXl}` : ''}`],
             [`${props.attributes.orderXxl !== undefined ? `order-xxl-${props.attributes.orderXxl}` : ''}`],
-            [
-              `${
-                props.attributes.display !== undefined
-                  ? `${props.attributes.display}`
-                  : ""
-              }`,
-            ],
             sharedMarginClassnames(props),
             sharedPaddingClassnames(props),
             sharedtextAlignClassnames(props),
@@ -1418,20 +1410,7 @@ export default function Edit(props) {
                   : ""
               }`,
             ],
-            [
-              `${
-                props.attributes.justifyContent !== undefined
-                  ? `${props.attributes.justifyContent}`
-                  : ""
-              }`,
-            ],
-            [
-              `${
-                props.attributes.alignItems !== undefined
-                  ? `${props.attributes.alignItems}`
-                  : ""
-              }`,
-            ]
+            
           )}
           style={
             (style,

@@ -90,20 +90,6 @@ export default function save(props) {
             : ""
         }`,
       ],
-      [
-        `${
-          props.attributes.justifyContent !== undefined
-            ? `${props.attributes.justifyContent}`
-            : ""
-        }`,
-      ],
-      [
-        `${
-          props.attributes.alignItems !== undefined
-            ? `${props.attributes.alignItems}`
-            : ""
-        }`,
-      ]
     )
     });
 
