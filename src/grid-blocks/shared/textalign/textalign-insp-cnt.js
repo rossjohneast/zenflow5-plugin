@@ -14,190 +14,92 @@ const sharedTextAlignInspCnt = (props) => {
         </p>
       </div> */}
 
-      <TabPanel
-        className="zen-gut-tab-panel"
-        activeClass="zen-gut-tab-panel-tab-active-tab"
-        tabs={[
-          {
-            name: "tab0",
-            title: block_icons.bpmobile,
-            className: "zen-gut-tab-panel-tab",
-            content: [
-              <div>
-                <div>
-                  <strong>Mobile portrait</strong>
-                </div>
-                <div>Smallest device width and greater</div>
-                <hr></hr>
-              </div>,
 
-                <PanelRow className="w-100">
-                <SelectControl
-                  label={__("Align Text", "zenflow5")}
-                  value={props.attributes.textAlign}
-                  options={[
-                   { value: "", label: "None" },  
-                   { value: "start", label: "Left" },
-                    { value: "center", label: "Center" },
-                    { value: "end", label: "Right" },
-                  ]}
-                  onChange={(new_val) => {
-                    props.setAttributes({ textAlign: new_val });
-                  }}
-                />
-                </PanelRow>
-            ],
-          },
-          {
-            name: "tab1",
-            title: block_icons.bpmobileland,
-            className: "zen-gut-tab-panel-tab",
-            content: [
-              <div>
-                <div>
-                  <strong>Mobile landscape</strong>
-                </div>
-                <div>Width equal or greater than 576px</div>
-                <hr></hr>
-              </div>,
-                           <PanelRow className="w-100">
-                           <SelectControl
-                             label={__("Align Text", "zenflow5")}
-                             value={props.attributes.textAlignSM}
-                             options={[
-                              { value: "", label: "None" },
-                               { value: "start", label: "Left" },
-                               { value: "center", label: "Center" },
-                               { value: "end", label: "Right" },
-                             ]}
-                             onChange={(new_val) => {
-                               props.setAttributes({ textAlignSM: new_val });
-                             }}
-                           />
-                           </PanelRow>
-            ],
-          },
-          {
-            name: "tab2",
-            title: block_icons.bptablet,
-            className: "zen-gut-tab-panel-tab",
-            content: [
-              <div>
-                <div>
-                  <strong>Tablet portrait</strong>
-                </div>
-                <div>Width equal or greater than 768px</div>
-                <hr></hr>
-              </div>,
-                 <PanelRow className="w-100">
-                 <SelectControl
-                   label={__("Align Text", "zenflow5")}
-                   value={props.attributes.textAlignMD}
-                   options={[
-                    { value: "", label: "None" },
-                     { value: "start", label: "Left" },
-                     { value: "center", label: "Center" },
-                     { value: "end", label: "Right" },
-                   ]}
-                   onChange={(new_val) => {
-                     props.setAttributes({ textAlignMD: new_val });
-                   }}
-                 />
-                 </PanelRow>
-            ],
-          },
-          {
-            name: "tab3",
-            title: block_icons.bplaptop,
-            className: "zen-gut-tab-panel-tab",
-            content: [
-              <div>
-                <div>
-                  <strong>Desktops</strong>
-                </div>
-                <div>Width equal or greater than 992px</div>
-                <hr></hr>
-              </div>,
-                 <PanelRow className="w-100">
-                 <SelectControl
-                   label={__("Align Text", "zenflow5")}
-                   value={props.attributes.textAlignLG}
-                   options={[
-                    { value: "", label: "None" },
-                     { value: "start", label: "Left" },
-                     { value: "center", label: "Center" },
-                     { value: "end", label: "Right" },
-                   ]}
-                   onChange={(new_val) => {
-                     props.setAttributes({ textAlignLG: new_val });
-                   }}
-                 />
-                 </PanelRow>
-            ],
-          },
-          {
-            name: "tab4",
-            title: block_icons.bpdesktop,
-            className: "zen-gut-tab-panel-tab",
-            content: [
-              <div>
-                <div>
-                  <strong>Large desktop</strong>
-                </div>
-                <div>Width equal or greater than 1200px</div>
-                <hr></hr>
-              </div>,
-                            <PanelRow className="w-100">
-                            <SelectControl
-                              label={__("Align Text", "zenflow5")}
-                              value={props.attributes.textAlignXL}
-                              options={[
-                                { value: "", label: "None" },
-                                { value: "start", label: "Left" },
-                                { value: "center", label: "Center" },
-                                { value: "end", label: "Right" },
-                              ]}
-                              onChange={(new_val) => {
-                                props.setAttributes({ textAlignXL: new_val });
-                              }}
-                            />
-                            </PanelRow>
-            ],
-          },
-          {
-            name: "tab5",
-            title: block_icons.bpdesktopxxl,
-            className: "zen-gut-tab-panel-tab",
-            content: [
-              <div>
-                <div>
-                  <strong>Larger desktop</strong>
-                </div>
-                <div>Width equal or greater than 1400px</div>
-                <hr></hr>
-              </div>,
+      <div className="zen-gut-responsive-select-wrapper">
+        <div className="zen-gut-responsive-select-wrapper__left">
+          {block_icons.bplaptop}
+        </div>
+        <div className="zen-gut-responsive-select-wrapper__right">
+          <SelectControl
+            // label="Text align"
+            value={props.attributes.textAlignLG}
+            default=''
+            options={[
+              { value: '', label: "None" },
+              { value: "start", label: "Left" },
+              { value: "center", label: "Center" },
+              { value: "end", label: "Right" },
+            ]}
+            onChange={(new_val_w) => {
+              props.setAttributes({ textAlignLG: new_val_w });
+            }}
+          />
+        </div>
+      </div>
+      <div className="zen-gut-responsive-select-wrapper">
+        <div className="zen-gut-responsive-select-wrapper__left">
+          {block_icons.bptablet}
+        </div>
+        <div className="zen-gut-responsive-select-wrapper__right">
+          <SelectControl
+            // label="Text align"
+            value={props.attributes.textAlignMD}
+            default=''
+            options={[
+              { value: '', label: "None" },
+              { value: "start", label: "Left" },
+              { value: "center", label: "Center" },
+              { value: "end", label: "Right" },
+            ]}
+            onChange={(new_val_w) => {
+              props.setAttributes({ textAlignMD: new_val_w });
+            }}
+          />
+        </div>
+      </div>
+      <div className="zen-gut-responsive-select-wrapper">
+        <div className="zen-gut-responsive-select-wrapper__left">
+          {block_icons.bpmobileland}
+        </div>
+        <div className="zen-gut-responsive-select-wrapper__right">
+          <SelectControl
+            // label="Text align"
+            value={props.attributes.textAlignSM}
+            default=''
+            options={[
+              { value: '', label: "None" },
+              { value: "start", label: "Left" },
+              { value: "center", label: "Center" },
+              { value: "end", label: "Right" },
+            ]}
+            onChange={(new_val_w) => {
+              props.setAttributes({ textAlignSM: new_val_w });
+            }}
+          />
+        </div>
+      </div>
+      <div className="zen-gut-responsive-select-wrapper">
+        <div className="zen-gut-responsive-select-wrapper__left">
+          {block_icons.bpmobile}
+        </div>
+        <div className="zen-gut-responsive-select-wrapper__right">
+          <SelectControl
+            // label="Text align"
+            value={props.attributes.textAlign}
+            default=''
+            options={[
+              { value: '', label: "None" },
+              { value: "start", label: "Left" },
+              { value: "center", label: "Center" },
+              { value: "end", label: "Right" },
+            ]}
+            onChange={(new_val_w) => {
+              props.setAttributes({ textAlign: new_val_w });
+            }}
+          />
+        </div>
+      </div>
 
-<PanelRow className="w-100">
-<SelectControl
-  label={__("Align Text", "zenflow5")}
-  value={props.attributes.textAlignXXL}
-  options={[
-    { value: "", label: "None" },
-    { value: "start", label: "Left" },
-    { value: "center", label: "Center" },
-    { value: "end", label: "Right" },
-  ]}
-  onChange={(new_val) => {
-    props.setAttributes({ textAlignXXL: new_val });
-  }}
-/>
-</PanelRow>
-            ],
-          },
-        ]}
-      >
-        {(tab) => <p>{tab.content}</p>}
-      </TabPanel>
     </PanelBody>
   );
 };
