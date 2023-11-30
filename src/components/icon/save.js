@@ -25,7 +25,8 @@ export default function save(props) {
 	const styleOuter = {
 		backgroundColor: backgroundColor,
 		color: iconColor,
-		borderRadius: borderRadius + 'rem',
+		 // Apply borderRadius only if it's not null or an empty string
+  		borderRadius: borderRadius !== null && borderRadius !== '' && displayIconBg !== false ? borderRadius + 'rem' : undefined,
 		borderWidth: borderWidth,
 		borderColor: borderColor,
 		// iconSize: iconSize,
