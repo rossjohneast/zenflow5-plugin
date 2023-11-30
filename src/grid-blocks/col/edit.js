@@ -515,7 +515,7 @@ export default function Edit(props) {
           </PanelBody>
 
           <PanelColorSettings
-            title={__("Custom colors", "zenflow5")}
+            title={__("Color", "zenflow5")}
             initialOpen={false}
             colorSettings={[
               {
