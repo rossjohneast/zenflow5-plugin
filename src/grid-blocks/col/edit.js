@@ -1067,106 +1067,14 @@ export default function Edit(props) {
               </p>
             </div> */}
 
-            <TabPanel
-              className="zen-gut-tab-panel"
-              activeClass="zen-gut-tab-panel-tab-active-tab"
-              tabs={[
-                {
-                  name: "tab0",
-                  title: block_icons.bpmobile,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Mobile portrait</strong>
-                      </div>
-                      <div>Smallest device width and greater</div>
-                      <hr></hr>
-                    </div>,
-
-                    <RangeControl
-                      label={__("Offset left", "zenflow5")}
-                      min={0}
-                      max={11}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.colOffset}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ colOffset: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab1",
-                  title: block_icons.bpmobileland,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Mobile landscape</strong>
-                      </div>
-                      <div>Width equal or greater than 576px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      label={__("Offset left", "zenflow5")}
-                      min={0}
-                      max={11}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.colOffsetSm}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ colOffsetSm: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab2",
-                  title: block_icons.bptablet,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Tablet portrait</strong>
-                      </div>
-                      <div>Width equal or greater than 768px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      label={__("Offset left", "zenflow5")}
-                      min={0}
-                      max={11}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.colOffsetMd}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ colOffsetMd: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab3",
-                  title: block_icons.bplaptop,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Desktops</strong>
-                      </div>
-                      <div>Width equal or greater than 992px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      label={__("Offset left", "zenflow5")}
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bplaptop}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      // label={__("Desktop", "zenflow5")}
                       min={0}
                       max={11}
                       step={1}
@@ -1177,80 +1085,83 @@ export default function Edit(props) {
                       onChange={(new_val_w) => {
                         props.setAttributes({ colOffsetLg: new_val_w });
                       }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab4",
-                  title: block_icons.bpdesktop,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Large desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1200px</div>
-                      <hr></hr>
-                    </div>,
+                    />
+  </div>
+</div>
 
-                    <RangeControl
-                      label={__("Offset left", "zenflow5")}
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bptablet}
+    {/* { props.attributes.colWidthMd } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      // label={__("Tablet", "zenflow5")}
                       min={0}
                       max={11}
                       step={1}
                       showTooltip={true}
                       allowReset={true}
                       resetFallbackValue={undefined}
-                      value={props.attributes.colOffsetXl}
+                      value={props.attributes.colOffsetMd}
                       onChange={(new_val_w) => {
-                        props.setAttributes({ colOffsetXl: new_val_w });
+                        props.setAttributes({ colOffsetMd: new_val_w });
                       }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab5",
-                  title: block_icons.bpdesktopxxl,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Larger desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1400px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      label={__(
-                        "Offset left Xxl (>1400px, larger desktops)",
-                        "zenflow5"
-                      )}
+                    />
+  </div>
+</div>
+
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpmobileland}
+    {/* { props.attributes.colWidthSm } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      // label={__("Mobile Landscape", "zenflow5")}
                       min={0}
                       max={11}
                       step={1}
                       showTooltip={true}
                       allowReset={true}
                       resetFallbackValue={undefined}
-                      value={props.attributes.colOffsetXxl}
+                      value={props.attributes.colOffsetSm}
                       onChange={(new_val_w) => {
-                        props.setAttributes({ colOffsetXxl: new_val_w });
+                        props.setAttributes({ colOffsetSm: new_val_w });
                       }}
-                    />,
-                  ],
-                },
-              ]}
-            >
-              {(tab) => <p>{tab.content}</p>}
-            </TabPanel>
+                    />
+  </div>
+</div>
+
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpmobile}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      // label={__("Mobile", "zenflow5")}
+                      min={0}
+                      max={11}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.colOffset}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ colOffset: new_val_w });
+                      }}
+                    />
+  </div>
+</div>
+
           </PanelBody>
-
 
           {sharedPaddingInspCnt(props)}
 
           {sharedMarginInspCnt(props)}
          
-     
-
           {sharedTextAlignInspCnt(props)}
 
           <PanelBody
