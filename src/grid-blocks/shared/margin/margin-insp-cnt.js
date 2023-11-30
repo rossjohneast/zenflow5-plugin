@@ -1,9 +1,17 @@
 import block_icons from "../../block-icons";
 
 const { __ } = wp.i18n;
-const { RangeControl, TabPanel, PanelBody } = wp.components;
+const { 
+  RangeControl, 
+  TabPanel, 
+  PanelBody,
+  ToggleControl,
+} = wp.components;
 
 const sharedPaddingInspCnt = (props) => {
+
+  const { setAttributes } = props;
+  
   return (
     <PanelBody title={__("Margin", "zenflow5")} initialOpen={false}>
       {/* <div className="zen-gut-panel-help">
@@ -30,19 +38,31 @@ const sharedPaddingInspCnt = (props) => {
                 <div>Smallest device width and greater</div>
                 <hr></hr>
               </div>,
-
-              <RangeControl
-                label={__("Margin", "zenflow5")}
-                min={0}
-                max={20}
-                allowReset={true}
-                resetFallbackValue={undefined}
-                value={props.attributes.margin}
-                onChange={(new_val) => {
-                  props.setAttributes({ margin: new_val });
-                }}
-              />,
-
+              <>
+                <label className="label-custom">{__("Margin", "zenflow5")}</label>
+                {!props.attributes.marginAuto && (
+                  <RangeControl
+                    // label={__("Margin", "zenflow5")}
+                    min={0}
+                    max={20}
+                    allowReset={true}
+                    resetFallbackValue={undefined}
+                    value={props.attributes.margin}
+                    onChange={(new_val) => {
+                      props.setAttributes({ margin: new_val });
+                    }}
+                  />
+                )}
+                <ToggleControl
+                  label="Auto"
+                  checked={props.attributes.marginAuto}
+                  onChange={(new_val) => setAttributes({
+                    marginAuto: new_val,
+                    margin: '',
+                  })}
+                />
+              </>       
+              ,
               <RangeControl
                 label={__("Margin Top", "zenflow5")}
                 min={0}

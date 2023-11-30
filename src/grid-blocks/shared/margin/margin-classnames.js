@@ -2,7 +2,7 @@ const sharedPaddingClassnames = (props) => {
     return (
        [
 
-        [`${props.attributes.margin !== undefined ? `m-${props.attributes.margin}` : ''}`],
+        [`${props.attributes.margin !== undefined && props.attributes.margin !== '' ? `m-${props.attributes.margin}` : ''}`],
         [`${props.attributes.marginT !== undefined ? `mt-${props.attributes.marginT}` : ''}`],
         [`${props.attributes.marginB !== undefined ? `mb-${props.attributes.marginB}` : ''}`],
         [`${props.attributes.marginL !== undefined ? `ms-${props.attributes.marginL}` : ''}`],
@@ -44,6 +44,8 @@ const sharedPaddingClassnames = (props) => {
         [`${props.attributes.marginXXLR !== undefined ? `me-xxl-${props.attributes.marginXXLR}` : ''}`],
         [`${props.attributes.marginXXLX !== undefined ? `mx-xxl-${props.attributes.marginXXLX}` : ''}`],
         [`${props.attributes.marginXXLY !== undefined ? `my-xxl-${props.attributes.marginXXLY}` : ''}`],
+
+        [`${props.attributes.marginAuto === true ? `m-auto` : ''}`],
 
        ]
     )

@@ -493,6 +493,9 @@
 		"marginXXLY": {
 			"type": "number"
 		},
+		"marginAuto": {
+			"type": "boolean"
+		},
 		"animation": {
 			"type": "string"
 		},
