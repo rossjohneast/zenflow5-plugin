@@ -558,28 +558,6 @@ export default function Edit(props) {
 
 
           <PanelBody title={__("Height", "zenflow5")} className="rangeWithMarks" initialOpen={false}>
-           
-            {/* <div className="zen-gut-panel-help">
-              <p>
-                Basic column settings for desktop devices. 
-              </p>
-            </div> */}
-
-            {/* <RangeControl
-              
-              label={__("Column Width", "zenflow5")}
-              min={0}
-              max={12}
-              step={1}
-              marks={ marksColumns }
-              showTooltip={true}
-              allowReset={true}
-              resetFallbackValue={undefined}
-              value={props.attributes.colWidthLg}
-              onChange={(new_val_w) => {
-                props.setAttributes({ colWidthLg: new_val_w });
-              }}
-            /> */}
 
           <RangeControl
               label={__("Minimum height", "zenflow5")}
@@ -594,32 +572,7 @@ export default function Edit(props) {
                 props.setAttributes({ minHeightCol: new_val });
               }}
             />
-{/* 
-            <RangeControl
-              label={__("Margin Bottom", "zenflow5")}
-              min={0}
-              max={5}
-              marks={marksMargB}
-              allowReset={true}
-              resetFallbackValue={undefined}
-              value={props.attributes.marginLGB}
-              onChange={(new_val) => {
-                props.setAttributes({ marginLGB: new_val });
-              }}
-            />
 
-            <RangeControl
-              label={__("Padding", "zenflow5")}
-              min={0}
-              max={5}
-              marks={marksPadding}
-              allowReset={true}
-              resetFallbackValue={undefined}
-              value={props.attributes.padding}
-              onChange={(new_val) => {
-                props.setAttributes({ padding: new_val });
-              }}
-            />  */}
           </PanelBody>
 
           <PanelBody
