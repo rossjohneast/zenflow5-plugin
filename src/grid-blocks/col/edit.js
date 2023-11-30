@@ -966,103 +966,13 @@ export default function Edit(props) {
               </p>
             </div> */}
 
-            <TabPanel
-              className="zen-gut-tab-panel"
-              activeClass="zen-gut-tab-panel-tab-active-tab"
-              initialTabName="tab3"
-              tabs={[
-                {
-                  name: "tab0",
-                  title: block_icons.bpmobile,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Mobile portrait</strong>
-                      </div>
-                      <div>Smallest device width and greater</div>
-                      <hr></hr>
-                    </div>,
-
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.order}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ order: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab1",
-                  title: block_icons.bpmobileland,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Mobile landscape</strong>
-                      </div>
-                      <div>Width equal or greater than 576px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderSm}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderSm: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab2",
-                  title: block_icons.bptablet,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Tablet portrait</strong>
-                      </div>
-                      <div>Width equal or greater than 768px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
-                      min={0}
-                      max={5}
-                      step={1}
-                      showTooltip={true}
-                      allowReset={true}
-                      resetFallbackValue={undefined}
-                      value={props.attributes.orderMd}
-                      onChange={(new_val_w) => {
-                        props.setAttributes({ orderMd: new_val_w });
-                      }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab3",
-                  title: block_icons.bplaptop,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Desktops</strong>
-                      </div>
-                      <div>Width equal or greater than 992px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bplaptop}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
                       min={0}
                       max={5}
                       step={1}
@@ -1073,68 +983,73 @@ export default function Edit(props) {
                       onChange={(new_val_w) => {
                         props.setAttributes({ orderLg: new_val_w });
                       }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab4",
-                  title: block_icons.bpdesktop,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Large desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1200px</div>
-                      <hr></hr>
-                    </div>,
+                    />
+  </div>
+</div>
 
-                    <RangeControl
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bptablet}
+    {/* { props.attributes.colWidthMd } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
                       min={0}
                       max={5}
                       step={1}
                       showTooltip={true}
                       allowReset={true}
                       resetFallbackValue={undefined}
-                      value={props.attributes.orderXl}
+                      value={props.attributes.orderMd}
                       onChange={(new_val_w) => {
-                        props.setAttributes({ orderXl: new_val_w });
+                        props.setAttributes({ orderMd: new_val_w });
                       }}
-                    />,
-                  ],
-                },
-                {
-                  name: "tab5",
-                  title: block_icons.bpdesktopxxl,
-                  className: "zen-gut-tab-panel-tab",
-                  content: [
-                    <div>
-                      <div>
-                        <strong>Larger desktop</strong>
-                      </div>
-                      <div>Width equal or greater than 1400px</div>
-                      <hr></hr>
-                    </div>,
-                    <RangeControl
+                    />
+  </div>
+</div>
+
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpmobileland}
+    {/* { props.attributes.colWidthSm } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
                       min={0}
                       max={5}
                       step={1}
                       showTooltip={true}
                       allowReset={true}
                       resetFallbackValue={undefined}
-                      value={props.attributes.orderXxl}
+                      value={props.attributes.orderSm}
                       onChange={(new_val_w) => {
-                        props.setAttributes({ orderXxl: new_val_w });
+                        props.setAttributes({ orderSm: new_val_w });
                       }}
-                    />,
-                  ],
-                },
-              ]}
-            >
-              {(tab) => <p>{tab.content}</p>}
-            </TabPanel>
+                    />
+  </div>
+</div>
 
 
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpmobile}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+    <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.order}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ order: new_val_w });
+                      }}
+                    />
+  </div>
+</div>
 
 
           </PanelBody>
