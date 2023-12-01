@@ -222,7 +222,42 @@ export default function Edit(props) {
               </p>
             </div> */}
 
-{/* 
+
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktopxxl}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+      <SelectControl
+        value={ props.attributes.colWidthXxl }
+        default=''
+        options={ [
+          {
+            label: 'Inherit from smaller size',
+            value: '',
+          },
+          { label: '1 Columns - 1/12', value: '-xxl-1' },
+          { label: '2 - 1/6', value: '-xxl-2' },
+          { label: '3 Columns - 1/4', value: '-xxl-3' },
+          { label: '4 Columns - 1/3', value: '-xxl-4' },
+          { label: '5 - 5/12', value: '-xxl-5' },
+          { label: '6 Columns - 1/2', value: '-xxl-6' },
+          { label: '7 - 7/12', value: '-xxl-7' },
+          { label: '8 Columns - 2/3', value: '-xxl-8' },
+          { label: '9 Columns - 3/4', value: '-xxl-9' },
+          { label: '10 - 10/12', value: '-xxl-10' },
+          { label: '11 - 11/12', value: '-xxl-11' },
+          { label: '12 Columns - 1/1', value: '-xxl-12' },
+          { label: 'Equal width Column', value: '-xxl' },
+          { label: 'Variable width Column', value: '-xxl-auto' },
+        ] }
+        onChange={(new_val_w) => {
+          props.setAttributes({ colWidthXxl: new_val_w });
+        }}
+      />
+  </div>
+</div>
+
 <div className="zen-gut-responsive-select-wrapper">
   <div className="zen-gut-responsive-select-wrapper__left">
     {block_icons.bpdesktop}
@@ -238,58 +273,26 @@ export default function Edit(props) {
             value: '',
           },
           { label: '1 Columns - 1/12', value: '-xl-1' },
+          { label: '2 - 1/6', value: '-xl-2' },
           { label: '3 Columns - 1/4', value: '-xl-3' },
           { label: '4 Columns - 1/3', value: '-xl-4' },
+          { label: '5 - 5/12', value: '-xl-5' },
           { label: '6 Columns - 1/2', value: '-xl-6' },
-
+          { label: '7 - 7/12', value: '-xl-7' },
           { label: '8 Columns - 2/3', value: '-xl-8' },
           { label: '9 Columns - 3/4', value: '-xl-9' },
-
+          { label: '10 - 10/12', value: '-xl-10' },
+          { label: '11 - 11/12', value: '-xl-11' },
           { label: '12 Columns - 1/1', value: '-xl-12' },
-
           { label: 'Equal width Column', value: '-xl' },
-          { label: 'Variable width Column', value: '-xl-auto' },
+          { label: 'Variable width Column', value: 'xl-auto' },
         ] }
         onChange={(new_val_w) => {
           props.setAttributes({ colWidthXl: new_val_w });
         }}
       />
   </div>
-</div> */}
-
-
-{/* <div className="zen-gut-responsive-select-wrapper">
-  <div className="zen-gut-responsive-select-wrapper__left">
-    {block_icons.bpdesktopxxl}
-  </div>
-  <div className="zen-gut-responsive-select-wrapper__right">
-      <SelectControl
-        value={ props.attributes.colWidthXxl }
-        default=''
-        options={ [
-          {
-            label: 'Inherit from smaller size',
-            value: '',
-          },
-          { label: '1 Columns - 1/12', value: '-xxl-1' },
-          { label: '3 Columns - 1/4', value: '-xxl-3' },
-          { label: '4 Columns - 1/3', value: '-xxl-4' },
-          { label: '6 Columns - 1/2', value: '-xxl-6' },
-          { label: '8 Columns - 2/3', value: '-xxl-8' },
-          { label: '9 Columns - 3/4', value: '-xxl-9' },
-          { label: '12 Columns - 1/1', value: '-xxl-12' },
-          { label: 'Equal width Column', value: '-xxl' },
-          { label: 'Variable width Column', value: '-xxl-auto' },
-        ] }
-        onChange={(new_val_w) => {
-          props.setAttributes({ colWidthXxl: new_val_w });
-        }}
-      />
-  </div>
 </div>
-
- */}
-
 
 <div className="zen-gut-responsive-select-wrapper">
   <div className="zen-gut-responsive-select-wrapper__left">
@@ -307,19 +310,17 @@ export default function Edit(props) {
             value: '',
           },
           { label: '1 Columns - 1/12', value: '-lg-1' },
-          // { label: '2 - 1/6', value: '2' },
+          { label: '2 - 1/6', value: '-lg-2' },
           { label: '3 Columns - 1/4', value: '-lg-3' },
           { label: '4 Columns - 1/3', value: '-lg-4' },
-          // { label: '5 - 5/12', value: '5' },
+          { label: '5 - 5/12', value: '-lg-5' },
           { label: '6 Columns - 1/2', value: '-lg-6' },
-          // { label: '7 - 7/12', value: '7' },
+          { label: '7 - 7/12', value: '-lg-7' },
           { label: '8 Columns - 2/3', value: '-lg-8' },
           { label: '9 Columns - 3/4', value: '-lg-9' },
-          // { label: '10 - 10/12', value: '10' },
-          // { label: '11 - 11/12', value: '11' },
+          { label: '10 - 10/12', value: '-lg-10' },
+          { label: '11 - 11/12', value: '-lg-11' },
           { label: '12 Columns - 1/1', value: '-lg-12' },
-          // { label: 'Equal width Column', value: '99' },
-          // { label: 'Variable width Column', value: '999' },
           { label: 'Equal width Column', value: '-lg' },
           { label: 'Variable width Column', value: '-lg-auto' },
         ] }
@@ -346,19 +347,17 @@ export default function Edit(props) {
             value: '',
           },
           { label: '1 Columns - 1/12', value: '-md-1' },
-          // { label: '2 - 1/6', value: '2' },
+          { label: '2 - 1/6', value: '-md-2' },
           { label: '3 Columns - 1/4', value: '-md-3' },
           { label: '4 Columns - 1/3', value: '-md-4' },
-          // { label: '5 - 5/12', value: '5' },
+          { label: '5 - 5/12', value: '-md-5' },
           { label: '6 Columns - 1/2', value: '-md-6' },
-          // { label: '7 - 7/12', value: '7' },
+          { label: '7 - 7/12', value: '-md-7' },
           { label: '8 Columns - 2/3', value: '-md-8' },
           { label: '9 Columns - 3/4', value: '-md-9' },
-          // { label: '10 - 10/12', value: '10' },
-          // { label: '11 - 11/12', value: '11' },
+          { label: '10 - 10/12', value: '-md-10' },
+          { label: '11 - 11/12', value: '-md-11' },
           { label: '12 Columns - 1/1', value: '-md-12' },
-          // { label: 'Equal width Column', value: '99' },
-          // { label: 'Variable width Column', value: '999' },
           { label: 'Equal width Column', value: '-md' },
           { label: 'Variable width Column', value: '-md-auto' },
         ] }
@@ -386,19 +385,17 @@ export default function Edit(props) {
             value: '',
           },
           { label: '1 Columns - 1/12', value: '-sm-1' },
-          // { label: '2 - 1/6', value: '2' },
+          { label: '2 - 1/6', value: '-sm-2' },
           { label: '3 Columns - 1/4', value: '-sm-3' },
           { label: '4 Columns - 1/3', value: '-sm-4' },
-          // { label: '5 - 5/12', value: '5' },
+          { label: '5 - 5/12', value: '-sm-5' },
           { label: '6 Columns - 1/2', value: '-sm-6' },
-          // { label: '7 - 7/12', value: '7' },
+          { label: '7 - 7/12', value: '-sm-7' },
           { label: '8 Columns - 2/3', value: '-sm-8' },
           { label: '9 Columns - 3/4', value: '-sm-9' },
-          // { label: '10 - 10/12', value: '10' },
-          // { label: '11 - 11/12', value: '11' },
+          { label: '10 - 10/12', value: '-sm-10' },
+          { label: '11 - 11/12', value: '-sm-11' },
           { label: '12 Columns - 1/1', value: '-sm-12' },
-          // { label: 'Equal width Column', value: '99' },
-          // { label: 'Variable width Column', value: '999' },
           { label: 'Equal width Column', value: '-sm' },
           { label: 'Variable width Column', value: '-sm-auto' },
         ] }
@@ -425,16 +422,16 @@ export default function Edit(props) {
             value: '',
           },
           { label: '1 Columns - 1/12', value: '-1' },
-          // { label: '2 - 1/6', value: '2' },
+          { label: '2 - 1/6', value: '-2' },
           { label: '3 Columns - 1/4', value: '-3' },
           { label: '4 Columns - 1/3', value: '-4' },
-          // { label: '5 - 5/12', value: '5' },
+          { label: '5 - 5/12', value: '-5' },
           { label: '6 Columns - 1/2', value: '-6' },
-          // { label: '7 - 7/12', value: '7' },
+          { label: '7 - 7/12', value: '-7' },
           { label: '8 Columns - 2/3', value: '-8' },
           { label: '9 Columns - 3/4', value: '-9' },
-          // { label: '10 - 10/12', value: '10' },
-          // { label: '11 - 11/12', value: '11' },
+          { label: '10 - 10/12', value: '-10' },
+          { label: '11 - 11/12', value: '-11' },
           { label: '12 Columns - 1/1', value: '-12' },
           { label: 'Variable width Column', value: '-auto' },
         ] }
