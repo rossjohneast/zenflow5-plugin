@@ -8,8 +8,8 @@ $zenLandingTextCenterOne = '
 
 <!-- wp:zenflow5/container -->
 <div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"justifyContent":"justify-content-center"} -->
-<div class="wp-block-zenflow5-row zenflow5-row row justify-content-center"><!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":10,"colWidthLg":7,"textAlign":"center"} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-10 col-lg-7 text-center"><!-- wp:heading -->
+<div class="wp-block-zenflow5-row zenflow5-row row justify-content-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-9","colWidthLg":"-lg-7","textAlign":"center"} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-9 col-lg-7 text-center"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Exceptional Service Excellence</strong></h2>
 <!-- /wp:heading -->
 
@@ -47,8 +47,8 @@ $zenLandingTextColsOne = '
 
 <!-- wp:zenflow5/container -->
 <div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"marginLGB":5,"justifyContent":"justify-content-center"} -->
-<div class="wp-block-zenflow5-row zenflow5-row row mb-lg-5 justify-content-center"><!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":10,"colWidthLg":7,"textAlign":"center"} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-10 col-lg-7 text-center"><!-- wp:heading -->
+<div class="wp-block-zenflow5-row zenflow5-row row mb-lg-5 justify-content-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-10","colWidthLg":"-lg-7","textAlign":"center"} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-10 col-lg-7 text-center"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Exceptional Service Excellence</strong></h2>
 <!-- /wp:heading -->
 
@@ -59,8 +59,8 @@ $zenLandingTextColsOne = '
 <!-- /wp:zenflow5/row -->
 
 <!-- wp:zenflow5/row {"marginLGB":5} -->
-<div class="wp-block-zenflow5-row zenflow5-row row mb-lg-5"><!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":4,"textAlign":"center","animation":"fade-up"} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:heading {"className":"is-style-h3"} -->
+<div class="wp-block-zenflow5-row zenflow5-row row mb-lg-5"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-4","textAlign":"center","animation":"fade-up"} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:heading {"className":"is-style-h3"} -->
 <h2 class="wp-block-heading is-style-h3"><strong>Service Excellence</strong></h2>
 <!-- /wp:heading -->
 
@@ -69,8 +69,8 @@ $zenLandingTextColsOne = '
 <!-- /wp:paragraph --></div>
 <!-- /wp:zenflow5/col -->
 
-<!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":4,"textAlign":"center","animation":"fade-up","animationDelay":50} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="50"><!-- wp:heading {"className":"is-style-h3"} -->
+<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-4","textAlign":"center","animation":"fade-up","animationDelay":50} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="50"><!-- wp:heading {"className":"is-style-h3"} -->
 <h2 class="wp-block-heading is-style-h3"><strong>Reliability You Can Count On</strong></h2>
 <!-- /wp:heading -->
 
@@ -79,8 +79,8 @@ $zenLandingTextColsOne = '
 <!-- /wp:paragraph --></div>
 <!-- /wp:zenflow5/col -->
 
-<!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":4,"textAlign":"center","animation":"fade-up","animationDelay":100} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="100"><!-- wp:heading {"className":"is-style-h3"} -->
+<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-4","textAlign":"center","animation":"fade-up","animationDelay":100} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="100"><!-- wp:heading {"className":"is-style-h3"} -->
 <h2 class="wp-block-heading is-style-h3"><strong>Customer-Centric Approach</strong></h2>
 <!-- /wp:heading -->
 
@@ -91,8 +91,8 @@ $zenLandingTextColsOne = '
 <!-- /wp:zenflow5/row -->
 
 <!-- wp:zenflow5/row -->
-<div class="wp-block-zenflow5-row zenflow5-row row"><!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":4,"textAlign":"center","animation":"fade-up"} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:heading {"className":"is-style-h3"} -->
+<div class="wp-block-zenflow5-row zenflow5-row row"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-4","textAlign":"center","animation":"fade-up"} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:heading {"className":"is-style-h3"} -->
 <h2 class="wp-block-heading is-style-h3"><strong>Service Excellence</strong></h2>
 <!-- /wp:heading -->
 
@@ -101,8 +101,8 @@ $zenLandingTextColsOne = '
 <!-- /wp:paragraph --></div>
 <!-- /wp:zenflow5/col -->
 
-<!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":4,"textAlign":"center","animation":"fade-up","animationDelay":50} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="50"><!-- wp:heading {"className":"is-style-h3"} -->
+<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-4","textAlign":"center","animation":"fade-up","animationDelay":50} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="50"><!-- wp:heading {"className":"is-style-h3"} -->
 <h2 class="wp-block-heading is-style-h3"><strong>Reliability You Can Count On</strong></h2>
 <!-- /wp:heading -->
 
@@ -111,8 +111,8 @@ $zenLandingTextColsOne = '
 <!-- /wp:paragraph --></div>
 <!-- /wp:zenflow5/col -->
 
-<!-- wp:zenflow5/col {"colWidth":12,"colWidthMd":4,"textAlign":"center","animation":"fade-up","animationDelay":100} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="100"><!-- wp:heading {"className":"is-style-h3"} -->
+<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-4","textAlign":"center","animation":"fade-up","animationDelay":100} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-4 text-center" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="100"><!-- wp:heading {"className":"is-style-h3"} -->
 <h2 class="wp-block-heading is-style-h3"><strong>Customer-Centric Approach</strong></h2>
 <!-- /wp:heading -->
 

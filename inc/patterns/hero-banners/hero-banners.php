@@ -8,14 +8,14 @@ $zenLandingHeroBannerOne = '
 
 <!-- wp:zenflow5/container -->
 <div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
-<div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"orderMd":2,"colWidth":12,"colWidthMd":5,"colWidthLg":6,"animation":"fade-up","animationDelay":250} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-5 col-lg-6 order-md-2" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="250"><!-- wp:image {"id":2599,"sizeSlug":"large","linkDestination":"none"} -->
+<div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"orderMd":2,"colWidth":"-12","colWidthMd":"-md-5","colWidthLg":"-lg-6","animation":"fade-up","animationDelay":250} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-5 col-lg-6 order-md-2" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="250"><!-- wp:image {"id":2599,"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img src="/wp-content/plugins/zenflow5-plugin/assets/img/free-pik/illustration-01.png" alt="" class="wp-image-2599"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:zenflow5/col -->
 
-<!-- wp:zenflow5/col {"orderMd":1,"colWidth":12,"colWidthMd":7,"colWidthLg":6,"textAlign":"center","textAlignMD":"start","animation":"fade-up"} -->
-<div class="wp-block-zenflow5-col zenflow5-col col col-12 col-md-7 col-lg-6 text-center text-md-start order-md-1" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:zenflow5/div {"textAlign":"","textAlignMD":"","marginB":2} -->
+<!-- wp:zenflow5/col {"orderMd":1,"colWidth":"-12","colWidthMd":"-md-7","colWidthLg":"-lg-6","textAlign":"center","textAlignMD":"start","animation":"fade-up"} -->
+<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-7 col-lg-6 text-center text-md-start order-md-1" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:zenflow5/div {"textAlign":"","textAlignMD":"","marginB":2,"className":"text- text-md-"} -->
 <div class="wp-block-zenflow5-div zenflow5-div mb-2 text- text-md-"><!-- wp:heading {"level":1,"className":"is-style-display-4"} -->
 <h1 class="wp-block-heading is-style-display-4"><strong>Welcome to [Company Name] Empowering Your Success</strong></h1>
 <!-- /wp:heading --></div>
