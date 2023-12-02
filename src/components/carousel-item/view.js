@@ -17,5 +17,5 @@
  */
  
 /* eslint-disable no-console */
-console.log("Hello World! (from create-block-carousel-item block)");
+// console.log("Hello World! (from create-block-carousel-item block)");
 /* eslint-enable no-console */
