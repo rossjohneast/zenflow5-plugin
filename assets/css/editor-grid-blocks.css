@@ -439,9 +439,9 @@ div[data-type="zenflow5/col"] .col {
     max-width: 100%;
 }
 
-div[data-type="zenflow5/col"]>.col {
+div[data-type="zenflow5/col"]>div {
     max-width: 100% !important;
-    width: 100%;
+    width: 100%!important;
 }
 
 .wp-block-zenflow5-section>section {
