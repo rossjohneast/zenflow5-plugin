@@ -827,6 +827,8 @@ function zen_b_p_register_block_patterns() {
 
 	require 'inc/patterns/hero-banners/hero-banners.php';
 
+	require 'inc/patterns/carousels/carousels.php';
+
 	require 'inc/patterns/icon-cols/icon-cols.php';
 
 	require 'inc/patterns/text-and-imgs/text-and-imgs.php';

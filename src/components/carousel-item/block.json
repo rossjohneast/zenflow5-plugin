@@ -10,6 +10,7 @@
             "default": 5000
 		}
 	},
+	"parent": [ "zenflow5/carousel" ],
 	"category": "zenflow5",
 	"icon": "format-image",
 	"description": "Carousel slide item. Can be an image or an advanced layout using a section.",
