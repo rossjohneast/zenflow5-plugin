@@ -261,7 +261,6 @@ export default function Edit(props) {
 <div className="zen-gut-responsive-select-wrapper">
   <div className="zen-gut-responsive-select-wrapper__left">
     {block_icons.bpdesktop}
-    { props.attributes.colWidthXl }
   </div>
   <div className="zen-gut-responsive-select-wrapper__right">
       <SelectControl
