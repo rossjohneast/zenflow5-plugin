@@ -132,4 +132,98 @@ $zenLandingTextandImgTwo = '
 		)
 	);
 
+
+	$zenLandingTextandImgThree = '
+	<!-- wp:zenflow5/section {"gradient":"linear-gradient(0deg,rgba(0,0,0,0.77) 0%,rgba(0,0,0,0.77) 100%)","urlImage":"/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg","imgID":539,"backgroundColorTheme":"","textColorTheme":"text-light"} -->
+	<section class="wp-block-zenflow5-section zenflow5-section section text-light" style="background-size:cover;background-repeat:no-repeat;background-position:50% 50%;background-image:url(/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg)"><!-- wp:zenflow5/responsive-spacer {"paddingB":8,"paddingMDB":11} -->
+	<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>
+	<!-- /wp:zenflow5/responsive-spacer -->
+	
+	<!-- wp:zenflow5/container -->
+	<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+	<div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-5","colWidthLg":"-lg-4"} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-5 col-lg-4"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} -->
+	<h2 class="wp-block-heading has-base-color has-text-color has-link-color"><strong>Delivering unparalleled service excellence</strong></h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:paragraph -->
+	<p>We understand that every customer is unique, and that is why we tailor our services to meet your specific needs.</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:zenflow5/responsive-spacer {"paddingB":4} -->
+	<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-4" aria-hidden="true"></div>
+	<!-- /wp:zenflow5/responsive-spacer -->
+	
+	<!-- wp:zenflow5/div -->
+	<div class="wp-block-zenflow5-div zenflow5-div"><!-- wp:zenflow5/div {"display":"d-flex"} -->
+	<div class="wp-block-zenflow5-div zenflow5-div d-flex"><!-- wp:zenflow5/div -->
+	<div class="wp-block-zenflow5-div zenflow5-div"><!-- wp:zenflow5/icon {"icon":"checkCircle","iconSize":44,"iconColorTheme":"text-primary"} -->
+	<span class="wp-block-zenflow5-icon"><span class="zenbuilder-icon-wrapper text-primary"><span class="hidden-icon-size"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path></svg></span><span class="abs-pos-icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path></svg></span></span></span>
+	<!-- /wp:zenflow5/icon --></div>
+	<!-- /wp:zenflow5/div -->
+	
+	<!-- wp:zenflow5/div {"marginL":4} -->
+	<div class="wp-block-zenflow5-div zenflow5-div ms-4"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"is-style-h4"} -->
+	<h2 class="wp-block-heading is-style-h4 has-base-color has-text-color has-link-color"><strong><strong>Reliability</strong></strong></h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:paragraph {"className":"mb-0"} -->
+	<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+	<!-- /wp:paragraph --></div>
+	<!-- /wp:zenflow5/div --></div>
+	<!-- /wp:zenflow5/div --></div>
+	<!-- /wp:zenflow5/div -->
+	
+	<!-- wp:zenflow5/div -->
+	<div class="wp-block-zenflow5-div zenflow5-div"><!-- wp:separator -->
+	<hr class="wp-block-separator has-alpha-channel-opacity"/>
+	<!-- /wp:separator --></div>
+	<!-- /wp:zenflow5/div -->
+	
+	<!-- wp:zenflow5/div {"display":"d-flex"} -->
+	<div class="wp-block-zenflow5-div zenflow5-div d-flex"><!-- wp:zenflow5/div -->
+	<div class="wp-block-zenflow5-div zenflow5-div"><!-- wp:zenflow5/icon {"icon":"checkCircle","iconSize":44,"iconColorTheme":"text-primary"} -->
+	<span class="wp-block-zenflow5-icon"><span class="zenbuilder-icon-wrapper text-primary"><span class="hidden-icon-size"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path></svg></span><span class="abs-pos-icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path></svg></span></span></span>
+	<!-- /wp:zenflow5/icon --></div>
+	<!-- /wp:zenflow5/div -->
+	
+	<!-- wp:zenflow5/div {"marginB":4,"marginL":4} -->
+	<div class="wp-block-zenflow5-div zenflow5-div mb-4 ms-4"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"is-style-h4"} -->
+	<h2 class="wp-block-heading is-style-h4 has-base-color has-text-color has-link-color"><strong><strong><strong><strong>Customer-Centric</strong></strong></strong></strong></h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:paragraph -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+	<!-- /wp:paragraph --></div>
+	<!-- /wp:zenflow5/div --></div>
+	<!-- /wp:zenflow5/div --></div>
+	<!-- /wp:zenflow5/col -->
+	
+	<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-7","colWidthLg":"-lg-7","colOffsetLg":1} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-7 col-lg-7 offset-lg-1"><!-- wp:image {"id":539,"sizeSlug":"large","linkDestination":"none"} -->
+	<figure class="wp-block-image size-large"><img src="/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg" alt="" class="wp-image-539"/></figure>
+	<!-- /wp:image --></div>
+	<!-- /wp:zenflow5/col --></div>
+	<!-- /wp:zenflow5/row --></div>
+	<!-- /wp:zenflow5/container -->
+	
+	<!-- wp:zenflow5/responsive-spacer {"paddingB":8,"paddingMDB":11} -->
+	<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>
+	<!-- /wp:zenflow5/responsive-spacer --><span class="bg_overlay" style="background-image:linear-gradient(0deg,rgba(0,0,0,0.77) 0%,rgba(0,0,0,0.77) 100%)"></span></section>
+	<!-- /wp:zenflow5/section -->
+		';
+	
+	
+		register_block_pattern(
+			'zen-b-p/zen-landing-text-and-img-three',
+			array(
+				'title'         => __( 'Text and image', 'zen-b-p' ),
+				'description'   => _x( 'Text and image', 'Used as page content', 'zen-b-p' ),
+				'content'       => $zenLandingTextandImgThree,
+				'categories'    => array( 'text-and-images' ),
+				'keywords'      => array( 'content', 'text', 'image' ),
+				'viewportWidth' => 800,
+			)
+		);
+
 ?>
