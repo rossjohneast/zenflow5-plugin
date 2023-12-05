@@ -17,6 +17,48 @@ const sharedTextAlignInspCnt = (props) => {
 
       <div className="zen-gut-responsive-select-wrapper">
         <div className="zen-gut-responsive-select-wrapper__left">
+          {block_icons.bpdesktopxxl}
+        </div>
+        <div className="zen-gut-responsive-select-wrapper__right">
+          <SelectControl
+            // label="Text align"
+            value={props.attributes.textAlignXXL}
+            default=''
+            options={[
+              { value: '', label: "None" },
+              { value: "start", label: "Left" },
+              { value: "center", label: "Center" },
+              { value: "end", label: "Right" },
+            ]}
+            onChange={(new_val_w) => {
+              props.setAttributes({ textAlignXXL: new_val_w });
+            }}
+          />
+        </div>
+      </div>
+      <div className="zen-gut-responsive-select-wrapper">
+        <div className="zen-gut-responsive-select-wrapper__left">
+          {block_icons.bpdesktopxxl}
+        </div>
+        <div className="zen-gut-responsive-select-wrapper__right">
+          <SelectControl
+            // label="Text align"
+            value={props.attributes.textAlignXL}
+            default=''
+            options={[
+              { value: '', label: "None" },
+              { value: "start", label: "Left" },
+              { value: "center", label: "Center" },
+              { value: "end", label: "Right" },
+            ]}
+            onChange={(new_val_w) => {
+              props.setAttributes({ textAlignXL: new_val_w });
+            }}
+          />
+        </div>
+      </div>
+      <div className="zen-gut-responsive-select-wrapper">
+        <div className="zen-gut-responsive-select-wrapper__left">
           {block_icons.bplaptop}
         </div>
         <div className="zen-gut-responsive-select-wrapper__right">

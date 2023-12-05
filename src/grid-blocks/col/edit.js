@@ -808,6 +808,46 @@ export default function Edit(props) {
 
 <div className="zen-gut-responsive-select-wrapper">
   <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktopxxl}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderXxl}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderXxl: new_val_w });
+                      }}
+                    />
+  </div>
+</div>
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktop}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      min={0}
+                      max={5}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.orderXl}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ orderXl: new_val_w });
+                      }}
+                    />
+  </div>
+</div>
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
     {block_icons.bplaptop}
     {/* { props.attributes.colWidthLg } */}
   </div>
@@ -907,6 +947,48 @@ export default function Edit(props) {
               </p>
             </div> */}
 
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktopxxl}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      // label={__("Desktop", "zenflow5")}
+                      min={0}
+                      max={11}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.colOffsetXxl}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ colOffsetXxl: new_val_w });
+                      }}
+                    />
+  </div>
+</div>
+<div className="zen-gut-responsive-select-wrapper">
+  <div className="zen-gut-responsive-select-wrapper__left">
+    {block_icons.bpdesktop}
+    {/* { props.attributes.colWidthLg } */}
+  </div>
+  <div className="zen-gut-responsive-select-wrapper__right">
+  <RangeControl
+                      // label={__("Desktop", "zenflow5")}
+                      min={0}
+                      max={11}
+                      step={1}
+                      showTooltip={true}
+                      allowReset={true}
+                      resetFallbackValue={undefined}
+                      value={props.attributes.colOffsetXl}
+                      onChange={(new_val_w) => {
+                        props.setAttributes({ colOffsetXl: new_val_w });
+                      }}
+                    />
+  </div>
+</div>
 <div className="zen-gut-responsive-select-wrapper">
   <div className="zen-gut-responsive-select-wrapper__left">
     {block_icons.bplaptop}
