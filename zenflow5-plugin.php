@@ -837,6 +837,7 @@ function zen_b_p_register_block_patterns() {
 
 	require 'inc/patterns/cta/cta.php';
 
+	require 'inc/patterns/imgs/imgs.php';
 	
 }
 add_action( 'init', 'zen_b_p_register_block_patterns' );
@@ -872,6 +873,13 @@ function custom_register_pattern_category() {
         'text-and-images',
         array(
             'label' => __('Text and images', 'zen-b-p'),
+        )
+    );
+
+	register_block_pattern_category(
+        'images',
+        array(
+            'label' => __('Images', 'zen-b-p'),
         )
     );
 
