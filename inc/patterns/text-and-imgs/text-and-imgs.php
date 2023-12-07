@@ -226,4 +226,86 @@ $zenLandingTextandImgTwo = '
 			)
 		);
 
+
+	$zenTextandImgFour = '
+	<!-- wp:zenflow5/section {"backgroundColorTheme":""} -->
+	<section class="wp-block-zenflow5-section zenflow5-section section" style="background-size:cover;background-repeat:no-repeat"><!-- wp:zenflow5/responsive-spacer {"paddingB":8,"paddingMDB":11} -->
+	<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>
+	<!-- /wp:zenflow5/responsive-spacer -->
+	
+	<!-- wp:zenflow5/container -->
+	<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row -->
+	<div class="wp-block-zenflow5-row zenflow5-row row"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthXl":"-xl-10","colOffsetXl":1} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-xl-10 offset-xl-1"><!-- wp:zenflow5/row {"display":"d-flex","alignItems":"align-items-center","justifyContent":"justify-content-center"} -->
+	<div class="wp-block-zenflow5-row zenflow5-row row justify-content-center align-items-center d-flex"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-5","marginB":4,"marginMDB":0} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-5 mb-4 mb-md-0"><!-- wp:paragraph {"className":"is-style-lead"} -->
+	<p class="is-style-lead">USEFUL SNIPPET HERE</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:heading {"className":"is-style-h1"} -->
+	<h2 class="wp-block-heading is-style-h1"><strong>About Business Name</strong></h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:paragraph {"className":"is-style-lead"} -->
+	<p class="is-style-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non faucibus tortor. Integer molestie mattis erat, eget dictum nisl aliquet at.</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:paragraph -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non faucibus tortor. Integer molestie mattis erat, eget dictum nisl aliquet at. Mauris semper magna quis velit hendrerit ornare. Duis consectetur tristique consequat.</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:zenflow5/button -->
+	<a class="zenflow5-btn btn btn-primary" aria-hidden="true">Learn more</a>
+	<!-- /wp:zenflow5/button --></div>
+	<!-- /wp:zenflow5/col -->
+	
+	<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-6","colWidthLg":"-lg-6","colOffsetLg":1} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-6 col-lg-6 offset-lg-1"><!-- wp:zenflow5/row {"alignItems":"align-items-center","justifyContent":"justify-content-center"} -->
+	<div class="wp-block-zenflow5-row zenflow5-row row justify-content-center align-items-center"><!-- wp:zenflow5/col -->
+	<div class="wp-block-zenflow5-col zenflow5-col col"><!-- wp:zenflow5/card {"imgID":538,"focalPointX":0.58,"focalPointY":0.61,"urlImage":"/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg","displayCardImgTop":false,"minHeightCard":335,"border":"border-0"} -->
+	<div class="wp-block-zenflow5-card card shadow-none border-0" style="min-height:335px"><div class="card-body"><!-- wp:heading -->
+	<h2 class="wp-block-heading"></h2>
+	<!-- /wp:heading --></div><div class="card-background-img" style="background-repeat:no-repeat;background-image:url(/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg);background-position:57.99999999999999% 61%"></div><div class="card-background-img-tint" style="opacity:0.5"></div></div>
+	<!-- /wp:zenflow5/card --></div>
+	<!-- /wp:zenflow5/col -->
+	
+	<!-- wp:zenflow5/col -->
+	<div class="wp-block-zenflow5-col zenflow5-col col"><!-- wp:zenflow5/card {"imgID":97,"focalPointX":0.68,"focalPointY":0.7,"urlImage":"/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg","displayCardImgTop":false,"minHeightCard":190,"border":"border-0","marginB":4} -->
+	<div class="wp-block-zenflow5-card card mb-4 shadow-none border-0" style="min-height:190px"><div class="card-body"><!-- wp:heading -->
+	<h2 class="wp-block-heading"></h2>
+	<!-- /wp:heading --></div><div class="card-background-img" style="background-repeat:no-repeat;background-image:url(/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg);background-position:68% 70%"></div><div class="card-background-img-tint" style="opacity:0.5"></div></div>
+	<!-- /wp:zenflow5/card -->
+	
+	<!-- wp:zenflow5/card {"imgID":538,"focalPointX":0.22,"focalPointY":0.71,"urlImage":"/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg","displayCardImgTop":false,"minHeightCard":190,"border":"border-0"} -->
+	<div class="wp-block-zenflow5-card card shadow-none border-0" style="min-height:190px"><div class="card-body"><!-- wp:paragraph -->
+	<p></p>
+	<!-- /wp:paragraph --></div><div class="card-background-img" style="background-repeat:no-repeat;background-image:url(/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg);background-position:22% 71%"></div><div class="card-background-img-tint" style="opacity:0.5"></div></div>
+	<!-- /wp:zenflow5/card --></div>
+	<!-- /wp:zenflow5/col --></div>
+	<!-- /wp:zenflow5/row --></div>
+	<!-- /wp:zenflow5/col --></div>
+	<!-- /wp:zenflow5/row --></div>
+	<!-- /wp:zenflow5/col --></div>
+	<!-- /wp:zenflow5/row --></div>
+	<!-- /wp:zenflow5/container -->
+	
+	<!-- wp:zenflow5/responsive-spacer {"paddingB":8,"paddingMDB":11} -->
+	<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>
+	<!-- /wp:zenflow5/responsive-spacer --></section>
+	<!-- /wp:zenflow5/section -->
+		';
+	
+	
+		register_block_pattern(
+			'zen-b-p/zen-landing-text-and-img-four',
+			array(
+				'title'         => __( 'Text and image', 'zen-b-p' ),
+				'description'   => _x( 'Text and image', 'Used as page content', 'zen-b-p' ),
+				'content'       => $zenTextandImgFour,
+				'categories'    => array( 'text-and-images' ),
+				'keywords'      => array( 'content', 'text', 'image' ),
+				'viewportWidth' => 800,
+			)
+		);
+
 ?>
