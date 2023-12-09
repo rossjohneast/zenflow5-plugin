@@ -1,7 +1,7 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 import { Icon } from '@wordpress/components';
 import classnames from 'classnames';
-import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
+import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
 import BsIconsRegular from '../bs-icons/regular';
 
 export default function save( props ) {

@@ -496,6 +496,129 @@
 		"marginAuto": {
 			"type": "boolean"
 		},
+		"marginAutoT": {
+			"type": "boolean"
+		},
+		"marginAutoB": {
+			"type": "boolean"
+		},
+		"marginAutoL": {
+			"type": "boolean"
+		},
+		"marginAutoR": {
+			"type": "boolean"
+		},
+		"marginAutoX": {
+			"type": "boolean"
+		},
+		"marginAutoY": {
+			"type": "boolean"
+		},
+		"marginAutoSM": {
+			"type": "boolean"
+		},
+		"marginAutoSMT": {
+			"type": "boolean"
+		},
+		"marginAutoSMB": {
+			"type": "boolean"
+		},
+		"marginAutoSML": {
+			"type": "boolean"
+		},
+		"marginAutoSMR": {
+			"type": "boolean"
+		},
+		"marginAutoSMX": {
+			"type": "boolean"
+		},
+		"marginAutoSMY": {
+			"type": "boolean"
+		},
+		"marginAutoMD": {
+			"type": "boolean"
+		},
+		"marginAutoMDT": {
+			"type": "boolean"
+		},
+		"marginAutoMDB": {
+			"type": "boolean"
+		},
+		"marginAutoMDL": {
+			"type": "boolean"
+		},
+		"marginAutoMDR": {
+			"type": "boolean"
+		},
+		"marginAutoMDX": {
+			"type": "boolean"
+		},
+		"marginAutoMDY": {
+			"type": "boolean"
+		},
+		"marginAutoLG": {
+			"type": "boolean"
+		},
+		"marginAutoLGT": {
+			"type": "boolean"
+		},
+		"marginAutoLGB": {
+			"type": "boolean"
+		},
+		"marginAutoLGL": {
+			"type": "boolean"
+		},
+		"marginAutoLGR": {
+			"type": "boolean"
+		},
+		"marginAutoLGX": {
+			"type": "boolean"
+		},
+		"marginAutoLGY": {
+			"type": "boolean"
+		},
+		"marginAutoXL": {
+			"type": "boolean"
+		},
+		"marginAutoXLT": {
+			"type": "boolean"
+		},
+		"marginAutoXLB": {
+			"type": "boolean"
+		},
+		"marginAutoXLL": {
+			"type": "boolean"
+		},
+		"marginAutoXLR": {
+			"type": "boolean"
+		},
+		"marginAutoXLX": {
+			"type": "boolean"
+		},
+		"marginAutoXLY": {
+			"type": "boolean"
+		},
+		"marginAutoXXL": {
+			"type": "boolean"
+		},
+		"marginAutoXXLT": {
+			"type": "boolean"
+		},
+		"marginAutoXXLB": {
+			"type": "boolean"
+		},
+		"marginAutoXXLL": {
+			"type": "boolean"
+		},
+		"marginAutoXXLR": {
+			"type": "boolean"
+		},
+		"marginAutoXXLX": {
+			"type": "boolean"
+		},
+		"marginAutoXXLY": {
+			"type": "boolean"
+		},
 		"animation": {
 			"type": "string"
 		},

@@ -27,8 +27,8 @@ const NEW_TAB_REL = 'noreferrer noopener';
 
 import classnames from 'classnames';
 import className from 'classnames';
-import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
-import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
+import sharedMarginInspCnt from "../../grid-blocks/shared/margin/margin-insp-cnt.js";
+import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
 
 import sharedIconInspCnt from "../shared/icon/icon-insp-cnt.js";
 import BsIconsRegular from '../bs-icons/regular';

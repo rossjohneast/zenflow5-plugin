@@ -127,6 +127,132 @@ const sharedMarginAtts = () => {
         marginXXLY: {
             type: 'number'
         },
+		"marginAuto": {
+			"type": "boolean"
+		},
+		"marginAutoT": {
+			"type": "number"
+		},
+		"marginAutoB": {
+			"type": "number"
+		},
+		"marginAutoL": {
+			"type": "number"
+		},
+		"marginAutoR": {
+			"type": "number"
+		},
+		"marginAutoX": {
+			"type": "number"
+		},
+		"marginAutoY": {
+			"type": "number"
+		},
+		"marginAutoSM": {
+			"type": "number"
+		},
+		"marginAutoSMT": {
+			"type": "number"
+		},
+		"marginAutoSMB": {
+			"type": "number"
+		},
+		"marginAutoSML": {
+			"type": "number"
+		},
+		"marginAutoSMR": {
+			"type": "number"
+		},
+		"marginAutoSMX": {
+			"type": "number"
+		},
+		"marginAutoSMY": {
+			"type": "number"
+		},
+		"marginAutoMD": {
+			"type": "number"
+		},
+		"marginAutoMDT": {
+			"type": "number"
+		},
+		"marginAutoMDB": {
+			"type": "number"
+		},
+		"marginAutoMDL": {
+			"type": "number"
+		},
+		"marginAutoMDR": {
+			"type": "number"
+		},
+		"marginAutoMDX": {
+			"type": "number"
+		},
+		"marginAutoMDY": {
+			"type": "number"
+		},
+		"marginAutoLG": {
+			"type": "number"
+		},
+		"marginAutoLGT": {
+			"type": "number"
+		},
+		"marginAutoLGB": {
+			"type": "number"
+		},
+		"marginAutoLGL": {
+			"type": "number"
+		},
+		"marginAutoLGR": {
+			"type": "number"
+		},
+		"marginAutoLGX": {
+			"type": "number"
+		},
+		"marginAutoLGY": {
+			"type": "number"
+		},
+		"marginAutoXL": {
+			"type": "number"
+		},
+		"marginAutoXLT": {
+			"type": "number"
+		},
+		"marginAutoXLB": {
+			"type": "number"
+		},
+		"marginAutoXLL": {
+			"type": "number"
+		},
+		"marginAutoXLR": {
+			"type": "number"
+		},
+		"marginAutoXLX": {
+			"type": "number"
+		},
+		"marginAutoXLY": {
+			"type": "number"
+		},
+		"marginAutoXXL": {
+			"type": "number"
+		},
+		"marginAutoXXLT": {
+			"type": "number"
+		},
+		"marginAutoXXLB": {
+			"type": "number"
+		},
+		"marginAutoXXLL": {
+			"type": "number"
+		},
+		"marginAutoXXLR": {
+			"type": "number"
+		},
+		"marginAutoXXLX": {
+			"type": "number"
+		},
+		"marginAutoXXLY": {
+			"type": "number"
+		},
     }
 
     )
