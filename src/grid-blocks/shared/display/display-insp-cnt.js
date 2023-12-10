@@ -27,6 +27,7 @@ const sharedDisplayInspCnt = (props) => {
               label={__("Display", "zenflow5")}
               value={props.attributes.display}
               options={[
+                { value: "", label: "Default" },
                 { value: "d-block", label: "Block" },
                 { value: "d-none", label: "None" },
                 { value: "d-inline", label: "Inline" },

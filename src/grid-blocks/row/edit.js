@@ -32,6 +32,9 @@ import sharedColOffsetsClassnames from "../shared/col/coloffsets-classnames.js";
 import sharedAnimationsInspCnt from "../shared/animation/aos-insp-cnt.js";
 import sharedAnimationsPropsAtts from "../shared/animation/aos-insp-cnt.js";
 
+import sharedDisplayInspCnt from "../shared/display/display-insp-cnt.js";
+import sharedDisplayClassnames from "../shared/display/display-classnames";
+
 
 export default function Edit(props) {
 	const { attributes, setAttributes, textColor, backgroundColor } = props;
@@ -152,31 +155,11 @@ export default function Edit(props) {
 						onChange={(new_val) => {
 							props.setAttributes({ marginLGB: new_val })
 						}} />
-
-
 				</PanelBody>
-				<PanelBody title={__('Display settings', 'zenflow5')} initialOpen={false}>
-					<PanelRow className="w-100">
-						<SelectControl
-							label={__('Display', 'zenflow5')}
-							value={props.attributes.display}
-							options={[
-								{ value: 'd-flex', label: 'Flex' },
-								{ value: 'd-none', label: 'None' },
-								{ value: 'd-inline', label: 'Inline' },
-								{ value: 'd-inline-block', label: 'Inline-block' },
-								{ value: 'd-block', label: 'Block' },
-								{ value: 'd-grid', label: 'Grid' },
-								{ value: 'd-table', label: 'Table' },
-								{ value: 'd-table-cell', label: 'Table-cell' },
-								{ value: 'd-table-row', label: 'Table-row' },
-								{ value: 'd-inline-flex', label: 'Inline-flex' },
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ display: new_val })
-							}} />
-					</PanelRow>
 
+				<PanelBody title={__('Display settings', 'zenflow5')} initialOpen={false}>
+
+					{sharedDisplayInspCnt(props)}
 
 					<PanelRow className="w-100">
 						<SelectControl
@@ -417,6 +400,7 @@ export default function Edit(props) {
 						[`${props.attributes.columnGutterWidth !== undefined ? `gx-${props.attributes.columnGutterWidth}` : ''}`],
 						sharedPaddingClassnames(props),
 						sharedMarginClassnames(props),
+						sharedDisplayClassnames(props),
 						[`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
 						[`${props.attributes.justifyContent !== undefined ? `${props.attributes.justifyContent}` : ''}`],
 						[`${props.attributes.alignItems !== undefined ? `${props.attributes.alignItems}` : ''}`],

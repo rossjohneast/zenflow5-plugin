@@ -5,14 +5,9 @@ import {
   } from '@wordpress/block-editor';
 
 import classnames from "classnames";
-import sharedPaddingInspCnt from "../shared/padding/padding-insp-cnt.js";
 import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
-import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
 import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
-import sharedColWidthClassnames from "../shared/col/colwidth-classnames.js";
-import sharedColOffsetsClassnames from "../shared/col/coloffsets-classnames.js";
-import sharedAnimationsInspCnt from "../shared/animation/aos-insp-cnt.js";
-import sharedAnimationsPropsAtts from "../shared/animation/aos-insp-cnt.js";
+import sharedDisplayClassnames from "../shared/display/display-classnames";
 
 export default function save(props) {
 	const { attributes } = props;
@@ -48,10 +43,8 @@ export default function save(props) {
 				[`${props.attributes.columnGutterWidth !== undefined ? `gx-${props.attributes.columnGutterWidth}` : ''}`],
 				sharedPaddingClassnames(props),
 				sharedMarginClassnames(props),
+				sharedDisplayClassnames(props),
 				[`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
-				[`${props.attributes.justifyContent !== undefined ? `${props.attributes.justifyContent}` : ''}`],
-				[`${props.attributes.alignItems !== undefined ? `${props.attributes.alignItems}` : ''}`],
-				[`${props.attributes.display !== undefined ? `${props.attributes.display}` : ''}`]
 			)
 		});
   
