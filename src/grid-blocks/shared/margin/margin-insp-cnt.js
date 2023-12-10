@@ -43,7 +43,7 @@ const sharedPaddingInspCnt = (props) => {
                 {!props.attributes.marginAuto && (
                   <RangeControl
                     // label={__("Margin", "zenflow5")}
-                    min={0}
+                    min={-5}
                     max={20}
                     allowReset={true}
                     resetFallbackValue={undefined}
@@ -69,7 +69,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoT && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -95,7 +95,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoB && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -120,7 +120,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoB && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -145,7 +145,7 @@ const sharedPaddingInspCnt = (props) => {
                 {!props.attributes.marginAutoR && (
                   <RangeControl
                     // label={__("Margin", "zenflow5")}
-                    min={0}
+                    min={-5}
                     max={20}
                     allowReset={true}
                     resetFallbackValue={undefined}
@@ -170,7 +170,7 @@ const sharedPaddingInspCnt = (props) => {
                   {!props.attributes.marginAutoX && (
                     <RangeControl
                       // label={__("Margin", "zenflow5")}
-                      min={0}
+                      min={-5}
                       max={20}
                       allowReset={true}
                       resetFallbackValue={undefined}
@@ -195,7 +195,7 @@ const sharedPaddingInspCnt = (props) => {
                     {!props.attributes.marginAutoY && (
                       <RangeControl
                         // label={__("Margin", "zenflow5")}
-                        min={0}
+                        min={-5}
                         max={20}
                         allowReset={true}
                         resetFallbackValue={undefined}
@@ -233,7 +233,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSM && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -258,7 +258,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSMT && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -283,7 +283,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSMB && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -308,7 +308,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSML && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -333,7 +333,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSMR && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -358,7 +358,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSMX && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -383,7 +383,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoSMY && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -424,7 +424,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoMD && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -449,7 +449,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoMDT && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -474,7 +474,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoMDB && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -499,7 +499,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoMDL && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -524,7 +524,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoMDR && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -549,7 +549,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoX && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -574,7 +574,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoY && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -614,7 +614,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLG && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -639,7 +639,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLGT && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -664,7 +664,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLGB && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -689,7 +689,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLGL && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -714,7 +714,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLGR && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -739,7 +739,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLGX && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -764,7 +764,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoLGY && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -804,7 +804,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXL && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -829,7 +829,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXLT && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -854,7 +854,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXLB && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -879,7 +879,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXLL && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -904,7 +904,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXLR && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -929,7 +929,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXLX && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -954,7 +954,7 @@ const sharedPaddingInspCnt = (props) => {
               {!props.attributes.marginAutoXLY && (
                 <RangeControl
                   // label={__("Margin", "zenflow5")}
-                  min={0}
+                  min={-5}
                   max={20}
                   allowReset={true}
                   resetFallbackValue={undefined}
@@ -994,7 +994,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXL && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}
@@ -1019,7 +1019,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXLT && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}
@@ -1044,7 +1044,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXLB && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}
@@ -1069,7 +1069,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXLL && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}
@@ -1094,7 +1094,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXLR && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}
@@ -1119,7 +1119,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXLX && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}
@@ -1144,7 +1144,7 @@ const sharedPaddingInspCnt = (props) => {
 {!props.attributes.marginAutoXXLY && (
   <RangeControl
     // label={__("Margin", "zenflow5")}
-    min={0}
+    min={-5}
     max={20}
     allowReset={true}
     resetFallbackValue={undefined}

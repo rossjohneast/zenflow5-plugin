@@ -1,50 +1,108 @@
-const sharedPaddingClassnames = (props) => {
+const transformMargin = (marginValue, suffix = '') => {
+if (marginValue !== undefined && marginValue !== '') {
+    return marginValue >= 0 ? `${suffix}-${marginValue}` : `${suffix}-n${Math.abs(marginValue)}`;
+}
+return '';
+};
+  
+  const generateMarginClass = (attribute, suffix = '') => {
+    return transformMargin(attribute, suffix);
+  };
+
+const sharedMarginClassnames = (props) => {
     return (
        [
 
-        [`${props.attributes.margin !== undefined && props.attributes.margin !== '' ? `m-${props.attributes.margin}` : ''}`],
-        [`${props.attributes.marginT !== undefined && props.attributes.marginT !== '' ? `mt-${props.attributes.marginT}` : ''}`],
-       
-        [`${props.attributes.marginB !== undefined && props.attributes.marginB !== ''  ? `mb-${props.attributes.marginB}` : ''}`],
-        [`${props.attributes.marginL !== undefined && props.attributes.marginL !== ''  ? `ms-${props.attributes.marginL}` : ''}`],
-        [`${props.attributes.marginR !== undefined && props.attributes.marginR !== ''  ? `me-${props.attributes.marginR}` : ''}`],
-        [`${props.attributes.marginX !== undefined && props.attributes.marginX !== ''  ? `mx-${props.attributes.marginX}` : ''}`],
-        [`${props.attributes.marginY !== undefined && props.attributes.marginY !== '' ? `my-${props.attributes.marginY}` : ''}`],
-        [`${props.attributes.marginSM !== undefined && props.attributes.marginSM !== '' ? `m-sm-${props.attributes.marginSM}` : ''}`],
-        [`${props.attributes.marginSMT !== undefined && props.attributes.marginSMT !== ''  ? `mt-sm-${props.attributes.marginSMT}` : ''}`],
-        [`${props.attributes.marginSMB !== undefined && props.attributes.marginSMB !== ''  ? `mb-sm-${props.attributes.marginSMB}` : ''}`],
-        [`${props.attributes.marginSML !== undefined && props.attributes.marginSML !== ''  ? `ms-sm-${props.attributes.marginSML}` : ''}`],
-        [`${props.attributes.marginSMR !== undefined && props.attributes.marginSMR !== ''  ? `me-sm-${props.attributes.marginSMR}` : ''}`],
-        [`${props.attributes.marginSMX !== undefined && props.attributes.marginSMX !== ''  ? `mx-sm-${props.attributes.marginSMX}` : ''}`],
-        [`${props.attributes.marginSMY !== undefined && props.attributes.marginSMY !== ''  ? `my-sm-${props.attributes.marginSMY}` : ''}`],
-        [`${props.attributes.marginMD !== undefined && props.attributes.marginMD !== ''  ? `m-md-${props.attributes.marginMD}` : ''}`],
-        [`${props.attributes.marginMDT !== undefined && props.attributes.marginMDT !== ''  ? `mt-md-${props.attributes.marginMDT}` : ''}`],
-        [`${props.attributes.marginMDB !== undefined && props.attributes.marginMDB !== ''  ? `mb-md-${props.attributes.marginMDB}` : ''}`],
-        [`${props.attributes.marginMDL !== undefined && props.attributes.marginMDL !== ''  ? `ms-md-${props.attributes.marginMDL}` : ''}`],
-        [`${props.attributes.marginMDR !== undefined && props.attributes.marginMDR !== ''  ? `me-md-${props.attributes.marginMDR}` : ''}`],
-        [`${props.attributes.marginMDX !== undefined && props.attributes.marginMDX !== ''  ? `mx-md-${props.attributes.marginMDX}` : ''}`],
-        [`${props.attributes.marginMDY !== undefined && props.attributes.marginMDY !== ''  ? `my-md-${props.attributes.marginMDY}` : ''}`],
-        [`${props.attributes.marginLG !== undefined && props.attributes.marginLG !== ''  ? `m-lg-${props.attributes.marginLG}` : ''}`],
-        [`${props.attributes.marginLGT !== undefined && props.attributes.marginLGT !== ''  ? `mt-lg-${props.attributes.marginLGT}` : ''}`],
-        [`${props.attributes.marginLGB !== undefined && props.attributes.marginLGB !== ''  ? `mb-lg-${props.attributes.marginLGB}` : ''}`],
-        [`${props.attributes.marginLGL !== undefined && props.attributes.marginLGL !== ''  ? `ms-lg-${props.attributes.marginLGL}` : ''}`],
-        [`${props.attributes.marginLGR !== undefined && props.attributes.marginLGR !== ''  ? `me-lg-${props.attributes.marginLGR}` : ''}`],
-        [`${props.attributes.marginLGX !== undefined && props.attributes.marginLGX !== ''  ? `mx-lg-${props.attributes.marginLGX}` : ''}`],
-        [`${props.attributes.marginLGY !== undefined && props.attributes.marginLGY !== ''  ? `my-lg-${props.attributes.marginLGY}` : ''}`],
-        [`${props.attributes.marginXL !== undefined && props.attributes.marginXL !== ''  ? `m-xl-${props.attributes.marginXL}` : ''}`],
-        [`${props.attributes.marginXLT !== undefined && props.attributes.marginXLT !== ''  ? `mt-xl-${props.attributes.marginXLT}` : ''}`],
-        [`${props.attributes.marginXLB !== undefined && props.attributes.marginXLB !== ''  ? `mb-xl-${props.attributes.marginXLB}` : ''}`],
-        [`${props.attributes.marginXLL !== undefined && props.attributes.marginXLL !== ''  ? `ms-xl-${props.attributes.marginXLL}` : ''}`],
-        [`${props.attributes.marginXLR !== undefined && props.attributes.marginXLR !== ''  ? `me-xl-${props.attributes.marginXLR}` : ''}`],
-        [`${props.attributes.marginXLX !== undefined && props.attributes.marginXLX !== ''  ? `mx-xl-${props.attributes.marginXLX}` : ''}`],
-        [`${props.attributes.marginXLY !== undefined && props.attributes.marginXLY !== ''  ? `my-xl-${props.attributes.marginXLY}` : ''}`],
-        [`${props.attributes.marginXXL !== undefined && props.attributes.marginXXL !== ''  ? `m-xxl-${props.attributes.marginXXL}` : ''}`],
-        [`${props.attributes.marginXXLT !== undefined && props.attributes.marginXXLT !== ''  ? `mt-xxl-${props.attributes.marginXXLT}` : ''}`],
-        [`${props.attributes.marginXXLB !== undefined && props.attributes.marginXXLB !== ''  ? `mb-xxl-${props.attributes.marginXXLB}` : ''}`],
-        [`${props.attributes.marginXXLL !== undefined && props.attributes.marginXXLL !== ''  ? `ms-xxl-${props.attributes.marginXXLL}` : ''}`],
-        [`${props.attributes.marginXXLR !== undefined && props.attributes.marginXXLR !== ''  ? `me-xxl-${props.attributes.marginXXLR}` : ''}`],
-        [`${props.attributes.marginXXLX !== undefined && props.attributes.marginXXLX !== ''  ? `mx-xxl-${props.attributes.marginXXLX}` : ''}`],
-        [`${props.attributes.marginXXLY !== undefined && props.attributes.marginXXLY !== ''  ? `my-xxl-${props.attributes.marginXXLY}` : ''}`],
+        [generateMarginClass(props.attributes.margin, 'm')],
+        [generateMarginClass(props.attributes.marginT, 'mt')],
+        [generateMarginClass(props.attributes.marginB, 'mb')],
+        [generateMarginClass(props.attributes.marginL, 'ms')],
+        [generateMarginClass(props.attributes.marginR, 'me')],
+        [generateMarginClass(props.attributes.marginX, 'mx')],
+        [generateMarginClass(props.attributes.marginY, 'my')],
+   
+        [generateMarginClass(props.attributes.marginSM, 'm-sm')],
+        [generateMarginClass(props.attributes.marginSMT, 'mt-sm')],
+        [generateMarginClass(props.attributes.marginSMB, 'mb-sm')],
+        [generateMarginClass(props.attributes.marginSML, 'ms-sm')],
+        [generateMarginClass(props.attributes.marginSMR, 'me-sm')],
+        [generateMarginClass(props.attributes.marginSMX, 'mx-sm')],
+        [generateMarginClass(props.attributes.marginSMY, 'my-sm')],
+
+        [generateMarginClass(props.attributes.marginMD, 'm-md')],
+        [generateMarginClass(props.attributes.marginMDT, 'mt-md')],
+        [generateMarginClass(props.attributes.marginMDB, 'mb-md')],
+        [generateMarginClass(props.attributes.marginMDL, 'ms-md')],
+        [generateMarginClass(props.attributes.marginMDR, 'me-md')],
+        [generateMarginClass(props.attributes.marginMDX, 'mx-md')],
+        [generateMarginClass(props.attributes.marginMDY, 'my-md')],
+
+        [generateMarginClass(props.attributes.marginLG, 'm-lg')],
+        [generateMarginClass(props.attributes.marginLGT, 'mt-lg')],
+        [generateMarginClass(props.attributes.marginLGB, 'mb-lg')],
+        [generateMarginClass(props.attributes.marginLGL, 'ms-lg')],
+        [generateMarginClass(props.attributes.marginLGR, 'me-lg')],
+        [generateMarginClass(props.attributes.marginLGX, 'mx-lg')],
+        [generateMarginClass(props.attributes.marginLGY, 'my-lg')],
+
+        [generateMarginClass(props.attributes.marginXL, 'm-xl')],
+        [generateMarginClass(props.attributes.marginXLT, 'mt-xl')],
+        [generateMarginClass(props.attributes.marginXLB, 'mb-xl')],
+        [generateMarginClass(props.attributes.marginXLL, 'ms-xl')],
+        [generateMarginClass(props.attributes.marginXLR, 'me-xl')],
+        [generateMarginClass(props.attributes.marginXLX, 'mx-xl')],
+        [generateMarginClass(props.attributes.marginXLY, 'my-xl')],
+
+        [generateMarginClass(props.attributes.marginXL, 'm-xxl')],
+        [generateMarginClass(props.attributes.marginXLT, 'mt-xxl')],
+        [generateMarginClass(props.attributes.marginXLB, 'mb-xxl')],
+        [generateMarginClass(props.attributes.marginXLL, 'ms-xxl')],
+        [generateMarginClass(props.attributes.marginXLR, 'me-xxl')],
+        [generateMarginClass(props.attributes.marginXLX, 'mx-xxl')],
+        [generateMarginClass(props.attributes.marginXLY, 'my-xxl')],
+
+        // [`${props.attributes.margin !== undefined && props.attributes.margin !== '' ? `m-${props.attributes.margin}` : ''}`],
+        // [`${props.attributes.marginT !== undefined && props.attributes.marginT !== '' ? `mt-${props.attributes.marginT}` : ''}`],
+        // [`${props.attributes.marginB !== undefined && props.attributes.marginB !== ''  ? `mb-${props.attributes.marginB}` : ''}`],
+        // [`${props.attributes.marginL !== undefined && props.attributes.marginL !== ''  ? `ms-${props.attributes.marginL}` : ''}`],
+        // [`${props.attributes.marginR !== undefined && props.attributes.marginR !== ''  ? `me-${props.attributes.marginR}` : ''}`],
+        // [`${props.attributes.marginX !== undefined && props.attributes.marginX !== ''  ? `mx-${props.attributes.marginX}` : ''}`],
+        // [`${props.attributes.marginY !== undefined && props.attributes.marginY !== '' ? `my-${props.attributes.marginY}` : ''}`],
+        // [`${props.attributes.marginSM !== undefined && props.attributes.marginSM !== '' ? `m-sm-${props.attributes.marginSM}` : ''}`],
+        // [`${props.attributes.marginSMT !== undefined && props.attributes.marginSMT !== ''  ? `mt-sm-${props.attributes.marginSMT}` : ''}`],
+        // [`${props.attributes.marginSMB !== undefined && props.attributes.marginSMB !== ''  ? `mb-sm-${props.attributes.marginSMB}` : ''}`],
+        // [`${props.attributes.marginSML !== undefined && props.attributes.marginSML !== ''  ? `ms-sm-${props.attributes.marginSML}` : ''}`],
+        // [`${props.attributes.marginSMR !== undefined && props.attributes.marginSMR !== ''  ? `me-sm-${props.attributes.marginSMR}` : ''}`],
+        // [`${props.attributes.marginSMX !== undefined && props.attributes.marginSMX !== ''  ? `mx-sm-${props.attributes.marginSMX}` : ''}`],
+        // [`${props.attributes.marginSMY !== undefined && props.attributes.marginSMY !== ''  ? `my-sm-${props.attributes.marginSMY}` : ''}`],
+        // [`${props.attributes.marginMD !== undefined && props.attributes.marginMD !== ''  ? `m-md-${props.attributes.marginMD}` : ''}`],
+        // [`${props.attributes.marginMDT !== undefined && props.attributes.marginMDT !== ''  ? `mt-md-${props.attributes.marginMDT}` : ''}`],
+        // [`${props.attributes.marginMDB !== undefined && props.attributes.marginMDB !== ''  ? `mb-md-${props.attributes.marginMDB}` : ''}`],
+        // [`${props.attributes.marginMDL !== undefined && props.attributes.marginMDL !== ''  ? `ms-md-${props.attributes.marginMDL}` : ''}`],
+        // [`${props.attributes.marginMDR !== undefined && props.attributes.marginMDR !== ''  ? `me-md-${props.attributes.marginMDR}` : ''}`],
+        // [`${props.attributes.marginMDX !== undefined && props.attributes.marginMDX !== ''  ? `mx-md-${props.attributes.marginMDX}` : ''}`],
+        // [`${props.attributes.marginMDY !== undefined && props.attributes.marginMDY !== ''  ? `my-md-${props.attributes.marginMDY}` : ''}`],
+        // [`${props.attributes.marginLG !== undefined && props.attributes.marginLG !== ''  ? `m-lg-${props.attributes.marginLG}` : ''}`],
+        // [`${props.attributes.marginLGT !== undefined && props.attributes.marginLGT !== ''  ? `mt-lg-${props.attributes.marginLGT}` : ''}`],
+        // [`${props.attributes.marginLGB !== undefined && props.attributes.marginLGB !== ''  ? `mb-lg-${props.attributes.marginLGB}` : ''}`],
+        // [`${props.attributes.marginLGL !== undefined && props.attributes.marginLGL !== ''  ? `ms-lg-${props.attributes.marginLGL}` : ''}`],
+        // [`${props.attributes.marginLGR !== undefined && props.attributes.marginLGR !== ''  ? `me-lg-${props.attributes.marginLGR}` : ''}`],
+        // [`${props.attributes.marginLGX !== undefined && props.attributes.marginLGX !== ''  ? `mx-lg-${props.attributes.marginLGX}` : ''}`],
+        // [`${props.attributes.marginLGY !== undefined && props.attributes.marginLGY !== ''  ? `my-lg-${props.attributes.marginLGY}` : ''}`],
+        // [`${props.attributes.marginXL !== undefined && props.attributes.marginXL !== ''  ? `m-xl-${props.attributes.marginXL}` : ''}`],
+        // [`${props.attributes.marginXLT !== undefined && props.attributes.marginXLT !== ''  ? `mt-xl-${props.attributes.marginXLT}` : ''}`],
+        // [`${props.attributes.marginXLB !== undefined && props.attributes.marginXLB !== ''  ? `mb-xl-${props.attributes.marginXLB}` : ''}`],
+        // [`${props.attributes.marginXLL !== undefined && props.attributes.marginXLL !== ''  ? `ms-xl-${props.attributes.marginXLL}` : ''}`],
+        // [`${props.attributes.marginXLR !== undefined && props.attributes.marginXLR !== ''  ? `me-xl-${props.attributes.marginXLR}` : ''}`],
+        // [`${props.attributes.marginXLX !== undefined && props.attributes.marginXLX !== ''  ? `mx-xl-${props.attributes.marginXLX}` : ''}`],
+        // [`${props.attributes.marginXLY !== undefined && props.attributes.marginXLY !== ''  ? `my-xl-${props.attributes.marginXLY}` : ''}`],
+        // [`${props.attributes.marginXXL !== undefined && props.attributes.marginXXL !== ''  ? `m-xxl-${props.attributes.marginXXL}` : ''}`],
+        // [`${props.attributes.marginXXLT !== undefined && props.attributes.marginXXLT !== ''  ? `mt-xxl-${props.attributes.marginXXLT}` : ''}`],
+        // [`${props.attributes.marginXXLB !== undefined && props.attributes.marginXXLB !== ''  ? `mb-xxl-${props.attributes.marginXXLB}` : ''}`],
+        // [`${props.attributes.marginXXLL !== undefined && props.attributes.marginXXLL !== ''  ? `ms-xxl-${props.attributes.marginXXLL}` : ''}`],
+        // [`${props.attributes.marginXXLR !== undefined && props.attributes.marginXXLR !== ''  ? `me-xxl-${props.attributes.marginXXLR}` : ''}`],
+        // [`${props.attributes.marginXXLX !== undefined && props.attributes.marginXXLX !== ''  ? `mx-xxl-${props.attributes.marginXXLX}` : ''}`],
+        // [`${props.attributes.marginXXLY !== undefined && props.attributes.marginXXLY !== ''  ? `my-xxl-${props.attributes.marginXXLY}` : ''}`],
 
         [`${props.attributes.marginAuto === true ? `m-auto` : ''}`],
         [`${props.attributes.marginAutoT === true ? `mt-auto` : ''}`],
@@ -93,4 +151,4 @@ const sharedPaddingClassnames = (props) => {
 
 }
 
-export default sharedPaddingClassnames;
+export default sharedMarginClassnames;
