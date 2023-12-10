@@ -7,7 +7,7 @@ $zenLandingHeroBannerOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"orderMd":2,"colWidth":"-12","colWidthMd":"-md-5","colWidthLg":"-lg-6","animation":"fade-up","animationDelay":250} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-5 col-lg-6 order-md-2" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400" data-aos-delay="250"><!-- wp:image {"id":2599,"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img src="/wp-content/plugins/zenflow5-plugin/assets/img/free-pik/illustration-01.png" alt="" class="wp-image-2599"/></figure>

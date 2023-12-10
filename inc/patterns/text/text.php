@@ -7,7 +7,7 @@ $zenLandingTextCenterOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"justifyContent":"justify-content-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"justifyContent":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row justify-content-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-9","colWidthLg":"-lg-7","textAlign":"center"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-9 col-lg-7 text-center"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Exceptional Service Excellence</strong></h2>
@@ -46,7 +46,7 @@ $zenLandingTextColsOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"marginLGB":5,"justifyContent":"justify-content-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"marginLGB":5,"justifyContent":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row mb-lg-5 justify-content-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-10","colWidthLg":"-lg-7","textAlign":"center"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-10 col-lg-7 text-center"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Exceptional Service Excellence</strong></h2>

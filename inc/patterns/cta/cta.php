@@ -7,7 +7,7 @@ $zenLandingCtaOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"justifyContent":"justify-content-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"justifyContent":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row justify-content-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-10","colWidthLg":"-lg-8","textAlign":"center"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-10 col-lg-8 text-center"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong><strong>Ready to Elevate Your Experience? </strong></strong></h2>
@@ -54,7 +54,7 @@ $zenCtaTwo = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"display":"d-block","justifyContent":"justify-content-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"display":"d-block","justifyContent":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row justify-content-center d-block"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"","colWidthLg":"-lg-7","textAlign":"","paddingLGR":18} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-lg-7 pe-lg-18"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"is-style-h1"} -->
 <h2 class="wp-block-heading is-style-h1 has-base-color has-text-color has-link-color"><strong><strong>Get in touch for a free consultation</strong></strong></h2>

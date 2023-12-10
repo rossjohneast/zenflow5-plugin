@@ -7,7 +7,7 @@ $zenLandingTextandImgOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-7","colWidthLg":"-lg-6"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-7 col-lg-6"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Our unwavering commitment is to deliver unparalleled service excellence.</strong></h2>
@@ -92,7 +92,7 @@ $zenLandingTextandImgTwo = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthLg":"-lg-6","paddingMDR":8} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-lg-6 pe-md-8"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Ready to Elevate Your Experience? Let us Get Started Today!</strong></h2>
@@ -140,7 +140,7 @@ $zenLandingTextandImgTwo = '
 	<!-- /wp:zenflow5/responsive-spacer -->
 	
 	<!-- wp:zenflow5/container -->
-	<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+	<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 	<div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-5","colWidthLg":"-lg-4"} -->
 	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-5 col-lg-4"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} -->
 	<h2 class="wp-block-heading has-base-color has-text-color has-link-color"><strong>Delivering unparalleled service excellence</strong></h2>
@@ -236,7 +236,7 @@ $zenLandingTextandImgTwo = '
 	<!-- wp:zenflow5/container -->
 	<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row -->
 	<div class="wp-block-zenflow5-row zenflow5-row row"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthXl":"-xl-10","colOffsetXl":1} -->
-	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-xl-10 offset-xl-1"><!-- wp:zenflow5/row {"display":"d-flex","alignItems":"align-items-center","justifyContent":"justify-content-center"} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-xl-10 offset-xl-1"><!-- wp:zenflow5/row {"display":"d-flex","alignItems":"center","justifyContent":"center"} -->
 	<div class="wp-block-zenflow5-row zenflow5-row row justify-content-center align-items-center d-flex"><!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-5","marginB":4,"marginMDB":0} -->
 	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-5 mb-4 mb-md-0"><!-- wp:paragraph {"className":"is-style-lead"} -->
 	<p class="is-style-lead">USEFUL SNIPPET HERE</p>
@@ -260,7 +260,7 @@ $zenLandingTextandImgTwo = '
 	<!-- /wp:zenflow5/col -->
 	
 	<!-- wp:zenflow5/col {"colWidth":"-12","colWidthMd":"-md-6","colWidthLg":"-lg-6","colOffsetLg":1} -->
-	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-6 col-lg-6 offset-lg-1"><!-- wp:zenflow5/row {"alignItems":"align-items-center","justifyContent":"justify-content-center"} -->
+	<div class="wp-block-zenflow5-col zenflow5-col col-12 col-md-6 col-lg-6 offset-lg-1"><!-- wp:zenflow5/row {"alignItems":"center","justifyContent":"center"} -->
 	<div class="wp-block-zenflow5-row zenflow5-row row justify-content-center align-items-center"><!-- wp:zenflow5/col -->
 	<div class="wp-block-zenflow5-col zenflow5-col col"><!-- wp:zenflow5/card {"imgID":538,"focalPointX":0.58,"focalPointY":0.61,"urlImage":"/wp-content/plugins/zenflow5-plugin/assets/img/pexels/pexels-440731.jpg","displayCardImgTop":false,"minHeightCard":335,"border":"border-0"} -->
 	<div class="wp-block-zenflow5-card card shadow-none border-0" style="min-height:335px"><div class="card-body"><!-- wp:heading -->

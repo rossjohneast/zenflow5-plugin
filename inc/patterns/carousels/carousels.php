@@ -9,7 +9,7 @@ $zenCarouselBannerOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"orderMd":1,"colWidth":"-12","colWidthLg":"-lg-6","colWidthXl":"","textAlign":"center","textAlignMD":"start","animation":"fade-up"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-lg-6 text-center text-md-start order-md-1" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:zenflow5/div {"textAlign":"","textAlignMD":"","marginB":2,"className":"text- text-md-"} -->
 <div class="wp-block-zenflow5-div zenflow5-div mb-2 text- text-md-"><!-- wp:heading {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"is-style-display-4"} -->
@@ -49,7 +49,7 @@ $zenCarouselBannerOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"orderMd":1,"colWidth":"-12","colWidthLg":"-lg-6","colWidthXl":"","textAlign":"center","textAlignMD":"start","animation":"fade-up"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-lg-6 text-center text-md-start order-md-1" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:zenflow5/div {"textAlign":"","textAlignMD":"","marginB":2,"className":"text- text-md-"} -->
 <div class="wp-block-zenflow5-div zenflow5-div mb-2 text- text-md-"><!-- wp:heading {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"is-style-display-4"} -->
@@ -89,7 +89,7 @@ $zenCarouselBannerOne = '
 <!-- /wp:zenflow5/responsive-spacer -->
 
 <!-- wp:zenflow5/container -->
-<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"align-items-center"} -->
+<div class="wp-block-zenflow5-container zenflow5-container container"><!-- wp:zenflow5/row {"alignItems":"center"} -->
 <div class="wp-block-zenflow5-row zenflow5-row row align-items-center"><!-- wp:zenflow5/col {"orderMd":1,"colWidth":"-12","colWidthLg":"-lg-6","colWidthXl":"","textAlign":"center","textAlignMD":"start","animation":"fade-up"} -->
 <div class="wp-block-zenflow5-col zenflow5-col col-12 col-lg-6 text-center text-md-start order-md-1" data-aos="fade-up" data-aos-offset="120" data-aos-duration="400"><!-- wp:zenflow5/div {"textAlign":"","textAlignMD":"","marginB":2,"className":"text- text-md-"} -->
 <div class="wp-block-zenflow5-div zenflow5-div mb-2 text- text-md-"><!-- wp:heading {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"is-style-display-4"} -->
