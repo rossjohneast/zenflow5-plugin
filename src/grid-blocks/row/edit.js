@@ -35,6 +35,9 @@ import sharedAnimationsPropsAtts from "../shared/animation/aos-insp-cnt.js";
 import sharedDisplayInspCnt from "../shared/display/display-insp-cnt.js";
 import sharedDisplayClassnames from "../shared/display/display-classnames";
 
+import sharedTextAlignInspCnt from "../shared/textalign/textalign-insp-cnt";
+import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
+
 
 export default function Edit(props) {
 	const { attributes, setAttributes, textColor, backgroundColor } = props;
@@ -386,6 +389,8 @@ export default function Edit(props) {
 
 				{sharedMarginInspCnt(props)}
 
+				{sharedTextAlignInspCnt(props)}
+
 				{sharedAnimationsInspCnt(props)}
 
 			</InspectorControls>
@@ -400,6 +405,7 @@ export default function Edit(props) {
 						[`${props.attributes.columnGutterWidth !== undefined ? `gx-${props.attributes.columnGutterWidth}` : ''}`],
 						sharedPaddingClassnames(props),
 						sharedMarginClassnames(props),
+						sharedtextAlignClassnames(props),
 						sharedDisplayClassnames(props),
 						[`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
 						[`${props.attributes.justifyContent !== undefined ? `${props.attributes.justifyContent}` : ''}`],

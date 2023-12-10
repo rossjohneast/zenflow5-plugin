@@ -8,6 +8,7 @@ import classnames from "classnames";
 import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
 import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 import sharedDisplayClassnames from "../shared/display/display-classnames";
+import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
 
 export default function save(props) {
 	const { attributes } = props;
@@ -44,6 +45,7 @@ export default function save(props) {
 				sharedPaddingClassnames(props),
 				sharedMarginClassnames(props),
 				sharedDisplayClassnames(props),
+				sharedtextAlignClassnames(props),
 				[`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
 			)
 		});

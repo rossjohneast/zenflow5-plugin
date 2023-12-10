@@ -389,8 +389,23 @@
 			"type": "string"
 		},
 		"textAlign": {
-			"type": "string"
-		}
+            "type": "string"
+        },
+        "textAlignSM": {
+            "type": "string"
+        },
+        "textAlignMD": {
+            "type": "string"
+        },
+        "textAlignLG": {
+            "type": "string"
+        },
+        "textAlignXL": {
+            "type": "string"
+        },
+        "textAlignXXL": {
+            "type": "string"
+        }
 	},
 	"category": "zenflow5",
 	"icon": "welcome-widgets-menus",
