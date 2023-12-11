@@ -40,6 +40,9 @@ import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames"
 import sharedDisplayInspCnt from "../shared/display/display-insp-cnt.js";
 import sharedDisplayClassnames from "../shared/display/display-classnames";
 
+import sharedOrderInspCnt from "../shared/order/order-insp-cnt.js";
+import sharedOrderClassnames from "../shared/order/order-classnames";
+
 export default function Edit(props) {
 
 	const { attributes, setAttributes, textColor, backgroundColor } = props;
@@ -362,6 +365,8 @@ export default function Edit(props) {
 				{sharedPaddingInspCnt(props)}
 
 				{sharedMarginInspCnt(props)}
+				
+				{sharedOrderInspCnt(props)}
 
 				{sharedAnimationsInspCnt(props)}
 
@@ -379,6 +384,7 @@ export default function Edit(props) {
 					sharedPaddingClassnames(props),
 					sharedtextAlignClassnames(props),
 					sharedDisplayClassnames(props),
+					sharedOrderClassnames(props),
 					[`${props.attributes.textColorTheme !== undefined ? `${props.attributes.textColorTheme}` : ''}`],
 					[`${props.attributes.backgroundColorTheme !== undefined ? `${props.attributes.backgroundColorTheme}` : ''}`],
 					[`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],

@@ -16,6 +16,8 @@ import sharedAnimationsPropsAtts from "../shared/animation/aos-insp-cnt.js";
 import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
 import sharedDisplayClassnames from "../shared/display/display-classnames";
 
+import sharedOrderClassnames from "../shared/order/order-classnames";
+
 export default function save(props) {
   
   const { attributes } = props;
@@ -61,12 +63,7 @@ export default function save(props) {
       sharedColOffsetsClassnames(props),
       sharedtextAlignClassnames(props),
       sharedDisplayClassnames(props),
-      [`${props.attributes.order !== undefined ? `order-${props.attributes.order}` : ''}`],
-      [`${props.attributes.orderSm !== undefined ? `order-sm-${props.attributes.orderSm}` : ''}`],
-      [`${props.attributes.orderMd !== undefined ? `order-md-${props.attributes.orderMd}` : ''}`],
-      [`${props.attributes.orderLg !== undefined ? `order-lg-${props.attributes.orderLg}` : ''}`],
-      [`${props.attributes.orderXl !== undefined ? `order-xl-${props.attributes.orderXl}` : ''}`],
-      [`${props.attributes.orderXxl !== undefined ? `order-xxl-${props.attributes.orderXxl}` : ''}`],
+      sharedOrderClassnames(props),
       sharedMarginClassnames(props),
       sharedPaddingClassnames(props),
       [

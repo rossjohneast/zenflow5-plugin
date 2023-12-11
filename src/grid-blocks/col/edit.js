@@ -42,6 +42,9 @@ import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames"
 import sharedDisplayInspCnt from "../shared/display/display-insp-cnt.js";
 import sharedDisplayClassnames from "../shared/display/display-classnames";
 
+import sharedOrderInspCnt from "../shared/order/order-insp-cnt.js";
+import sharedOrderClassnames from "../shared/order/order-classnames";
+
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
@@ -1127,12 +1130,7 @@ export default function Edit(props) {
           className={classnames(
             sharedColWidthClassnames(props),
             sharedColOffsetsClassnames(props),
-            [`${props.attributes.order !== undefined ? `order-${props.attributes.order}` : ''}`],
-            [`${props.attributes.orderSm !== undefined ? `order-sm-${props.attributes.orderSm}` : ''}`],
-            [`${props.attributes.orderMd !== undefined ? `order-md-${props.attributes.orderMd}` : ''}`],
-            [`${props.attributes.orderLg !== undefined ? `order-lg-${props.attributes.orderLg}` : ''}`],
-            [`${props.attributes.orderXl !== undefined ? `order-xl-${props.attributes.orderXl}` : ''}`],
-            [`${props.attributes.orderXxl !== undefined ? `order-xxl-${props.attributes.orderXxl}` : ''}`],
+            sharedOrderClassnames(props),
             sharedMarginClassnames(props),
             sharedPaddingClassnames(props),
             sharedtextAlignClassnames(props),

@@ -12,6 +12,8 @@ import sharedColOffsetsClassnames from '../shared/col/coloffsets-classnames.js';
 import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
 import sharedDisplayClassnames from "../shared/display/display-classnames";
 
+import sharedOrderClassnames from "../shared/order/order-classnames";
+
 export default function save(props) {
 
     const { attributes } = props;
@@ -58,6 +60,7 @@ export default function save(props) {
                 sharedPaddingClassnames(props),
                 sharedtextAlignClassnames(props),
                 sharedDisplayClassnames(props),
+                sharedOrderClassnames(props),
                 [`${props.attributes.textColorTheme !== undefined ? `${props.attributes.textColorTheme}` : ''}`],
                 [`${props.attributes.backgroundColorTheme !== undefined ? `${props.attributes.backgroundColorTheme}` : ''}`],
                 [`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
