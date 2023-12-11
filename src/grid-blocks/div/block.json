@@ -28,6 +28,18 @@
 		"display": {
 			"type": "string"
 		},
+		"displaySm": {
+			"type": "string"
+		},
+		"displayLg": {
+			"type": "string"
+		},
+		"displayXl": {
+			"type": "string"
+		},
+		"displayXxl": {
+			"type": "string"
+		},
 		"minHeightDiv": {
 			"type": "number"
 		},
@@ -64,7 +76,37 @@
 		"alignItems": {
 			"type": "string"
 		},
-		"justifyContent": {
+        "alignItemsSM": {
+			"type": "string"
+		},
+        "alignItemsMD": {
+			"type": "string"
+		},
+        "alignItemsLG": {
+			"type": "string"
+		},
+        "alignItemsXL": {
+			"type": "string"
+		},
+        "alignItemsXXL": {
+			"type": "string"
+		},
+        "justifyContent": {
+			"type": "string"
+		},
+        "justifyContentSM": {
+			"type": "string"
+		},
+        "justifyContentMD": {
+			"type": "string"
+		},
+        "justifyContentLG": {
+			"type": "string"
+		},
+        "justifyContentXL": {
+			"type": "string"
+		},
+        "justifyContentXXL": {
 			"type": "string"
 		},
 		"textAlign": {

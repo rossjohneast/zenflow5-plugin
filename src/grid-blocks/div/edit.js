@@ -37,6 +37,8 @@ import sharedAnimationsInspCnt from '../shared/animation/aos-insp-cnt.js';
 import sharedTextAlignInspCnt from "../shared/textalign/textalign-insp-cnt";
 import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
 
+import sharedDisplayInspCnt from "../shared/display/display-insp-cnt.js";
+import sharedDisplayClassnames from "../shared/display/display-classnames";
 
 export default function Edit(props) {
 
@@ -173,76 +175,11 @@ export default function Edit(props) {
 
 
 				</PanelBody>
-				<PanelBody title={__('Display Settings', 'zenflow5')} initialOpen={true}>
-
-					<PanelRow className="w-100">
-						<SelectControl
-							label={__('Display', 'zenflow5')}
-							value={props.attributes.display}
-							options={[
-								{ value: 'd-block', label: 'Block' },
-								{ value: 'd-none', label: 'None' },
-								{ value: 'd-inline', label: 'Inline' },
-								{ value: 'd-inline-block', label: 'Inline-block' },
-								{ value: 'd-grid', label: 'Grid' },
-								{ value: 'd-table', label: 'Table' },
-								{ value: 'd-table-cell', label: 'Table-cell' },
-								{ value: 'd-table-row', label: 'Table-row' },
-								{ value: 'd-flex', label: 'Flex' },
-								{ value: 'd-inline-flex', label: 'Inline-flex' },
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ display: new_val })
-							}} />
-					</PanelRow>
 
 
-					{/* <PanelRow className="w-100">
-						<SelectControl
-							label={__('Align Text', 'zenflow5')}
-							value={props.attributes.textAlign}
-							options={[
-								{ value: 'text-left', label: 'Left' },
-								{ value: 'text-center', label: 'Center' },
-								{ value: 'text-right', label: 'Right' },
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ textAlign: new_val })
-							}} />
-					</PanelRow> */}
+				<PanelBody title={__('Display settings', 'zenflow5')} initialOpen={false}>
 
-					<PanelRow className="w-100">
-						<SelectControl
-							label={__('Align Content', 'zenflow5')}
-							value={props.attributes.alignItems}
-							options={[
-								{ value: 'align-items-start', label: 'Start' },
-								{ value: 'align-items-end', label: 'End' },
-								{ value: 'align-items-center', label: 'Center' },
-								{ value: 'align-items-baseline', label: 'Baseline' },
-								{ value: 'align-items-stretch', label: 'Stretch' }
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ alignItems: new_val })
-							}} />
-					</PanelRow>
-
-					<PanelRow className="w-100">
-						<SelectControl
-							label={__('Justify Content', 'zenflow5')}
-							value={props.attributes.justifyContent}
-							options={[
-								{ value: 'justify-content-start', label: 'Start' },
-								{ value: 'justify-content-end', label: 'End' },
-								{ value: 'justify-content-center', label: 'Center' },
-								{ value: 'justify-content-between', label: 'Space-between' },
-								{ value: 'justify-content-around', label: 'Space-around' },
-								{ value: 'justify-content-evenly', label: 'Space-evenly' }
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ justifyContent: new_val })
-							}} />
-					</PanelRow>
+				{sharedDisplayInspCnt(props)}
 
 				</PanelBody>
 
@@ -437,15 +374,16 @@ export default function Edit(props) {
 					sharedColWidthClassnames(props),
 					sharedColOffsetsClassnames(props),
 					[`${props.attributes.textAlign !== undefined ? `${props.attributes.textAlign}` : ''}`],
-					[`${props.attributes.display !== undefined ? `${props.attributes.display}` : ''}`],
+					// [`${props.attributes.display !== undefined ? `${props.attributes.display}` : ''}`],
 					sharedMarginClassnames(props),
 					sharedPaddingClassnames(props),
 					sharedtextAlignClassnames(props),
+					sharedDisplayClassnames(props),
 					[`${props.attributes.textColorTheme !== undefined ? `${props.attributes.textColorTheme}` : ''}`],
 					[`${props.attributes.backgroundColorTheme !== undefined ? `${props.attributes.backgroundColorTheme}` : ''}`],
 					[`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
-					[`${props.attributes.justifyContent !== undefined ? `${props.attributes.justifyContent}` : ''}`],
-					[`${props.attributes.alignItems !== undefined ? `${props.attributes.alignItems}` : ''}`],
+					// [`${props.attributes.justifyContent !== undefined ? `${props.attributes.justifyContent}` : ''}`],
+					// [`${props.attributes.alignItems !== undefined ? `${props.attributes.alignItems}` : ''}`],
 				)} style={
 					style, {
 						...style,

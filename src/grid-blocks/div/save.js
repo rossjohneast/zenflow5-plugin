@@ -10,7 +10,7 @@ import sharedMarginClassnames from '../shared/margin/margin-classnames.js';
 import sharedColWidthClassnames from '../shared/col/colwidth-classnames.js';
 import sharedColOffsetsClassnames from '../shared/col/coloffsets-classnames.js';
 import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
-
+import sharedDisplayClassnames from "../shared/display/display-classnames";
 
 export default function save(props) {
 
@@ -57,6 +57,7 @@ export default function save(props) {
                 sharedMarginClassnames(props),
                 sharedPaddingClassnames(props),
                 sharedtextAlignClassnames(props),
+                sharedDisplayClassnames(props),
                 [`${props.attributes.textColorTheme !== undefined ? `${props.attributes.textColorTheme}` : ''}`],
                 [`${props.attributes.backgroundColorTheme !== undefined ? `${props.attributes.backgroundColorTheme}` : ''}`],
                 [`${props.attributes.backgroundImageTint !== undefined ? `${props.attributes.backgroundImageTint}` : ''}`],
