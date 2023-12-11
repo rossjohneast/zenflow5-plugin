@@ -90,6 +90,38 @@
             background: transparent url("../../../assets/img/bsicons/cloud-rain-heavy.svg") center / 28px no-repeat;
         }
 
+        input[value="evFront"] + label {
+            background: transparent url("../../../assets/img/bsicons/ev-front.svg") center / 28px no-repeat;
+        }
+
+        input[value="houses"] + label {
+            background: transparent url("../../../assets/img/bsicons/houses.svg") center / 28px no-repeat;
+        }
+
+        input[value="houseCheck"] + label {
+            background: transparent url("../../../assets/img/bsicons/house-check.svg") center / 28px no-repeat;
+        }
+
+        input[value="shieldCheck"] + label {
+            background: transparent url("../../../assets/img/bsicons/shield-check.svg") center / 28px no-repeat;
+        }
+
+        input[value="buildingCheck"] + label {
+            background: transparent url("../../../assets/img/bsicons/building-check.svg") center / 28px no-repeat;
+        }
+
+        input[value="lightningCharge"] + label {
+            background: transparent url("../../../assets/img/bsicons/lightning-charge.svg") center / 28px no-repeat;
+        }
+
+        input[value="lightbulb"] + label {
+            background: transparent url("../../../assets/img/bsicons/lightbulb.svg") center / 28px no-repeat;
+        }
+
+        input[value="hddNetwork"] + label {
+            background: transparent url("../../../assets/img/bsicons/hdd-network.svg") center / 28px no-repeat;
+        }
+
 		input[value="facebook"] + label {
             background: transparent url("../../../assets/img/bsicons/facebook.svg") center / 28px no-repeat;
         }

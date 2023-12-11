@@ -61,7 +61,15 @@ const sharedIconInspCnt = (props) => {
 
                                     { label: __('phone'), value: 'phone' },
                                     { label: __('clipboardHeart'), value: 'clipboardHeart' },
-                                    { label: __('cloudRainHeavy'), value: 'cloudRainHeavy' }
+                                    { label: __('cloudRainHeavy'), value: 'cloudRainHeavy' },
+                                    { label: __('evFront'), value: 'evFront' },
+                                    { label: __('shieldCheck'), value: 'shieldCheck' },
+                                    { label: __('houseCheck'), value: 'houseCheck' },
+                                    { label: __('buildingCheck'), value: 'buildingCheck' },
+                                    { label: __('lightbulb'), value: 'lightbulb' },
+                                    { label: __('lightningCharge'), value: 'lightningCharge' },
+                                    { label: __('hddNetwork'), value: 'hddNetwork' },
+                                    { label: __('houses'), value: 'houses' }
                                 ]}
                                 onChange={(val) => props.setAttributes({ 'icon': val })}
                                 className="zen-accordion-icon-option zen-accordion-icon-option-inner-panel"
