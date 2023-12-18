@@ -24,6 +24,9 @@
 		},
 		"zoomAnimation": {
 			"type": "boolean"
+		},
+		"darkControls": {
+			"type": "boolean"
 		}
 	},
 	"category": "zenflow5",

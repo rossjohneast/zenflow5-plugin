@@ -13,7 +13,7 @@ export default function save( { attributes } ) {
 	// });
 
 	const blockPropsClass = useBlockProps.save({
-		className: `carousel slide${attributes.crossFade ? ' carousel-fade' : ''} ${attributes.zoomAnimation ? ' carousel-zoom' : ''}`
+		className: `carousel slide${attributes.crossFade ? ' carousel-fade' : ''} ${attributes.zoomAnimation ? ' carousel-zoom' : ''} ${attributes.darkControls ? ' carousel-dark' : ''}`
 	});
 
 	// function getRandomString(length) {

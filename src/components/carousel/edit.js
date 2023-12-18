@@ -84,6 +84,13 @@ export default function Edit(props) {
 						props.setAttributes({ maxWidth: new_val });
 						}}
 					/>
+					<ToggleControl
+						label="Dark controls"
+						checked={props.attributes.darkControls}
+						onChange={() => {
+							props.setAttributes({ darkControls: !props.attributes.darkControls });
+						}}
+					/>
 				</PanelBody>
 				<PanelBody title={__("Animation", "zenflow5")} initialOpen={true}>
 					<ToggleControl
