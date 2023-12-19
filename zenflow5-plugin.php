@@ -395,12 +395,12 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 					$category_single_link_all = '';
 				}
  
-				$category_single_link_all = '<a class="btn btn-soft-secondary btn-xs rounded-pill m-1 ' .  esc_html__( $category_single_link_all, 'zen-bootstrap-blog' )  . '" href="' . get_post_type_archive_link( 'post' ) . '">All</a>';
+				$category_single_link_all = '<a class="btn btn-sm m-1 ' .  esc_html__( $category_single_link_all, 'zen-bootstrap-blog' )  . '" href="' . get_post_type_archive_link( 'post' ) . '">All</a>';
 
 				//https://stackoverflow.com/questions/39704715/how-to-display-all-categories-in-wordpress
 				foreach( $categories as $category ) {
 					
-					$category_single_link = '<a class="btn btn-soft-secondary btn-xs rounded-pill m-1' . ( is_category( $category->slug ) ? ' active' : '' ) . '" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+					$category_single_link = '<a class="btn btn-sm m-1' . ( is_category( $category->slug ) ? ' active' : '' ) . '" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
 					
 					$all_category_links .= $category_single_link;
 
@@ -777,7 +777,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 					
 					$single_post_output .= '<div class="d-block small mb-3">' . get_the_date('M j, Y') . '</div>';
 
-					$single_post_output .= '<div class="col-12">' . get_the_post_thumbnail( get_the_ID(), 'large', array('class' => 'w-100')) . '</h1>';								
+					$single_post_output .= '<div class="col-12">' . get_the_post_thumbnail( get_the_ID(), 'large', array('class' => 'w-100 h-auto')) . '</h1>';								
 				
 					$single_post_output .= '<p>' . get_the_content() . '</p>';
 				
