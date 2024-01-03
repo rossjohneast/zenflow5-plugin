@@ -26,7 +26,7 @@ import {
 import { createHigherOrderComponent } from '@wordpress/compose';
 
 import classnames from "classnames";
-import sharedPaddingInspCnt from "../shared/padding/padding-insp-cnt.js";
+// import sharedPaddingInspCnt from "../shared/padding/padding-insp-cnt.js";
 import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
 import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
 
@@ -1083,7 +1083,7 @@ export default function Edit(props) {
 
           </PanelBody>
 
-          {sharedPaddingInspCnt(props)}
+          {/* {sharedPaddingInspCnt(props)} */}
 
           {sharedMarginInspCnt(props)}
          
