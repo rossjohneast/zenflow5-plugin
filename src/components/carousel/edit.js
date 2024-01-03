@@ -91,6 +91,13 @@ export default function Edit(props) {
 							props.setAttributes({ darkControls: !props.attributes.darkControls });
 						}}
 					/>
+					<ToggleControl
+						label="Bullets underneath"
+						checked={props.attributes.bulletsUnder}
+						onChange={() => {
+							props.setAttributes({ bulletsUnder: !props.attributes.bulletsUnder });
+						}}
+					/>
 				</PanelBody>
 				<PanelBody title={__("Animation", "zenflow5")} initialOpen={true}>
 					<ToggleControl

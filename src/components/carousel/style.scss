@@ -39,6 +39,15 @@
 
 }
 
+.wp-block-zenflow5-carousel.carousel-bullets-under {
+    padding-bottom: 25px;
+
+    .carousel-indicators {
+        bottom: -15px;
+    }
+
+}
+
 /* Define the keyframes animation */
 // @keyframes zoom-ani-1 {
 //     0% {

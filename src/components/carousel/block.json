@@ -27,6 +27,9 @@
 		},
 		"darkControls": {
 			"type": "boolean"
+		},
+		"bulletsUnder": {
+			"type": "boolean"
 		}
 	},
 	"category": "zenflow5",
