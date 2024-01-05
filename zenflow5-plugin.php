@@ -107,6 +107,8 @@ function create_block_zen_bootstrap_components_block_init() {
 	register_block_type(__DIR__ . '/build/components/carousel-item');
 	register_block_type(__DIR__ . '/build/components/card');
 	register_block_type(__DIR__ . '/build/components/icon');
+	register_block_type(__DIR__ . '/build/components/tabbed-panel');
+	register_block_type(__DIR__ . '/build/components/tabbed-panel-child');
 	register_block_type(__DIR__ . '/build/components/custom-nav',
 		array( 
 			'render_callback' =>'zenflow5_custom_nav_render'

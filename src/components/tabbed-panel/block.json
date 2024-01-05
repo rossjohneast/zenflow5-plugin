@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/tabbed-panel",
+	"version": "0.1.0",
+	"title": "Tabbed Panel",
+	"attributes": {
+		"innerBlockCount": {
+			"type": "number"
+		},
+		"tabLabelsArray": {
+			"type": "array",
+			"default" : []
+		},		
+		"tabIdArray": {
+			"type": "array",
+			"default" : []
+		},		
+		"updateChild":{
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"category": "zenflow5",
+	"icon": "table-row-after",
+	"description": "Tabbed interface.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "tabbed-panel",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

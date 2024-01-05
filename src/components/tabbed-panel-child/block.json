@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/tabbed-panel-child",
+	"version": "0.1.0",
+	"title": "Tabbed Panel Child",
+	"attributes": {
+		"blockId":{
+            "type": "string"
+		},
+		"blockIndex":{
+            "type": "number"
+		},
+		"tabLabel":{
+			"type": "string"
+		}
+	},
+	"parent": [ "zenflow5/tabbed-panel" ],
+	"category": "zenflow5",
+	"icon": "table-row-after",
+	"description": "Tabbed interface item.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "tabbed-panel-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
