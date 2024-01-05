@@ -74,9 +74,16 @@ export default function Edit(props) {
           {tab.tabLabel} - {tab.clientId}
         </div>
       ))} */}
+
+
+		{/* If you find that reordering is slow, you might consider adding the key attribute to the InnerBlocks component, 
+		especially if the order of the child blocks matters. 
+		The key attribute should be unique for each child element, typically using a value that is stable across renders. */}
+
       <InnerBlocks
-        allowedBlocks={['zenflow5/tabbed-panel-child']}
-        template={MY_TEMPLATE_CELLS}
+		allowedBlocks={['zenflow5/tabbed-panel-child']}
+		template={MY_TEMPLATE_CELLS}
+		key={tabLabelsArray.map(tab => tab.clientId).join(',')}
       />
     </div>
   );
