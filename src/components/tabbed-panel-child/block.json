@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "zenflow5/tabbed-panel-child",
 	"version": "0.1.0",
-	"title": "Tabbed Panel Child",
+	"title": "Tab",
 	"attributes": {
 		"blockId":{
             "type": "string"
