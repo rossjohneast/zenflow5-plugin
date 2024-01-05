@@ -389,7 +389,7 @@
 	},
 	"category": "zenflow5",
 	"icon": "index-card",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Cards provide a flexible and extensible content container with multiple variants and options.",
 	"supports": {
 		"html": false,
 		"background": true,
