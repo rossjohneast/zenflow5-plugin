@@ -17,6 +17,7 @@ import {
 	ToolbarButton,
 	PanelBody,
 	TextareaControl,
+	TextControl, 
 	SelectControl,
 	PanelRow,
 	Button,
@@ -325,6 +326,18 @@ import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 					)}
 
 					<PanelBody title={__("Settings", "zenflow5")}>
+
+						{attributes.url && (
+							<PanelRow>
+								<TextControl
+									label="Card link ARIA Label"
+									value={ attributes.ariaLabel }
+									onChange={ ( value ) => 
+										setAttributes({ ariaLabel: value })
+									}
+								/>
+							</PanelRow>
+						)}
 
 						<PanelRow>
 							<ToggleControl

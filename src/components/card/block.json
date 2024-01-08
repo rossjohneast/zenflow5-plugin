@@ -8,6 +8,9 @@
 		"imgID": {
 			"type": "number"
 		},
+		"ariaLabel": {
+			"type": "string"
+		},
 		"imgURL": {
 			"type": "string",
 			"source": "attribute",

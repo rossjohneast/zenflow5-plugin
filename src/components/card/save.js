@@ -105,16 +105,30 @@ export default function save(props) {
 				}
 			}
 		>
-			{attributes.url &&
-				<RichText.Content
-					tagName="a"
-					className='card-bg-link-overlay'
-					href={attributes.url}
-					value={attributes.linkText}
-					target={attributes.linkTarget}
-					rel={attributes.linkRel}
-				/>
-			}
+
+
+			{attributes.url && (
+				attributes.ariaLabel ? (
+					<RichText.Content
+						tagName="a"
+						className='card-bg-link-overlay'
+						href={attributes.url}
+						value={attributes.linkText}
+						target={attributes.linkTarget}
+						rel={attributes.linkRel}
+						aria-label={attributes.ariaLabel}
+					/>
+				) : (
+					<RichText.Content
+						tagName="a"
+						className='card-bg-link-overlay'
+						href={attributes.url}
+						value={attributes.linkText}
+						target={attributes.linkTarget}
+						rel={attributes.linkRel}
+					/>
+				)
+			)}
 
 
 		{imgURL &&

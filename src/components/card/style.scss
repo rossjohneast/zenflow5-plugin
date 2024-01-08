@@ -13,6 +13,7 @@
 
 .wp-block-zenflow5-card {
 	
+	position: relative;
 	overflow: hidden;
 
 	.card-img-top{
@@ -49,6 +50,8 @@
 		height: 100%;
 		position: absolute;
 		z-index: 3;
+		top: 0;
+		left: 0;
 	}
 
 	.card-background-img-tint,
