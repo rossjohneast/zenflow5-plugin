@@ -9,6 +9,9 @@
 			"type": "string",
 			"default": "clipboardHeart"	
 		},
+		"ariaLabel": {
+			"type": "string"
+		},
         "iconSize": {
             "type": "number",
             "default": "20"

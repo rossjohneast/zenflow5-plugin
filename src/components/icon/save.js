@@ -45,7 +45,16 @@ export default function save(props) {
 	return (
 		<span {...useBlockProps.save()} {...blockPropsClass}>
 
-			{attributes.url && <a className='icon-link' href={attributes.url} target={attributes.linkTarget} rel={attributes.linkRel} aria-hidden={!attributes.url}></a>}
+			{attributes.url && 
+				<a 
+					className='icon-link' 
+					href={attributes.url} 
+					target={attributes.linkTarget} 
+					rel={attributes.linkRel} 
+					aria-hidden={!attributes.url}
+					aria-label="Text alternative goes here."
+				></a>
+			}
 
 			<span
 				className={

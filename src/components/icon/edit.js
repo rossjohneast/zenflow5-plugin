@@ -19,7 +19,8 @@ import {
 	Icon,
 	RangeControl,
 	TabPanel,
-	SelectControl
+	SelectControl,
+	TextControl
 } from '@wordpress/components';
 import classnames from "classnames";
 import { link, linkOff } from '@wordpress/icons';
@@ -136,7 +137,21 @@ export default function Edit(props) {
 		<>
 			<InspectorControls>
 
-			{sharedIconInspCnt(props)}
+				<PanelBody title={__("Settings", "zenflow5")}>
+					{attributes.url && (
+						<PanelRow>
+							<TextControl
+								label="Icon link ARIA Label"
+								value={ attributes.ariaLabel }
+								onChange={ ( value ) => 
+									setAttributes({ ariaLabel: value })
+								}
+							/>
+						</PanelRow>
+					)}
+				</PanelBody>
+
+				{sharedIconInspCnt(props)}
 
 
 			{/* <PanelBody title={__('Theme colors', 'zenbuilder')} className={"components-panel-children-w-100"}>
