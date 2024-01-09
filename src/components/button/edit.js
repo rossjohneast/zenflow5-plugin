@@ -112,8 +112,8 @@ export default function Edit(props) {
 
 			<InspectorControls>
 
-			<PanelBody title={__("Settings", "zenflow5")}>
-					{attributes.url && (
+			{attributes.url && (
+				<PanelBody title={__("Settings", "zenflow5")}>
 						<PanelRow>
 							<TextControl
 								label="Button link ARIA Label"
@@ -124,12 +124,10 @@ export default function Edit(props) {
 								help={ !attributes.content ? 'Recommended: The link text is empty' : ''}
 							/>
 						</PanelRow>
-					)}
 				</PanelBody>
-
+			)}
 
 			{sharedIconInspCnt(props)}
-
 
 				<Panel>
 					<PanelBody title={__('Button Settings', 'zenflow5')}>
