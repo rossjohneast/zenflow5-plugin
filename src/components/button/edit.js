@@ -112,6 +112,21 @@ export default function Edit(props) {
 
 			<InspectorControls>
 
+			<PanelBody title={__("Settings", "zenflow5")}>
+					{attributes.url && (
+						<PanelRow>
+							<TextControl
+								label="Button link ARIA Label"
+								value={ attributes.ariaLabel }
+								onChange={ ( value ) => 
+									setAttributes({ ariaLabel: value })
+								}
+								help={ !attributes.content ? 'Recommended: The link text is empty' : ''}
+							/>
+						</PanelRow>
+					)}
+				</PanelBody>
+
 
 			{sharedIconInspCnt(props)}
 

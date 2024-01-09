@@ -49,11 +49,11 @@ export default function save( props ) {
 				sharedMarginClassnames(props)
 				)}
 		
-				href={ attributes.url }
+		href={ attributes.url }
 		target={ attributes.linkTarget }
 		rel={ attributes.linkRel }
-
 		aria-hidden={ !attributes.url }
+		aria-label={ attributes.ariaLabel }
 		
 		{...attributes.animation && {'data-aos' : attributes.animation}}
 		{...attributes.animationOffset && attributes.animation && {'data-aos-offset' : attributes.animationOffset}}

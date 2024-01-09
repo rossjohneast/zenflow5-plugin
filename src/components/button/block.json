@@ -8,6 +8,9 @@
 		"customId": {
 			"type": "string"
 		},
+		"ariaLabel": {
+			"type": "string"
+		},
 		"icon": {
 			"type": "string"
 		},
