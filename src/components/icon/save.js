@@ -52,7 +52,7 @@ export default function save(props) {
 					target={attributes.linkTarget} 
 					rel={attributes.linkRel} 
 					aria-hidden={!attributes.url}
-					aria-label="Text alternative goes here."
+					aria-label={attributes.ariaLabel}
 				></a>
 			}
 
