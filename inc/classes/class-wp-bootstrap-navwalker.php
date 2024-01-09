@@ -70,9 +70,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				// build a string to use as aria-labelledby.
 				$labelledby = 'aria-labelledby="' . esc_attr( end( $matches[2] ) ) . '"';
 			}
-			// Rremove role="menu" for Wave / ARIA
+			// Remove role="menu" for Wave / ARIA
 			//$output .= "{$n}{$indent}<ul$class_names $labelledby role=\"menu\"><div class=\"col-auto\" data-dropdown-content><div class=\"dropdown-grid-menu\">{$n}";
-			$output .= "{$n}{$indent}<ul$class_names $labelledby role=\"menu\"><div class=\"col-auto\" data-dropdown-content><div class=\"dropdown-grid-menu\">{$n}";
+			$output .= "{$n}{$indent}<ul$class_names $labelledby><div class=\"col-auto\" data-dropdown-content><div class=\"dropdown-grid-menu\">{$n}";
 		}
 
 		/**
