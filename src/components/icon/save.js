@@ -52,7 +52,8 @@ export default function save(props) {
 					target={attributes.linkTarget} 
 					rel={attributes.linkRel} 
 					aria-hidden={!attributes.url}
-					aria-label={attributes.ariaLabel}
+					// aria-label={attributes.ariaLabel}
+					{...(attributes.ariaLabel && { 'aria-label': attributes.ariaLabel })}
 				></a>
 			}
 

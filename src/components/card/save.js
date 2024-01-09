@@ -108,7 +108,7 @@ export default function save(props) {
 
 
 			{attributes.url && (
-				attributes.ariaLabel ? (
+		
 					<RichText.Content
 						tagName="a"
 						className='card-bg-link-overlay'
@@ -116,18 +116,10 @@ export default function save(props) {
 						value={attributes.linkText}
 						target={attributes.linkTarget}
 						rel={attributes.linkRel}
-						aria-label={attributes.ariaLabel}
+						// aria-label={attributes.ariaLabel}
+						{...(attributes.ariaLabel && { 'aria-label': attributes.ariaLabel })}
 					/>
-				) : (
-					<RichText.Content
-						tagName="a"
-						className='card-bg-link-overlay'
-						href={attributes.url}
-						value={attributes.linkText}
-						target={attributes.linkTarget}
-						rel={attributes.linkRel}
-					/>
-				)
+
 			)}
 
 
