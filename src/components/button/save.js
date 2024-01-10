@@ -8,47 +8,31 @@ export default function save( props ) {
 
 	const { attributes } = props
 
-	const blockProps = useBlockProps.save();
+	// const blockProps = useBlockProps.save();
+
+	/** * Add classes to block if set. * * @link https://stackoverflow.com/a/72408500 */
+	const blockPropsClass = useBlockProps.save({
+		className:
+			classnames(
+				'zenflow5-btn',
+				'btn',
+				[`${attributes.btnStyle || ''}`],
+				[`${attributes.btnSize || ''}`],
+				[`${attributes.btnWidth || ''}`],
+				[`${attributes.textAlign || ''}`],
+				[`${attributes.display || ''}`],
+				[`${attributes.justifyContent || ''}`],
+				[`${attributes.alignItems || ''}`],
+				sharedMarginClassnames(props)
+			)
+	}
+	);
 
 	return(
-		<a { ...blockProps }
+		<a {...blockPropsClass}
 		
 		id={attributes.customId || undefined}
 
-		className={
-			classnames(
-			'zenflow5-btn',
-			'btn',
-				[`${attributes.btnStyle !== undefined ? `${attributes.btnStyle}` : ''}`],
-				[`${attributes.btnSize !== undefined ? `${attributes.btnSize}` : ''}`],
-				[`${attributes.btnWidth !== undefined ? `${attributes.btnWidth}` : ''}`],
-				[
-					`${attributes.textAlign !== undefined
-						? `${attributes.textAlign}`
-						: ""
-					}`,
-				],
-				[
-					`${attributes.display !== undefined
-						? `${attributes.display}`
-						: ""
-					}`,
-				],
-				[
-					`${attributes.justifyContent !== undefined
-						? `${attributes.justifyContent}`
-						: ""
-					}`,
-				],
-				[
-					`${attributes.alignItems !== undefined
-						? `${attributes.alignItems}`
-						: ""
-					}`,
-				],
-				sharedMarginClassnames(props)
-				)}
-		
 		href={ attributes.url }
 		target={ attributes.linkTarget }
 		rel={ attributes.linkRel }
