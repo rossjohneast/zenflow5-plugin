@@ -52,7 +52,7 @@ export default function save(props) {
   
 	return (
 		<div 
-		{ ...useBlockProps.save() }	{...blockPropsClass}
+			{...blockPropsClass}
 
 			style={{
 				...style,

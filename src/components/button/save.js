@@ -25,8 +25,7 @@ export default function save( props ) {
 				[`${attributes.alignItems || ''}`],
 				sharedMarginClassnames(props)
 			)
-	}
-	);
+	});
 
 	return(
 		<a {...blockPropsClass}

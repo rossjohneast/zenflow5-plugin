@@ -75,27 +75,28 @@ export default function save(props) {
 		opacity: bgTintOpacity
 	};
 
+	const blockPropsClass = useBlockProps.save({
+		className:
+			classnames(
+				'wp-block-zenflow5-card',
+				'card',
+				sharedPaddingClassnames(props),
+				sharedMarginClassnames(props),
+				[`${textColorTheme !== undefined ? `${textColorTheme}` : ""}`],
+				[`${shadow !== undefined ? `${shadow}` : ""}`],
+				[`${border !== undefined ? `${border}` : ""}`],
+				[
+					`${backgroundColorTheme !== undefined
+						? `${backgroundColorTheme}`
+						: ""
+					}`,
+				]
+			)
+	});
+
 	return (
 		<div 
-			{...useBlockProps.save()} 
-			className={
-				(
-					classnames(
-						'wp-block-zenflow5-card',
-						'card',
-						sharedPaddingClassnames(props),
-						sharedMarginClassnames(props),
-						[`${textColorTheme !== undefined ? `${textColorTheme}` : ""}`],
-						[`${shadow !== undefined ? `${shadow}` : ""}`],
-						[`${border !== undefined ? `${border}` : ""}`],
-						[
-							`${backgroundColorTheme !== undefined
-								? `${backgroundColorTheme}`
-								: ""
-							}`,
-						]
-					))
-			}
+			{...blockPropsClass}
 			style={
 				{
 					...style,
@@ -105,7 +106,6 @@ export default function save(props) {
 				}
 			}
 		>
-
 
 			{attributes.url && (
 		
@@ -121,7 +121,6 @@ export default function save(props) {
 					/>
 
 			)}
-
 
 		{imgURL &&
 			// <div style={styleTopImage} className="card-img-top">

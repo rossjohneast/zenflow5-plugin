@@ -43,7 +43,7 @@ export default function save(props) {
 		});
 
 	return (
-		<span {...useBlockProps.save()} {...blockPropsClass}>
+		<span {...blockPropsClass}>
 
 			{attributes.url && 
 				<a 

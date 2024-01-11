@@ -34,15 +34,15 @@ export default function save(props) {
 		/** * Add class to block if img set. * * @link https://stackoverflow.com/a/72408500 */
 		const blockPropsClass = useBlockProps.save({
 			className: 
-			classnames(
-				'zenflow5-container',
-				[`${props.attributes.layoutContainerOption}`]
-			)
+				classnames(
+					'zenflow5-container',
+					[`${props.attributes.layoutContainerOption}`]
+				)
 		});
 
 	  return (
-		  <div {...useBlockProps.save()}  {...blockPropsClass}
-
+		  <div
+		  	  {...blockPropsClass}
 			  style={{
 				  ...style,
 				  ...BackgroundIsActive,

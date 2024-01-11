@@ -68,7 +68,7 @@ export default function Edit({ attributes: { blockIndex, tabLabel, blockId},  se
 			{/* <p>clientId: {clientId}</p> */}
 			{/* <p>tabLabel: {tabLabel}</p> */}
 			{/* <p>getBlockIndex: {getBlockIndex}</p> */}
-	{clientId}
+			{/* {clientId} */}
 			<InnerBlocks/>
 		</div>
 	);
