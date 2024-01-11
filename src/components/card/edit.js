@@ -750,14 +750,14 @@ import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 						/> */}
 
 						<InnerBlocks
-							template={[
-								["core/heading"],
-								["core/paragraph"],
-								[
-									"zenflow5/button",
-									{ display: "d-inline-block", btnStyle: "btn-primary" },
-								],
-							]}
+							// template={[
+							// 	["core/heading"],
+							// 	["core/paragraph"],
+							// 	[
+							// 		"zenflow5/button",
+							// 		{ display: "d-inline-block", btnStyle: "btn-primary" },
+							// 	],
+							// ]}
 						/>
 					</div>
 
