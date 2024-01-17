@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/footer-info",
+	"version": "0.1.0",
+	"title": "Footer Info",
+	"attributes": {
+		"yearFrom": {
+			"type": "string"
+		},
+		"showCopyrightSymbol": {
+            "type": "boolean",
+			"default": true
+		},
+		"showYear": {
+            "type": "boolean",
+			"default": true
+		},
+		"showSiteName": {
+            "type": "boolean",
+			"default": true
+		},
+		"showYearFrom": {
+            "type": "boolean",
+			"default": false
+		},
+		"showRightReserved": {
+            "type": "boolean",
+			"default": true
+        },
+		"showCustomText": {
+			"type": "boolean"
+        },
+		"customText": {
+			"type": "string"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "smiley",
+	"description": "Information for the footer.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "footer-info",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.6
+ * Version:           1.0.8
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
@@ -109,6 +109,10 @@ function create_block_zen_bootstrap_components_block_init() {
 	register_block_type(__DIR__ . '/build/components/icon');
 	register_block_type(__DIR__ . '/build/components/tabbed-panel');
 	register_block_type(__DIR__ . '/build/components/tabbed-panel-child');
+	register_block_type(__DIR__ . '/build/components/footer-info',
+		array( 
+			'render_callback' =>'zenflow5_footer_info_render'
+		));
 	register_block_type(__DIR__ . '/build/components/custom-nav',
 		array( 
 			'render_callback' =>'zenflow5_custom_nav_render'
@@ -275,6 +279,57 @@ function prefix_bs5_dropdown_data_attribute( $atts, $item, $args ) {
     }
     return $atts;
 }
+
+/**
+ * Render the footer information, such as current year etc
+ */
+function zenflow5_footer_info_render($atts, $content)
+{
+    $output = '';
+
+    // Check and include &copy; if showCopyrightSymbol is true
+    if (isset($atts['showCopyrightSymbol']) && $atts['showCopyrightSymbol']) {
+        $output .= esc_html__('&copy;', 'your-text-domain') . ' ';
+    }
+
+    // Include the year if showYear is true
+    if (isset($atts['showYearFrom']) && $atts['showYearFrom']) {
+        $output .= $atts['yearFrom'] . '-' . date('Y') . ' ';
+    }
+
+	// Include the year if showYear is true
+    if (isset($atts['showYear']) && $atts['showYear'] ) {
+        $output .= date('Y') . ' ';
+    }
+
+    // Include the site name if showSiteName is true
+    if (isset($atts['showSiteName']) && $atts['showSiteName']) {
+        $output .= get_bloginfo('name') . '. ';
+    }
+
+    // Include "All rights reserved" if showRightReserved is true
+    if (isset($atts['showRightReserved']) && $atts['showRightReserved']) {
+        $output .= esc_html__('All rights reserved. ', 'your-text-domain');
+    }
+
+    // Include custom text if showCustomText is true
+    if (isset($atts['showCustomText']) && $atts['showCustomText']) {
+        $output .= esc_html($atts['customText']);
+    }
+
+	// Access the customText attribute
+	$customText = isset($atts['customText']) ? $atts['customText'] : '';
+
+	// Use $customText as needed in your PHP function
+	// For example, you might want to decode HTML entities
+	// This way we can keep the links etc
+	$decodedCustomText = html_entity_decode($customText);
+
+	$output .= $decodedCustomText;
+
+    return $output;
+}
+
 
 //END: COMPONENT BLOCKS
 
