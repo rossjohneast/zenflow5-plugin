@@ -69,7 +69,19 @@ const sharedIconInspCnt = (props) => {
                                     { label: __('lightbulb'), value: 'lightbulb' },
                                     { label: __('lightningCharge'), value: 'lightningCharge' },
                                     { label: __('hddNetwork'), value: 'hddNetwork' },
-                                    { label: __('houses'), value: 'houses' }
+                                    { label: __('houses'), value: 'houses' },
+
+                                    { label: __('layoutTextWindowReverse'), value: 'layoutTextWindowReverse' },
+                                    { label: __('cardHeading'), value: 'cardHeading' },
+                                    { label: __('viewList'), value: 'viewList' },
+                                    { label: __('handThumbUp'), value: 'handThumbUp' },
+                                    { label: __('arrowsVertical'), value: 'arrowsVertical' },
+                                    { label: __('handIndexThumb'), value: 'handIndexThumb' },
+                                    { label: __('collectionPlay'), value: 'collectionPlay' },
+                                    { label: __('segmentedNav'), value: 'segmentedNav' },
+                                    { label: __('speedometer'), value: 'speedometer' },
+                                    { label: __('columns'), value: 'columns' },
+                      
                                 ]}
                                 onChange={(val) => props.setAttributes({ 'icon': val })}
                                 className="zen-accordion-icon-option zen-accordion-icon-option-inner-panel"
@@ -129,6 +141,7 @@ const sharedIconInspCnt = (props) => {
                                     { label: __('Telephone'), value: 'telephone' },
                                     { label: __('Envelope'), value: 'envelope' },
                                     { label: __('Geo Alt'), value: 'geoAlt' },
+                                    { label: __('plusSquare'), value: 'plusSquare' },
 
                                 ]}
                                 onChange={(val) => props.setAttributes({ 'icon': val })}
