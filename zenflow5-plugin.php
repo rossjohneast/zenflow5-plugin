@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.8
+ * Version:           1.0.9
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
@@ -989,6 +989,7 @@ function zenflow5_blacklist_blocks( $allowed_blocks ) {
 	unset( $blocks[ 'zenflow5/blog-archive' ] );
 	unset( $blocks[ 'zenflow5/page' ] );
 	unset( $blocks[ 'zenflow5/custom-nav' ] );
+	unset( $blocks[ 'zenflow5/footer-info' ] );
 
 	// return the new list of allowed blocks
 	return array_keys( $blocks );
