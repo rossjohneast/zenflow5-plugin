@@ -35,6 +35,8 @@ import sharedDisplayClassnames from "../shared/display/display-classnames";
 import sharedTextAlignInspCnt from "../shared/textalign/textalign-insp-cnt";
 import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames";
 
+import sharedColorsInspCnt from "../shared/colors/color-insp-cnt.js";
+
 export default function Edit(props) {
 	const { attributes, setAttributes, textColor, backgroundColor } = props;
 
@@ -162,67 +164,8 @@ export default function Edit(props) {
 
 				</PanelBody>
 
+				{sharedColorsInspCnt(props)}
 
-				<PanelBody title={__('Theme colors', 'zenflow5')} initialOpen={false}>
-					<PanelRow className="w-100">
-						<SelectControl
-							label={__('Background Color', 'zenflow5')}
-							value={props.attributes.backgroundColorTheme}
-							options={[
-								{ value: '', label: 'Default (None)' },
-								{ value: 'bg-primary', label: 'Primary' },
-								{ value: 'bg-secondary', label: 'Secondary' },
-								{ value: 'bg-success', label: 'Success' },
-								{ value: 'bg-danger', label: 'Danger' },
-								{ value: 'bg-warning', label: 'Warning' },
-								{ value: 'bg-info', label: 'Info' },
-								{ value: 'bg-light', label: 'Light' },
-								{ value: 'bg-dark', label: 'Dark' },
-								{ value: 'bg-white', label: 'White' },
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ backgroundColorTheme: new_val })
-							}} />
-					</PanelRow>
-					<PanelRow className="w-100">
-						<SelectControl
-							label={__('Text Color', 'zenflow5')}
-							value={props.attributes.textColorTheme}
-							options={[
-								{ value: '', label: 'Default' },
-								{ value: 'text-primary', label: 'Primary' },
-								{ value: 'text-secondary', label: 'Secondary' },
-								{ value: 'text-success', label: 'Success' },
-								{ value: 'text-danger', label: 'Danger' },
-								{ value: 'text-warning', label: 'Warning' },
-								{ value: 'text-info', label: 'Info' },
-								{ value: 'text-light', label: 'Light' },
-								{ value: 'text-dark', label: 'Dark' },
-								{ value: 'text-white', label: 'White' },
-							]}
-							onChange={(new_val) => {
-								props.setAttributes({ textColorTheme: new_val })
-							}} />
-					</PanelRow>
-				</PanelBody>
-
-				<PanelColorSettings
-					title={__('Custom colors', 'zenflow5')} initialOpen={false}
-					colorSettings={[
-						{
-							value: backgroundColor,
-							onChange: (colorValue) => setAttributes({ backgroundColor: colorValue }),
-							label: __('Background Color'),
-						},
-						{
-							value: textColor,
-							onChange: (colorValue) => setAttributes({ textColor: colorValue }),
-							label: __('Text Color'),
-						},
-					]}
-				>
-
-				</PanelColorSettings>
 {focalUrl && (
 					<PanelBody title={__('Background image')} initialOpen={false}>
 						
