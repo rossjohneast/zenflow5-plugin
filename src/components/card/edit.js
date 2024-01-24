@@ -37,6 +37,8 @@ import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
 import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
 import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 
+import sharedColorsInspCnt from "../../grid-blocks/shared/colors/color-insp-cnt.js";
+
 // export default function Edit(props { isSelected, attributes, setAttributes }) {
 
 	export default function Edit(props) {
@@ -468,72 +470,7 @@ import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
 
 					{sharedMarginInspCnt(props)}
 
-					<PanelBody
-						title={__("Theme Colors", "zenflow5")}
-						initialOpen={true}
-					>
-						<PanelRow className="w-100">
-							<SelectControl
-								label={__("Background Color", "zenflow5")}
-								value={backgroundColorTheme}
-								options={[
-									{ value: "", label: "Default (None)" },
-									{ value: "bg-primary", label: "Primary" },
-									{ value: "bg-secondary", label: "Secondary" },
-									{ value: "bg-success", label: "Success" },
-									{ value: "bg-danger", label: "Danger" },
-									{ value: "bg-warning", label: "Warning" },
-									{ value: "bg-info", label: "Info" },
-									{ value: "bg-light", label: "Light" },
-									{ value: "bg-dark", label: "Dark" },
-									{ value: "bg-white", label: "White" },
-								]}
-								onChange={(new_val) => {
-									setAttributes({ backgroundColorTheme: new_val });
-								}}
-							/>
-						</PanelRow>
-						<PanelRow className="w-100">
-							<SelectControl
-								value={textColorTheme}
-								label={__("Text Color", "zenflow5")}
-								options={[
-									{ value: "", label: "Default" },
-									{ value: "text-primary", label: "Primary" },
-									{ value: "text-secondary", label: "Secondary" },
-									{ value: "text-success", label: "Success" },
-									{ value: "text-danger", label: "Danger" },
-									{ value: "text-warning", label: "Warning" },
-									{ value: "text-info", label: "Info" },
-									{ value: "text-light", label: "Light" },
-									{ value: "text-dark", label: "Dark" },
-									{ value: "text-white", label: "White" },
-								]}
-								onChange={(new_val) => {
-									setAttributes({ textColorTheme: new_val });
-								}}
-							/>
-						</PanelRow>
-					</PanelBody>
-
-					<PanelColorSettings
-						title={__("Custom Card Colors", "zenflow5")}
-						initialOpen={false}
-						colorSettings={[
-							{
-								value: backgroundColor,
-								onChange: (colorValue) =>
-									setAttributes({ backgroundColor: colorValue }),
-								label: __("Background Color"),
-							},
-							{
-								value: textColor,
-								onChange: (colorValue) =>
-									setAttributes({ textColor: colorValue }),
-								label: __("Text Color"),
-							},
-						]}
-					></PanelColorSettings>
+					{sharedColorsInspCnt(props)}
 
 					<PanelBody title={__("Overlay", "zenflow5")} initialOpen={true}>
 						<RangeControl
