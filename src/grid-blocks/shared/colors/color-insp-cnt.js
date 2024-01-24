@@ -15,7 +15,7 @@ const sharedColorsInspCnt = (props) => {
     return (
         <>
             <PanelBody
-            title={__("Theme colors shared", "zenflow5")}
+            title={__("Theme colors", "zenflow5")}
             initialOpen={false}
         >
             <PanelRow className="w-100">
