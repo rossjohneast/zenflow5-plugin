@@ -309,7 +309,7 @@ function zenflow5_footer_info_render($atts, $content)
 
     // Include "All rights reserved" if showRightReserved is true
     if (isset($atts['showRightReserved']) && $atts['showRightReserved']) {
-        $output .= esc_html__('All rights reserved. ', 'your-text-domain');
+        $output .= esc_html__('All rights reserved.', 'your-text-domain');
     }
 
     // Include custom text if showCustomText is true
@@ -323,7 +323,7 @@ function zenflow5_footer_info_render($atts, $content)
 	// Use $customText as needed in your PHP function
 	// For example, you might want to decode HTML entities
 	// This way we can keep the links etc
-	$decodedCustomText = html_entity_decode($customText);
+	$decodedCustomText = '&nbsp;' . html_entity_decode($customText);
 
 	$output .= $decodedCustomText;
 
