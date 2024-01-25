@@ -31,6 +31,8 @@ function valid_themezen_license_check() {
     }
 }
 
+
+
 function live_valid_themezen_license_check() {
     
     if (get_option('themezen_license_key')) {
@@ -74,6 +76,8 @@ function live_valid_themezen_license_check() {
 
 }
 
+
+
 function live_valid_themezen_license_status() {
     if (get_option('themezen_license_key')) {
         // Get the stored license key from the ThemeZen Server
@@ -110,8 +114,8 @@ function live_valid_themezen_license_status() {
 
 
 function themezen_license_management_page() {
-    echo '<div class="wrap">';
-    echo '<h2>ZenFlow 5 License Activator</h2>';
+    echo '<div class="wrap"  style="background:white;padding:3rem;">';
+    echo '<h2>Licence Activation</h2>';
 
     /*** License activate button was clicked ***/
     if (isset($_REQUEST['activate_license'])) {
@@ -210,13 +214,13 @@ function themezen_license_management_page() {
     /*** End of sample license deactivation ***/
 
     ?>
-    <p>Please enter the license key for this product to activate it. You were given a license key when you purchased this item.</p>
+    <p>Please enter the licence key for this product to activate it. You were given a licence key when you purchased this item.</p>
     <!-- <p>If you need a new license please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</p> -->
-    <p>If you are moving to a new domain please de-active your license on this website first.</p>
+    <p>If you are moving to a new domain please de-active your licence on this website first.</p>
     <form action="" method="post">
         <table class="form-table">
             <tr>
-                <th style="width:100px;"><label for="themezen_license_key">License Key</label></th>
+                <th style="width:100px;"><label for="themezen_license_key">Licence Key</label></th>
                 <td ><input class="regular-text" type="text" id="themezen_license_key" name="themezen_license_key"  value="<?php echo get_option('themezen_license_key'); ?>" ></td>
             </tr>
         </table>
@@ -237,7 +241,7 @@ function themezen_license_management_page() {
             case 'blocked':
                 echo '<div id="setting-error-settings_updated" class="notice notice-error settings-error is-dismissible"> 
                         <p>
-                            <strong>The license is blocked. You wont be receiving critical updates to your theme &amp; plugins. If you need to renew your license please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</strong>
+                            <strong>The licence is blocked. You wont be receiving critical updates to your theme &amp; plugins. If you need to renew your licence please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</strong>
                         </p>
                         <button type="button" class="notice-dismiss">
                             <span class="screen-reader-text">Dismiss this notice.</span>
@@ -247,7 +251,7 @@ function themezen_license_management_page() {
             case 'active':
                 echo '<div id="setting-success-settings_updated" class="notice notice-success settings-success is-dismissible"> 
                         <p>
-                            <strong>The license is active.</strong>
+                            <strong>The licence is active.</strong>
                         </p>
                         <button type="button" class="notice-dismiss">
                             <span class="screen-reader-text">Dismiss this notice.</span>
@@ -257,7 +261,7 @@ function themezen_license_management_page() {
             case 'pending':
                 echo '<div id="setting-error-settings_updated" class="notice notice-error settings-error is-dismissible"> 
                         <p>
-                            <strong>The license is pending. You wont be receiving critical updates to your theme &amp; plugins. If you need to renew your license please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</strong>
+                            <strong>The licence is pending. You wont be receiving critical updates to your theme &amp; plugins. If you need to renew your licence please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</strong>
                         </p>
                         <button type="button" class="notice-dismiss">
                             <span class="screen-reader-text">Dismiss this notice.</span>
@@ -267,7 +271,7 @@ function themezen_license_management_page() {
             case 'expired':
                 echo '<div id="setting-error-settings_updated" class="notice notice-error settings-error is-dismissible"> 
                         <p>
-                        <strong>The license has expired. You wont be receiving critical updates to your theme &amp; plugins. If you need to renew your license please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</strong>
+                        <strong>The licence has expired. You wont be receiving critical updates to your theme &amp; plugins. If you need to renew your licence please contact <a href="mailto:info@theme-zen.com">info@theme-zen.com</a>.</strong>
                         </p>
                         <button type="button" class="notice-dismiss">
                             <span class="screen-reader-text">Dismiss this notice.</span>
