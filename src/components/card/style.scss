@@ -25,6 +25,8 @@
 	.card-img-top > img{
 		position: absolute;
 		top:0;
+		object-fit: cover;
+    	height: 100%;
 	}
 
 	.card-img-overlay,
