@@ -996,4 +996,35 @@ function zenflow5_blacklist_blocks( $allowed_blocks ) {
 	
 }
 
+
+
+// Add lazy loading to all images, this should be toggled under options controls and moved to core theme
+// We use mb_convert_encoding() to convert the content to HTML entities, ensuring that the content is properly encoded for parsing.
+// We pass additional flags (LIBXML_NOERROR and LIBXML_NOWARNING) to loadHTML() to suppress warnings and errors caused by invalid markup.
+// By specifying LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD, we ensure that DOMDocument doesn't add implied html and body tags or a DOCTYPE declaration, which could interfere with the content structure.
+function add_lazy_loading_to_images( $content ) {
+    // Check if the content contains any <img> tags
+    if ( false !== strpos( $content, '<img' ) ) {
+        // Create a DOMDocument object to parse the HTML content
+        $dom = new DOMDocument();
+        // Specify that HTML5 parsing rules should be used
+        $dom->loadHTML( mb_convert_encoding( $content, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD | LIBXML_NOERROR | LIBXML_NOWARNING );
+
+        // Get all <img> tags
+        $images = $dom->getElementsByTagName( 'img' );
+
+        // Loop through each <img> tag and add the loading="lazy" attribute
+        foreach ( $images as $image ) {
+            $image->setAttribute( 'loading', 'lazy' );
+        }
+
+        // Save the modified HTML content
+        $content = $dom->saveHTML();
+    }
+
+    return $content;
+}
+add_filter( 'the_content', 'add_lazy_loading_to_images' );
+
+
 ?>
