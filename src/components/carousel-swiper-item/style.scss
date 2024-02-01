@@ -1,0 +1,30 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// Handle WordPress images added to the swiper
+.wp-block-zenflow5-carousel-swiper-item figure.wp-block-image{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.swiper--wp-img-cover .wp-block-zenflow5-carousel-swiper-item figure.wp-block-image img{
+	// width: auto;
+	// max-width: 100%;
+	// max-height: 100px;
+	object-fit: cover;
+}
+
+.swiper--wp-img-contain .wp-block-zenflow5-carousel-swiper-item figure.wp-block-image img{
+	object-fit: contain;
+}
+
+.swiper--wp-img-none .wp-block-zenflow5-carousel-swiper-item figure.wp-block-image img{
+	object-fit: none;
+}
+

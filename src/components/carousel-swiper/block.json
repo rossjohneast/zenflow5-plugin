@@ -1,0 +1,110 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/carousel-swiper",
+	"version": "0.1.0",
+	"title": "Carousel Swiper",
+	"attributes": {
+		"swiperId": {
+			"type": "string"
+		},
+		"slidesPerViewXS": {
+			"type": "number",
+			"default": 1
+		},
+		"slidesPerViewSM": {
+			"type": "number"
+		},
+		"slidesPerViewMD": {
+			"type": "number"
+		},
+		"slidesPerViewLG": {
+			"type": "number"
+		},
+		"slidesPerViewXL": {
+			"type": "number"
+		},
+		"slidesPerViewXXL": {
+			"type": "number"
+		},
+		"spaceBetweenXS": {
+			"type": "string",
+			"default": "24"
+		},
+		"centeredSlides": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoPlay": {
+			"type": "boolean",
+			"default": false
+		},
+		"delay": {
+			"type": "string"
+		},
+		"disableOnInteraction": {
+			"type": "boolean",
+			"default": true
+		},
+		"pauseOnMouseEnter": {
+			"type": "boolean",
+			"default": false
+		},
+		"stopOnLastSlide": {
+			"type": "boolean",
+			"default": false
+		},
+		"loop": {
+			"type": "boolean",
+			"default": false
+		},
+		"navigation": {
+			"type": "boolean",
+			"default": true
+		},
+		"navigationOutside": {
+			"type": "boolean",
+			"default": false
+		},
+		"pagination": {
+			"type": "boolean",
+			"default": true
+		},
+		"paginationOutside": {
+			"type": "boolean",
+			"default": false
+		},
+		"paginationClickable": {
+			"type": "boolean",
+			"default": true
+		},
+		"fadeEffect": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoHeight": {
+			"type": "boolean",
+			"default": false
+		},
+		"customUITheme": {
+			"type": "string",
+			"default": "swiper--ui-light"
+		},
+		"customWPImages": {
+			"type": "string",
+			"default": "swiper--wp-img-contain"
+		}
+	},
+	"category": "zenflow5",
+	"icon": "smiley",
+	"description": "An advanced carousel.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "carousel-swiper",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

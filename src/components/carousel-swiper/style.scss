@@ -1,0 +1,68 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "swiper/css";
+@import "swiper/css/a11y";
+@import "swiper/css/autoplay";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-fade";
+
+.wp-block-zenflow5-carousel-swiper {
+  .disabled_swiper_button {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+  // Give the swiper nav some space
+  .wp-block-zenflow5-carousel-swiper.swiper--nav-outside {
+    margin-bottom: 5rem;
+  }
+
+  // Move to the bottom else buttons overlap or are hidden etc and horz scroll issue
+  .swiper-button-outside-wrapper {
+    position: absolute;
+    bottom: 1.3rem;
+    width: 0.6rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+.swiper-button-outside-wrapper {
+  .swiper-button-prev-outside {
+    left: -2.4rem;
+  }
+
+  .swiper-button-next-outside {
+    right: -2.4rem;
+  }
+}
+
+.swiper-pag-outside-wrapper {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-pag-outside-wrapper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -2px;
+}
+
+@media (min-width: 1200px) {
+  .swiper-pag-outside-wrapper {
+    bottom: -3rem;
+  }
+}
