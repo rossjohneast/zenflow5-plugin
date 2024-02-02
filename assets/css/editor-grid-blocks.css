@@ -115,13 +115,14 @@
 
 /* Layout block */
 
-.editor-styles-wrapper div[data-type="zenflow5/row"] {
+.editor-styles-wrapper div[data-type="zenflow5/row"],
+.editor-styles-wrapper div[data-type="zenflow5/container"] {
     flex: 1 1 100%;
 }
 
-.editor-styles-wrapper div[data-type="zenflow5/container"],
 .wp-block-zenflow5-section>section>.block-editor-inner-blocks {
     flex: 1 1 100%;
+    flex: 0 0 100%;
 }
 
 div[data-type="zenflow5/row"] .row>div {
@@ -475,6 +476,7 @@ div[data-type="zenflow5/col"]>div {
 
 .wp-block-zenflow5-section>section {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .wp-block-zenflow5-section .container {
