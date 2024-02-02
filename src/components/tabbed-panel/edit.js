@@ -1,5 +1,9 @@
 import { __ } from '@wordpress/i18n';
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { 
+  InnerBlocks, 
+  useBlockProps, 
+  ButtonBlockAppender 
+} from '@wordpress/block-editor';
 import './editor.scss';
 import { useSelect } from '@wordpress/data';
 import { useEffect } from 'react';
@@ -85,6 +89,12 @@ export default function Edit(props) {
 		template={MY_TEMPLATE_CELLS}
 		key={tabLabelsArray.map(tab => tab.clientId).join(',')}
       />
+
+      <ButtonBlockAppender
+				className="custom-text-appender has-icon"
+				rootClientId={clientId}
+			/>
+
     </div>
   );
 }

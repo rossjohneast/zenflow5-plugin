@@ -2,7 +2,8 @@ import { __ } from '@wordpress/i18n';
 import { 
 	useBlockProps,
 	InnerBlocks,
-	InspectorControls  
+	InspectorControls,
+	ButtonBlockAppender 
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -125,6 +126,11 @@ export default function Edit(props) {
 					['zenflow5/carousel-item'],
 					['zenflow5/carousel-item']
 				]}
+			/>
+
+			<ButtonBlockAppender
+				className="custom-text-appender has-icon"
+				rootClientId={clientId}
 			/>
 
 		</div>

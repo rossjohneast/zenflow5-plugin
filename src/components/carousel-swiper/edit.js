@@ -379,7 +379,7 @@ export default function Edit(props) {
 			/>
 
 			<ButtonBlockAppender
-				className="slider-appender has-icon"
+				className="custom-text-appender has-icon"
 				rootClientId={clientId}
 			/>
 

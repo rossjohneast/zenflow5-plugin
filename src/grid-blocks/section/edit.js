@@ -6,7 +6,8 @@ import {
   MediaUploadCheck,
   PanelColorSettings,
   BlockControls,
-  MediaReplaceFlow
+  MediaReplaceFlow,
+  ButtonBlockAppender
 } from '@wordpress/block-editor';
 import { 
 	PanelBody, 
@@ -32,7 +33,7 @@ import './editor.scss';
 
 export default function Edit(props) {
 
-    const { attributes, setAttributes, textColor, backgroundColor } = props;
+    const { attributes, setAttributes, textColor, backgroundColor, clientId } = props;
 
 	//Start: focal point management
 	const [focalPoint, setFocalPoint] = useState({
@@ -390,6 +391,14 @@ export default function Edit(props) {
 						["zenflow5/responsive-spacer"]
 					]}
 				/>
+
+				<div className="custom-text-appender-wrapper custom-text-appender-wrapper-section mt-3">
+					<ButtonBlockAppender
+						className="custom-text-appender has-icon"
+						rootClientId={clientId}
+					/>
+				</div>
+
 
 			{attributes.gradient && (
 				<span className='bg_overlay' style={styleOverlay}></span>

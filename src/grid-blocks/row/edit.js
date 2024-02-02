@@ -3,11 +3,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 import { useState } from '@wordpress/element';
 import { InnerBlocks,
     InspectorControls,
-    MediaUpload,
-    MediaUploadCheck,
-    PanelColorSettings,
 	BlockControls,
-	MediaReplaceFlow
+	MediaReplaceFlow,
+	ButtonBlockAppender
 } from '@wordpress/block-editor';
 import {
     PanelBody,
@@ -38,7 +36,7 @@ import sharedtextAlignClassnames from "../shared/textalign/textalign-classnames"
 import sharedColorsInspCnt from "../shared/colors/color-insp-cnt.js";
 
 export default function Edit(props) {
-	const { attributes, setAttributes, textColor, backgroundColor } = props;
+	const { attributes, setAttributes, textColor, backgroundColor, clientId } = props;
 
 
 	//Start: focal point management
@@ -312,9 +310,13 @@ export default function Edit(props) {
 				<InnerBlocks
 					allowedBlocks={['zenflow5/col']}
 					template={[
-						['zenflow5/col'],
 						['zenflow5/col']
 					]}
+				/>
+
+				<ButtonBlockAppender
+					className="custom-text-appender has-icon"
+					rootClientId={clientId}
 				/>
 
 			</div>

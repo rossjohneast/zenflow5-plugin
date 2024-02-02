@@ -20,6 +20,15 @@
 	object-fit: cover;
 }
 
+.swiper--wp-img-contain .wp-block-zenflow5-carousel-swiper-item figure,
+.swiper--wp-img-cover .wp-block-zenflow5-carousel-swiper-item figure {
+	height: 100%;
+}
+.swiper--wp-img-contain .wp-block-zenflow5-carousel-swiper-item figure.wp-block-image img,
+.swiper--wp-img-cover .wp-block-zenflow5-carousel-swiper-item figure.wp-block-image img {
+	width: 100%!important;
+}
+
 .swiper--wp-img-contain .wp-block-zenflow5-carousel-swiper-item figure.wp-block-image img{
 	object-fit: contain;
 }

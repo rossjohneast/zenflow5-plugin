@@ -2,12 +2,11 @@ import block_icons from "../block-icons";
 import { useState } from '@wordpress/element';
 import {
 	InspectorControls,
-	MediaUpload,
-	MediaUploadCheck,
 	InnerBlocks,
     PanelColorSettings,
 	BlockControls,
-	MediaReplaceFlow
+	MediaReplaceFlow,
+	ButtonBlockAppender
 } from '@wordpress/block-editor';
 import {
 	Panel,
@@ -27,7 +26,7 @@ import classnames from 'classnames';
 
 export default function Edit(props) {
 
-	const { attributes, setAttributes } = props;
+	const { attributes, setAttributes, clientId } = props;
 
 	//Start: focal point management
 	const [focalPoint, setFocalPoint] = useState({
@@ -262,6 +261,19 @@ export default function Edit(props) {
 					allowedBlocks={["zenflow5/row"]}
 					template={[["zenflow5/row"]]}
 				/>
+
+				{/* <ButtonBlockAppender
+					className="custom-text-appender has-icon"
+					rootClientId={clientId}
+				/> */}
+
+				<div className="custom-text-appender-wrapper mt-3">
+					<ButtonBlockAppender
+						className="custom-text-appender has-icon"
+						rootClientId={clientId}
+					/>
+				</div>
+
 			</div>
 		</div>
 	);
