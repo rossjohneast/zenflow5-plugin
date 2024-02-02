@@ -21,5 +21,5 @@
  */
  
 /* eslint-disable no-console */
-console.log("Hello World! (from create-block-carousel-swiper-item block)");
+// console.log("Hello World! (from create-block-carousel-swiper-item block)");
 /* eslint-enable no-console */

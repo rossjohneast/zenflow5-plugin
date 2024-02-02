@@ -15,9 +15,7 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.1.0",
-		"postcss-import": "^16.0.0",
-		"postcss-preset-env": "^9.3.0"
+		"@wordpress/scripts": "^26.1.0"
 	},
 	"dependencies": {
 		"@wordpress/icons": "^9.21.0",

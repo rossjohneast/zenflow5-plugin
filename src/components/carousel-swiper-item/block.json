@@ -3,10 +3,10 @@
 	"apiVersion": 3,
 	"name": "zenflow5/carousel-swiper-item",
 	"version": "0.1.0",
-	"title": "Carousel Swiper Item",
+	"title": "Advanced Carousel Item",
 	"parent": [ "zenflow5/carousel-swiper" ],
 	"category": "zenflow5",
-	"icon": "smiley",
+	"icon": "format-image",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
 	"supports": {

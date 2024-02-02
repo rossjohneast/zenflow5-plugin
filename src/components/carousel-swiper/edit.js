@@ -2,7 +2,8 @@ import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
 	InnerBlocks,
-	InspectorControls
+	InspectorControls,
+	ButtonBlockAppender
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -167,8 +168,6 @@ export default function Edit(props) {
 					>
 						{__("Reset", "zenflow5")}
 					</Button>
-
-
 
 				</PanelBody>
 
@@ -370,7 +369,6 @@ export default function Edit(props) {
 				</PanelBody>
 			</InspectorControls>
 
-
 			<InnerBlocks
 				allowedBlocks={['zenflow5/carousel-swiper-item']}
 				template={[
@@ -378,6 +376,11 @@ export default function Edit(props) {
 					['zenflow5/carousel-swiper-item'],
 					['zenflow5/carousel-swiper-item']
 				]}
+			/>
+
+			<ButtonBlockAppender
+				className="slider-appender has-icon"
+				rootClientId={clientId}
 			/>
 
 		</div>

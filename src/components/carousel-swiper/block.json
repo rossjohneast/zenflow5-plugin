@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "zenflow5/carousel-swiper",
 	"version": "0.1.0",
-	"title": "Carousel Swiper",
+	"title": "Advanced Carousel",
 	"attributes": {
 		"swiperId": {
 			"type": "string"
@@ -96,7 +96,7 @@
 		}
 	},
 	"category": "zenflow5",
-	"icon": "smiley",
+	"icon": "images-alt2",
 	"description": "An advanced carousel.",
 	"example": {},
 	"supports": {
