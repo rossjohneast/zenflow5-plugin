@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zenflow5/breadcrumbs",
+	"version": "0.1.0",
+	"title": "Breadcrumbs",
+	"category": "zenflow5",
+	"icon": "smiley",
+	"description": "Breadcrumbs for pages.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "breadcrumbs",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
