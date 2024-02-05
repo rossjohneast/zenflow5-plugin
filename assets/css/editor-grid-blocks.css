@@ -200,8 +200,9 @@ div[data-type="zenflow5/cover-layout"] {
     /* transition: all 0.4s ease-in-out; */
 }
 
-div[data-type="zenflow5/col"] {
-    overflow: auto;
+
+div[data-type="zenflow5/col"] > div {
+    overflow-x: auto;
 }
 
 .wp-block-zenflow5-section:hover,
@@ -324,9 +325,11 @@ div[data-type="zenflow5/cover-layout"]:before {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
+
+    right: auto;
 }
 
-/* div[data-type="zenflow5/section"]:hover:before,
+div[data-type="zenflow5/section"]:hover:before,
 div[data-type="zenflow5/section-cover"]:hover:before,
 div[data-type="zenflow5/section-cover"] [data-type="core/cover"]:hover:before,
 div[data-type="zenflow5/col"]:hover:before,
@@ -338,17 +341,17 @@ div[data-type="zenflow5/cover-layout"]:hover:before {
     opacity: 1 !important;
     color: #fff !important;
     background-color: #007cba;
-} */
+}
 
-/* div[data-type="zenflow5/col"]:hover:before,
+div[data-type="zenflow5/col"]:hover:before,
 div[data-type="zenflow5/responsive-spacer"]:hover:before {
     opacity: 1 !important;
     color: #fff !important;
     background-color: #007cba;
 
-} */
+}
 
-/* div:hover > div[data-type="zenflow5/section"]:before,
+div:hover > div[data-type="zenflow5/section"]:before,
 div:hover > div[data-type="zenflow5/section-cover"]:before,
 div:hover > div[data-type="zenflow5/section-cover"] [data-type="core/cover"]:before,
 div:hover > div[data-type="zenflow5/col"]:before,
@@ -360,7 +363,7 @@ div:hover > div[data-type="zenflow5/cover-layout"]:before {
     opacity: 1 !important;
     color: #fff !important;
     background-color: #007cba;
-} */
+}
 
 div[data-type="zenflow5/container"] {
     /* padding: 10px; */
@@ -371,13 +374,13 @@ div[data-type="zenflow5/col"] {
     box-sizing: border-box;
 }
 
-/* div[data-type="zenflow5/col"],
+div[data-type="zenflow5/col"],
 div[data-type="zenflow5/div"],
 div[data-type="zenflow5/row"],
 .wp-block-zenflow5-section>section {
     padding: 10px;
     padding-top: 35px !important;
-} */
+}
 
 div[data-type="zenflow5/cover-layout"]:before {
     content: "Cover Layout";
