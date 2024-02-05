@@ -11,3 +11,29 @@
 .rangeWithMarks .components-range-control__marks {
 	top: 13px;
 }
+
+
+// Show a spacer for cols with Offset values
+// div[data-type="zenflow5/col"] [class*='offset']:after
+// div[data-type^="zenflow5/col"].offset-xs-1:not(.is-selected):after
+$grid-sizes: xs sm md lg xl xxl;
+$grid-columns: 12;
+
+@each $size in $grid-sizes {
+  @for $i from 1 through $grid-columns {
+    div[data-type^="zenflow5/col"].offset-#{$size}-#{$i}:not(.is-selected):after {
+      left: math.div($i, $grid-columns) * -100%; // Calculate left offset
+      width: math.div(1, $grid-columns) * $i * 100%; // Calculate width
+      content: ""; /* Add content to the pseudo-element */
+      display: block; /* Make it a block element */
+      position: absolute; /* Position absolutely */
+      top: 0; /* Align to the top */
+      bottom: 0; /* Align to the bottom */
+      background-color: #eee; /* Set the background color of the left margin */
+	  opacity: .5;
+    }
+  }
+}
+
+
+// Show a spacer for cols with Offset values
