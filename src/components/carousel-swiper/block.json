@@ -93,6 +93,10 @@
 		"customWPImages": {
 			"type": "string",
 			"default": "swiper--wp-img-contain"
+		},
+		"desaturateImg": {
+			"type": "string",
+			"default": false
 		}
 	},
 	"category": "zenflow5",

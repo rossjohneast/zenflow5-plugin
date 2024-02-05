@@ -149,6 +149,14 @@ export default function Edit(props) {
 						}}
 					/>
 
+					<ToggleControl
+						label="Destaurate images"
+						checked={props.attributes.desaturateImg}
+						onChange={() => {
+							props.setAttributes({ desaturateImg: !props.attributes.desaturateImg });
+						}}
+					/>
+
 					<TextControl
 						label={__("Space between slides (px)", "zenflow5")}
 						type="number"

@@ -7,3 +7,12 @@
 .wp-block-create-block-carousel-swiper {
 	border: 1px dotted #f00;
 }
+
+.swiper--bw-imgs img {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	cursor: pointer;
+}

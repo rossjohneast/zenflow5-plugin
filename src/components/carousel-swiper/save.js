@@ -10,6 +10,7 @@ export default function save({ attributes }) {
 		className: `
 			swiper 
 			${attributes.swiperId} 
+			${attributes.desaturateImg ? ' swiper--bw-imgs' : ''} 
 			${attributes.navigationOutside ? ' swiper--nav-outside' : ''} 
 			${attributes.paginationOutside ? ' swiper--pag-outside' : ''}
 			${attributes.customUITheme ? attributes.customUITheme : ''}
