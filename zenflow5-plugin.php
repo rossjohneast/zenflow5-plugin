@@ -259,7 +259,7 @@ register_nav_menus( array(
  * Register Custom Bootstrap Navigation Walker
  */
 function register_navwalker(){
-	require_once __DIR__ . '/inc/classes/class-wp-bootstrap-navwalker.php';
+	require_once __DIR__ . '/inc/classes/class-wp-bootstrap-navwalker-hover.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
