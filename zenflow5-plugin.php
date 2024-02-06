@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.11
+ * Version:           1.0.13
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
@@ -349,8 +349,6 @@ function zenflow5_breadcrumb_render($atts, $content)
 		
 	//Theme button
 	$breadc_output = "";
-
-	//	$breadc_on_pages = get_theme_mod( 'breadc_on_pages', '' );
 		   
 		// Settings
 		$separator          = '&nbsp;' . '/' . '&nbsp;';
@@ -365,11 +363,9 @@ function zenflow5_breadcrumb_render($atts, $content)
 		   
 		// Get the query & post information
 		global $post,$wp_query;
-		 
-	//if (! empty($breadc_on_pages) &&  $breadc_on_pages == "1") {
-	
+		 	
 		// Do not display on the homepage
-		if (!is_front_page()) {
+		//if (!is_front_page()) {
 			$breadc_output .= '
 				<section class="wp-zenflow-breadcrumbs zenflow-breadcrumb-section">
 				<div class="container breadcrumb-container ">
@@ -390,7 +386,7 @@ function zenflow5_breadcrumb_render($atts, $content)
 				$breadc_output .= '<li class="item-home breadcrumb-item"><a class="bread-link bread-home" href="' . $blog_page_url . '" title="' . $blog_page_title . '">' . $blog_page_title . '</a></li>';
 				$breadc_output .= '<li class="separator separator-home"> ' . $separator . ' </li>';
 			}
-		}
+		//}
 	
 			if (is_archive() && !is_tax() && !is_category() && !is_tag()) {
 				$breadc_output .= '<li class="item-current item-archive breadcrumb-item"><span class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</span></li>';
