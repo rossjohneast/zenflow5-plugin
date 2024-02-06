@@ -341,27 +341,16 @@ function zenflow5_footer_info_render($atts, $content)
 function zenflow5_breadcrumb_render($atts, $content)
 {
 
+	// Only display if set in theme options
+	if (get_option('zenbsgb_op_showbreadc') != 1) {
+		
+		return;
+	
+	} else {
+		
 	//Theme button
 	$breadc_output = "";
 
-	//	$breadc_on_pages = get_theme_mod( 'breadc_on_pages', '' );
-		   
-		// Settings
-		$separator          = '&nbsp;' . '/' . '&nbsp;';
-		$breadcrums_id      = 'breadcrumbs';
-		$breadcrums_class   = ' breadcrumb';
-		$home_title         = 'Home';
-		$blog_page_url		= get_permalink( get_option( 'page_for_posts' ) );
-		$blog_page_title	= get_the_title( get_option('page_for_posts', true) );
-			  
-		// If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
-		$custom_taxonomy    = 'product_cat';
-		   
-		// Get the query & post information
-		global $post,$wp_query;
-		 
-	//if (! empty($breadc_on_pages) &&  $breadc_on_pages == "1") {
-	
 		// Do not display on the homepage
 		if (!is_front_page()) {
 			$breadc_output .= '
@@ -567,13 +556,10 @@ function zenflow5_breadcrumb_render($atts, $content)
 				 </div>
 				 </div>
 				 </section>';
-	//	}
 
-		   
+		return $breadc_output;
+	}
 
-
-
-	return $breadc_output;
 }
 
 
