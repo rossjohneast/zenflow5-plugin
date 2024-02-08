@@ -714,13 +714,13 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 				$news_all_posts = '';
 
 				//Page title
-				$news_all_posts .= '<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>';
+				//$news_all_posts .= '<div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div>';
 					
-					$news_all_posts .= '<div class="container content-space-b-1 content-space-b-md-2">';
+					$news_all_posts .= '<div class="container">';
 							
 						$news_all_posts .= '<div class="w-md-75 w-lg-50 text-center mx-md-auto">';
 								
-							$news_all_posts .= '<h1 class="display-4">' . esc_html__( 'News', 'zen-bootstrap-blog' ) . '</h1>';
+							$news_all_posts .= '<h1 class="h1">' . esc_html__( 'News', 'zen-bootstrap-blog' ) . '</h1>';
 							
 						$news_all_posts .= '<p class="lead">' . esc_html__( $page_title, 'zen-bootstrap-blog' ) . '</p>';
 						
@@ -1072,7 +1072,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 
 			$single_post_output = "<main><div class='container'><div class='row'>";
 
-				$single_post_output .= "<div class='row'><div class='wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11' aria-hidden='true'></div></div>";
+				//$single_post_output .= "<div class='row'><div class='wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11' aria-hidden='true'></div></div>";
 
 				$single_post_output .= "<div class='col-12 col-lg-8 offset-lg-2'>";
 				
@@ -1106,7 +1106,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 				
 				$single_post_output .= '</div>';
 
-				$single_post_output .= '<div class="row"><div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div></div>';
+				//$single_post_output .= '<div class="row"><div class="wp-block-zenflow5-responsive-spacer zenflow5-responsive-spacer pb-8 pb-md-11" aria-hidden="true"></div></div>';
 
 			$single_post_output .= '</div></div></main>';
 		
