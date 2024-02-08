@@ -85,20 +85,19 @@ const sharedColorsInspCnt = (props) => {
                 initialOpen={false}
                 colorSettings={[
                 {
-                    value:  props.backgroundColor,
+                    value:  props.attributes.backgroundColor,
                     onChange: (colorValue) =>
-                    props.setAttributes({ backgroundColor: colorValue }),
+                        props.setAttributes({ backgroundColor: colorValue }),
                     label: __("Background Color"),
                 },
                 {
-                    value:  props.textColor,
+                    value:  props.attributes.textColor,
                     onChange: (colorValue) =>
-                    props.setAttributes({ textColor: colorValue }),
+                        props.setAttributes({ textColor: colorValue }),
                     label: __("Text Color"),
                 },
                 ]}
             >
-                
             </PanelColorSettings>
         </>
     )
