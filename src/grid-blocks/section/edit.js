@@ -29,6 +29,11 @@ import block_icons from "../block-icons";
 import sharedAnimationsInspCnt from "../shared/animation/aos-insp-cnt.js";
 import sharedColorsInspCnt from "../shared/colors/color-insp-cnt.js";
 
+import sharedPaddingInspCnt from "../shared/padding/padding-insp-cnt.js";
+import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
+import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
+import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
+
 import './editor.scss';
 
 export default function Edit( props ) {
@@ -339,6 +344,11 @@ export default function Edit( props ) {
 					</PanelBody>
 
 				)}
+
+				{sharedPaddingInspCnt(props)}
+
+				{sharedMarginInspCnt(props)}
+
 				{sharedAnimationsInspCnt(props)}
 			</InspectorControls>
 

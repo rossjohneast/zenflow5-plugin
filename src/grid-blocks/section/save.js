@@ -4,6 +4,9 @@ import {
 } from '@wordpress/block-editor';
 import classnames from "classnames";
 
+import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
+import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
+
 export default function save(props) {
     const { attributes } = props;
 
@@ -47,30 +50,32 @@ export default function save(props) {
     	/** * Add class to block if img set. * * @link https://stackoverflow.com/a/72408500 */
 	const blockPropsClass = useBlockProps.save({
 		className: 
-    classnames(
-      "zenflow5-section",
-      "section",
-      [
-        `${
-          props.attributes.textColorTheme !== undefined
-            ? `${props.attributes.textColorTheme}`
-            : ""
-        }`,
-      ],
-      [
-        `${
-          props.attributes.backgroundColorTheme !== undefined
-            ? `${props.attributes.backgroundColorTheme}`
-            : ""
-        }`,
-      ],
-      [
-        `${
-          props.attributes.paddingSection !== undefined
-            ? `py-${props.attributes.paddingSection}`
-            : ""
-        }`,
-      ],
+      classnames(
+        "zenflow5-section",
+        "section",
+        sharedPaddingClassnames(props),
+        sharedMarginClassnames(props),
+        [
+          `${
+            props.attributes.textColorTheme !== undefined
+              ? `${props.attributes.textColorTheme}`
+              : ""
+          }`,
+        ],
+        [
+          `${
+            props.attributes.backgroundColorTheme !== undefined
+              ? `${props.attributes.backgroundColorTheme}`
+              : ""
+          }`,
+        ],
+        [
+          `${
+            props.attributes.paddingSection !== undefined
+              ? `py-${props.attributes.paddingSection}`
+              : ""
+          }`,
+        ],
       [
         `${
           props.attributes.backgroundImageTint !== undefined
