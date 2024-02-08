@@ -1,22 +1,22 @@
 import { __ } from '@wordpress/i18n';
 import {
-  InnerBlocks,
-  InspectorControls,
-  MediaUpload,
-  MediaUploadCheck,
-  PanelColorSettings,
-  BlockControls,
-  MediaReplaceFlow,
-  ButtonBlockAppender
+	InnerBlocks,
+	InspectorControls,
+	MediaUpload,
+	MediaUploadCheck,
+	PanelColorSettings,
+	BlockControls,
+	MediaReplaceFlow,
+	ButtonBlockAppender
 } from '@wordpress/block-editor';
-import { 
-	PanelBody, 
-	PanelRow, 
-	Button, 
-	SelectControl, 
+import {
+	PanelBody,
+	PanelRow,
+	Button,
+	SelectControl,
 	RangeControl,
 	FocalPointPicker,
-	GradientPicker 
+	GradientPicker
 } from '@wordpress/components';
 
 import { useState } from '@wordpress/element';
@@ -31,9 +31,9 @@ import sharedColorsInspCnt from "../shared/colors/color-insp-cnt.js";
 
 import './editor.scss';
 
-export default function Edit(props) {
+export default function Edit( props ) {
 
-    const { attributes, setAttributes, textColor, backgroundColor, clientId } = props;
+	const { attributes, setAttributes, textColor, backgroundColor, clientId } = props;
 
 	//Start: focal point management
 	const [focalPoint, setFocalPoint] = useState({
@@ -69,18 +69,18 @@ export default function Edit(props) {
 	}
 
 
-    const style = {
-      backgroundColor: props.attributes.backgroundColor,
-      color: props.attributes.textColor,
-      backgroundSize: props.attributes.backgroundImageSize,
-      backgroundAttachment: props.attributes.backgroundImageAttachment,
-      backgroundRepeat: props.attributes.backgroundImageRepeat,
-      minHeight: props.attributes.minHeightSection,
-      backgroundPosition: props.attributes.backgroundImagePos,
+	const style = {
+		backgroundColor: props.attributes.backgroundColor,
+		color: props.attributes.textColor,
+		backgroundSize: props.attributes.backgroundImageSize,
+		backgroundAttachment: props.attributes.backgroundImageAttachment,
+		backgroundRepeat: props.attributes.backgroundImageRepeat,
+		minHeight: props.attributes.minHeightSection,
+		backgroundPosition: props.attributes.backgroundImagePos,
 
-	  backgroundImage: `url(${focalUrl})`,
-	  backgroundPosition: `${focalPoint.x * 100}% ${focalPoint.y * 100}%`,
-    };
+		backgroundImage: `url(${focalUrl})`,
+		backgroundPosition: `${focalPoint.x * 100}% ${focalPoint.y * 100}%`,
+	};
 
 	function onImageSelect(imageObject) {
 		setAttributes({
@@ -95,30 +95,30 @@ export default function Edit(props) {
 			backgroundImage: null
 		});
 	};
-  
-    const styleOverlay = {
+
+	const styleOverlay = {
 		backgroundImage: `${attributes.gradient}`,
 	};
 
-	  return (
+	return (
 		<>
 
-			  <BlockControls group="other">
-				  <MediaReplaceFlow
-					  name={!attributes.urlImage ? __('Add Background Image') : __('Replace Background Image')}
-					  mediaId={attributes.imgID}
-					  mediaURL={attributes.urlImage}
-					  allowedTypes={['image']}
-					  accept="image/*"
-					  onSelect={selectImg}
-					  onError={error => console.error(error)}
-				  />
-			  </BlockControls>
+			<BlockControls group="other">
+				<MediaReplaceFlow
+					name={!attributes.urlImage ? __('Add Background Image') : __('Replace Background Image')}
+					mediaId={attributes.imgID}
+					mediaURL={attributes.urlImage}
+					allowedTypes={['image']}
+					accept="image/*"
+					onSelect={selectImg}
+					onError={error => console.error(error)}
+				/>
+			</BlockControls>
 
 
-		<InspectorControls>
-		  <PanelBody title={__("Section options", "zenflow5")}>
-			{/* <RangeControl
+			<InspectorControls>
+				<PanelBody title={__("Section options", "zenflow5")}>
+					{/* <RangeControl
 			  label={__("Padding Y (top & bottom)", "zenflow5")}
 			  min={0}
 			  max={5}
@@ -129,31 +129,31 @@ export default function Edit(props) {
 				props.setAttributes({ paddingSection: new_val });
 			  }}
 			/> */}
-  
-			<RangeControl
-			  label={__("Minimum height", "zenflow5")}
-			  min={0}
-			  max={2000}
-			  step={5}
-			  allowReset={true}
-			  resetFallbackValue={"0"}
-			  value={props.attributes.minHeightSection}
-			  onChange={(new_val) => {
-				props.setAttributes({ minHeightSection: new_val });
-			  }}
-			/>
-		  </PanelBody>
-  
-		  {sharedColorsInspCnt(props)}
 
-  {focalUrl && (
-		  <PanelBody
-			title={__("Section Background image", "zenflow5")}
-			initialOpen={true}
-		  >
+					<RangeControl
+						label={__("Minimum height", "zenflow5")}
+						min={0}
+						max={2000}
+						step={5}
+						allowReset={true}
+						resetFallbackValue={"0"}
+						value={props.attributes.minHeightSection}
+						onChange={(new_val) => {
+							props.setAttributes({ minHeightSection: new_val });
+						}}
+					/>
+				</PanelBody>
+
+				{sharedColorsInspCnt(props)}
+
+				{focalUrl && (
+					<PanelBody
+						title={__("Section Background image", "zenflow5")}
+						initialOpen={true}
+					>
 
 
-			
+
 						<div>
 							<PanelRow>
 								<div>
@@ -237,27 +237,27 @@ export default function Edit(props) {
 									}} />
 							</PanelRow>
 						</div>
-					
 
-			{/* <PanelBody title='Gradient'> */}
-					<PanelRow>
-						<GradientPicker
-							__nextHasNoMargin
-							value={attributes.gradient}
-							onChange={(val) => setAttributes({ gradient: val })}
-							gradients={[
-								{
-									name: 'Dark Tint',
-									gradient:
-										'linear-gradient(0deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(34,34,34,0.4) 100%)',
-									slug: 'zenflow5-darktint',
-								},
-							]}
-						/>	
+
+						{/* <PanelBody title='Gradient'> */}
+						<PanelRow>
+							<GradientPicker
+								__nextHasNoMargin
+								value={attributes.gradient}
+								onChange={(val) => setAttributes({ gradient: val })}
+								gradients={[
+									{
+										name: 'Dark Tint',
+										gradient:
+											'linear-gradient(0deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(34,34,34,0.4) 100%)',
+										slug: 'zenflow5-darktint',
+									},
+								]}
+							/>
 						</PanelRow>
-				{/* </PanelBody> */}
+						{/* </PanelBody> */}
 
-			{/* <PanelRow className="w-100">
+						{/* <PanelRow className="w-100">
 			  <SelectControl
 				label={__("Background tint", "zenflow5")}
 				value={props.attributes.backgroundImageTint}
@@ -278,8 +278,8 @@ export default function Edit(props) {
 				}}
 			  />
 			</PanelRow> */}
-  
-			{/* <PanelRow className="w-100">
+
+						{/* <PanelRow className="w-100">
 			  <SelectControl
 				label={__("Background size", "zenflow5")}
 				value={props.attributes.backgroundImageSize}
@@ -334,78 +334,74 @@ export default function Edit(props) {
 			  />
 			</PanelRow> */}
 
-		  </PanelBody>
+					</PanelBody>
 
-)}
-		  {sharedAnimationsInspCnt(props)}
-		</InspectorControls>
-  
-		<div 
-			{ ...useBlockProps() }
-		>
-		  <section
-			className={classnames(
-			  "zenflow5-section",
-			  "section",
-			  [
-				`${
-				  props.attributes.textColorTheme !== undefined
-					? `${props.attributes.textColorTheme}`
-					: ""
-				}`,
-			  ],
-			  [
-				`${
-				  props.attributes.backgroundColorTheme !== undefined
-					? `${props.attributes.backgroundColorTheme}`
-					: ""
-				}`,
-			  ],
-			  [
-				`${
-				  props.attributes.paddingSection !== undefined
-					? `py-${props.attributes.paddingSection}`
-					: ""
-				}`,
-			  ],
-			  [
-				`${
-				  props.attributes.backgroundImageTint !== undefined
-					? `${props.attributes.backgroundImageTint}`
-					: ""
-				}`,
-			  ]
-			)}
-			style={{
-			  ...style,
-			  ...BackgroundIsActive,
-			}}
-		  >
-				<InnerBlocks
-					allowedBlocks={[
-						"zenflow5/container", "zenflow5/responsive-spacer"
-					]}
-					template={[
-						["zenflow5/responsive-spacer"],
-						["zenflow5/container"],
-						["zenflow5/responsive-spacer"]
-					]}
-				/>
+				)}
+				{sharedAnimationsInspCnt(props)}
+			</InspectorControls>
 
-				<div className="custom-text-appender-wrapper custom-text-appender-wrapper-section mt-3">
-					<ButtonBlockAppender
-						className="custom-text-appender has-icon"
-						rootClientId={clientId}
+			<div
+				{...useBlockProps()}
+			>
+				<section
+					className={classnames(
+						"zenflow5-section",
+						"section",
+						[
+							`${props.attributes.textColorTheme !== undefined
+								? `${props.attributes.textColorTheme}`
+								: ""
+							}`,
+						],
+						[
+							`${props.attributes.backgroundColorTheme !== undefined
+								? `${props.attributes.backgroundColorTheme}`
+								: ""
+							}`,
+						],
+						[
+							`${props.attributes.paddingSection !== undefined
+								? `py-${props.attributes.paddingSection}`
+								: ""
+							}`,
+						],
+						[
+							`${props.attributes.backgroundImageTint !== undefined
+								? `${props.attributes.backgroundImageTint}`
+								: ""
+							}`,
+						]
+					)}
+					style={{
+						...style,
+						...BackgroundIsActive,
+					}}
+				>
+					<InnerBlocks
+						allowedBlocks={[
+							"zenflow5/container", "zenflow5/responsive-spacer"
+						]}
+						template={[
+							["zenflow5/responsive-spacer"],
+							["zenflow5/container"],
+							["zenflow5/responsive-spacer"]
+						]}
 					/>
-				</div>
+
+					<div className="custom-text-appender-wrapper custom-text-appender-wrapper-section mt-3">
+						<ButtonBlockAppender
+							className="custom-text-appender has-icon"
+							rootClientId={clientId}
+						/>
+					</div>
 
 
-			{attributes.gradient && (
-				<span className='bg_overlay' style={styleOverlay}></span>
-			)}
+					{attributes.gradient && (
+						<span className='bg_overlay' style={styleOverlay}></span>
+					)}
 
-		  </section>
-		</div>
+				</section>
+			</div>
 		</>
-	  );
+	);
 }
