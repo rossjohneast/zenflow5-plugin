@@ -31,6 +31,15 @@ export default function save(props) {
       backgroundPosition: props.attributes.backgroundImagePos,
     };
 
+    // Style conditionals
+    // Check if backgroundGradient is set
+    if (props.attributes.backgroundGradient) {
+      style.background = props.attributes.backgroundGradient;
+    } else if (props.attributes.backgroundColor) { 
+      // Set background color if gradient is not set
+      style.backgroundColor = props.attributes.backgroundColor;
+    }
+
     const styleOverlay = {
       backgroundImage: `${attributes.gradient}`,
     };

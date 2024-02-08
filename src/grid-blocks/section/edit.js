@@ -80,6 +80,8 @@ export default function Edit( props ) {
 
 		backgroundImage: `url(${focalUrl})`,
 		backgroundPosition: `${focalPoint.x * 100}% ${focalPoint.y * 100}%`,
+
+		background: props.attributes.backgroundGradient ? props.attributes.backgroundGradient : '',
 	};
 
 	function onImageSelect(imageObject) {

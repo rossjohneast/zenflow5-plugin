@@ -2,7 +2,8 @@ const { __ } = wp.i18n;
 import { 
   PanelBody,
   PanelRow,
-  SelectControl
+  SelectControl,
+  GradientPicker
 } from '@wordpress/components';
 import {
     PanelColorSettings,
@@ -99,6 +100,25 @@ const sharedColorsInspCnt = (props) => {
                 ]}
             >
             </PanelColorSettings>
+
+            <PanelBody title='Gradient'>
+                <PanelRow>
+                    <GradientPicker
+                        __nextHasNoMargin
+                        value={props.attributes.backgroundGradient}
+                        onChange={(val) => setAttributes({ backgroundGradient: val })}
+                        gradients={[
+                            {
+                                name: 'Dark Tint',
+                                gradient:
+                                    'linear-gradient(0deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(34,34,34,0.4) 100%)',
+                                slug: 'zenflow5-darktint',
+                            },
+                        ]}
+                    />
+                </PanelRow>
+            </PanelBody>
+
         </>
     )
 

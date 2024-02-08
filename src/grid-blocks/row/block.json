@@ -405,7 +405,10 @@
         },
         "textAlignXXL": {
             "type": "string"
-        }
+        },
+		"backgroundGradient": {
+			"type": "string"
+		}
 	},
 	"category": "zenflow5",
 	"icon": "welcome-widgets-menus",

@@ -22,6 +22,16 @@ export default function save(props) {
 		backgroundColor: props.attributes.backgroundColor
 	};
 
+	// Style conditionals
+	// Check if backgroundGradient is set
+	if (props.attributes.backgroundGradient) {
+		style.background = props.attributes.backgroundGradient;
+	} 
+	// else if (props.attributes.backgroundColor) {
+	// 	// Set background color if gradient is not set
+	// 	style.backgroundColor = props.attributes.backgroundColor;
+	// }
+
 	//Only use the background inline style if its not null
 	let BackgroundIsActive = "";
 	if (focalUrl != null) {
