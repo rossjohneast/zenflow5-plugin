@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.15
+ * Version:           1.0.16
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
@@ -709,6 +709,11 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 
 				}
 
+				// Get the ID of the posts page to add to the h1 title
+				$posts_page_id = get_option('page_for_posts');
+				// Get the title of the posts page
+				$posts_page_title = get_the_title($posts_page_id);
+
 				//Get and display the posts
 				$news_single_post = '';
 				$news_all_posts = '';
@@ -719,8 +724,8 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 					$news_all_posts .= '<div class="container">';
 							
 						$news_all_posts .= '<div class="w-md-75 w-lg-50 text-center mx-md-auto">';
-								
-							$news_all_posts .= '<h1 class="h1">' . esc_html__( 'News', 'zen-bootstrap-blog' ) . '</h1>';
+
+							$news_all_posts .= '<h1 class="h1">' . esc_html($posts_page_title) . '</h1>';
 							
 						$news_all_posts .= '<p class="lead">' . esc_html__( $page_title, 'zen-bootstrap-blog' ) . '</p>';
 						
