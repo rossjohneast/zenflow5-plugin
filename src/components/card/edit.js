@@ -45,6 +45,8 @@ import sharedColorsInspCnt from "../../grid-blocks/shared/colors/color-insp-cnt.
 
     const { isSelected, attributes, setAttributes } = props;
 
+	const NEW_TAB_REL = "noopener noreferrer";
+	const richTextRef = useRef();
 
 	const {
 		imgID,
