@@ -6,9 +6,11 @@ import BsIconsRegular from '../bs-icons/regular';
 import sharedMarginInspCnt from '../shared/margin/margin-insp-cnt.js';
 import sharedMarginClassnames from '../shared/margin/margin-classnames.js';
 
-const NEW_TAB_REL = 'noreferrer noopener';
+
 
 export default function save(props) {
+
+	const NEW_TAB_REL = 'noreferrer noopener';
 
 	const { attributes } = props;
 
@@ -25,14 +27,19 @@ export default function save(props) {
 	const styleOuter = {
 		backgroundColor: backgroundColor,
 		color: iconColor,
-		 // Apply borderRadius only if it's not null or an empty string
-  		borderRadius: borderRadius !== null && borderRadius !== '' && displayIconBg !== false ? borderRadius + 'rem' : undefined,
 		borderWidth: borderWidth,
 		borderColor: borderColor,
 		// iconSize: iconSize,
 		minHeight: minHeight,
 		minWidth: minWidth,
 	};
+
+	// styleOuter conditionals
+	// Apply borderRadius only if it's not null or an empty string
+	// Check if borderRadius is set and displayIconBg is not false
+	if (props.attributes.borderRadius && props.attributes.displayIconBg != false) {
+		styleOuter.borderRadius = props.attributes.borderRadius + 'rem';
+	}
 
 		/** * Add class to block if img set. * * @link https://stackoverflow.com/a/72408500 */
 		const blockPropsClass = useBlockProps.save({

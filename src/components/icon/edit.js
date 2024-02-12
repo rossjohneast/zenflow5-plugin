@@ -32,12 +32,12 @@ import sharedIconInspCnt from "../shared/icon/icon-insp-cnt.js";
 import sharedMarginInspCnt from '../shared/margin/margin-insp-cnt.js';
 import sharedMarginClassnames from '../shared/margin/margin-classnames.js';
 
-const NEW_TAB_REL = 'noreferrer noopener';
-
 export default function Edit(props) {
 
 	const { isSelected, attributes, setAttributes } =
 		props;
+
+	const NEW_TAB_REL = 'noreferrer noopener';
 
 	// const iconsNew = BsIconsRegular;
 
