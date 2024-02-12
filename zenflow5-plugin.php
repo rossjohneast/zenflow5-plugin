@@ -1229,23 +1229,23 @@ add_action( 'admin_init', 'zenflow5_plugin_update_check_with_license' );
  * @author Misha Rudrastyh
  * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html#blacklist-blocks
  */
-add_filter( 'allowed_block_types_all', 'zenflow5_blacklist_blocks' );
+// add_filter( 'allowed_block_types_all', 'zenflow5_blacklist_blocks' );
  
-function zenflow5_blacklist_blocks( $allowed_blocks ) {
-	// get all the registered blocks
-	$blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+// function zenflow5_blacklist_blocks( $allowed_blocks_plugin ) {
+// 	// get all the registered blocks
+// 	$blocks_plugin = WP_Block_Type_Registry::get_instance()->get_all_registered();
 
-	// then disable some of them
-	unset( $blocks[ 'zenflow5/blog-single-post' ] );
-	unset( $blocks[ 'zenflow5/blog-archive' ] );
-	unset( $blocks[ 'zenflow5/page' ] );
-	unset( $blocks[ 'zenflow5/custom-nav' ] );
-	unset( $blocks[ 'zenflow5/footer-info' ] );
+// 	// then disable some of them
+// 	unset( $blocks_plugin[ 'zenflow5/blog-single-post' ] );
+// 	unset( $blocks_plugin[ 'zenflow5/blog-archive' ] );
+// 	unset( $blocks_plugin[ 'zenflow5/page' ] );
+// 	unset( $blocks_plugin[ 'zenflow5/custom-nav' ] );
+// 	unset( $blocks_plugin[ 'zenflow5/footer-info' ] );
 
-	// return the new list of allowed blocks
-	return array_keys( $blocks );
+// 	// return the new list of allowed blocks
+// 	return array_keys( $blocks_plugin );
 	
-}
+// }
 
 
 
