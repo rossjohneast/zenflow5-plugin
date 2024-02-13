@@ -41,6 +41,7 @@ export default function save(props) {
 			backgroundRepeat: 'no-repeat',
 			backgroundImage: `url(${focalUrl})`,
 			backgroundPosition: attributes.focalPointX ? `${attributes.focalPointX * 100}% ${attributes.focalPointY * 100}%` : '',
+			backgroundSize: attributes.urlImageSize,
 		}
 	}
 

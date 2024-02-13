@@ -388,6 +388,9 @@
 		},
 		"marginAuto": {
 			"type": "boolean"
+		},
+		"urlImageSize" : {
+			"type": "string"
 		}
 	},
 	"category": "zenflow5",

@@ -74,7 +74,8 @@ import sharedColorsInspCnt from "../../grid-blocks/shared/colors/color-insp-cnt.
 		urlImagefocalPointY,
 		shadow,
 		border,
-		backgroundSize
+		backgroundSize,
+		urlImageSize
 	} = attributes;
 
 	function onToggleOpenInNewTab(value) {
@@ -326,6 +327,23 @@ import sharedColorsInspCnt from "../../grid-blocks/shared/colors/color-insp-cnt.
 									{__("Clear Media")}
 								</Button>
 							</PanelRow>
+
+
+							<PanelRow className="w-100">
+								<SelectControl
+									label={__("Background image size", "zenflow5")}
+									value={urlImageSize}
+									options={[
+										{ value: "auto", label: "Auto" },
+										{ value: "cover", label: "Cover" },
+										{ value: "contain", label: "Contain" },
+									]}
+									onChange={(new_val) => {
+										setAttributes({ urlImageSize: new_val });
+									}}
+								/>
+							</PanelRow>
+
 						</PanelBody>
 					)}
 
