@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.18
+ * Version:           1.0.19
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
