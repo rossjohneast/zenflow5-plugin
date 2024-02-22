@@ -3,10 +3,8 @@ import { Icon } from '@wordpress/components';
 import classnames from "classnames";
 import BsIconsRegular from '../bs-icons/regular';
 
-import sharedMarginInspCnt from '../shared/margin/margin-insp-cnt.js';
-import sharedMarginClassnames from '../shared/margin/margin-classnames.js';
-
-
+import sharedPaddingClassnames from "../../grid-blocks/shared/padding/padding-classnames.js";
+import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
 
 export default function save(props) {
 

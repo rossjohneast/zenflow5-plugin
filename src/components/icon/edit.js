@@ -29,8 +29,10 @@ import './editor.scss';
 import BsIconsRegular from '../bs-icons/regular';
 import sharedIconInspCnt from "../shared/icon/icon-insp-cnt.js";
 
-import sharedMarginInspCnt from '../shared/margin/margin-insp-cnt.js';
-import sharedMarginClassnames from '../shared/margin/margin-classnames.js';
+import sharedPaddingInspCnt from "../../grid-blocks/shared/padding/padding-insp-cnt.js";
+import sharedPaddingClassnames from "../../grid-blocks/shared/padding/padding-classnames.js";
+import sharedMarginInspCnt from "../../grid-blocks/shared/margin/margin-insp-cnt.js";
+import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
 
 export default function Edit(props) {
 
@@ -152,6 +154,10 @@ export default function Edit(props) {
 				</PanelBody>
 
 				{sharedIconInspCnt(props)}
+
+				{sharedPaddingInspCnt(props)}
+
+				{sharedMarginInspCnt(props)}
 
 
 			{/* <PanelBody title={__('Theme colors', 'zenbuilder')} className={"components-panel-children-w-100"}>
@@ -314,7 +320,7 @@ export default function Edit(props) {
 								onChange={(new_val) => {
 									setAttributes({ minHeight: new_val })
 								}} />
-							<RangeControl
+							{/* <RangeControl
 								label={__('Background Padding', 'zenbuilder')}
 								min={0}
 								max={5}
@@ -323,7 +329,7 @@ export default function Edit(props) {
 								value={padding}
 								onChange={(new_val) => {
 									setAttributes({ padding: new_val })
-								}} />
+								}} /> */}
 
 							{/* <RangeControl
 								label={__('Background Margin', 'zenbuilder')}
@@ -398,6 +404,7 @@ export default function Edit(props) {
 							[`${borderColorTheme !== undefined ? `${borderColorTheme}` : ''}`],
 							[`${padding !== undefined ? `p-${padding}` : ''}`],
 							sharedMarginClassnames(props),
+							sharedPaddingClassnames(props),
 							// [`${margin !== undefined ? `m-${margin}` : ''}`]
 						)} style={{
 							...styleOuter
