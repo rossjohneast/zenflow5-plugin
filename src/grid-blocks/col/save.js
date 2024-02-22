@@ -67,37 +67,37 @@ export default function save(props) {
 	/** * Add class to block if img set. * * @link https://stackoverflow.com/a/72408500 */
 	const blockPropsClass = useBlockProps.save({
 		className: 
-    classnames(
-      "zenflow5-col",
-      sharedColWidthClassnames(props),
-      sharedColOffsetsClassnames(props),
-      sharedtextAlignClassnames(props),
-      sharedDisplayClassnames(props),
-      sharedOrderClassnames(props),
-      sharedMarginClassnames(props),
-      sharedPaddingClassnames(props),
-      [
-        `${
-          props.attributes.textColorTheme !== undefined
-            ? `${props.attributes.textColorTheme}`
-            : ""
-        }`,
-      ],
-      [
-        `${
-          props.attributes.backgroundColorTheme !== undefined
-            ? `${props.attributes.backgroundColorTheme}`
-            : ""
-        }`,
-      ],
-      [
-        `${
-          props.attributes.backgroundImageTint !== undefined
-            ? `${props.attributes.backgroundImageTint}`
-            : ""
-        }`,
-      ],
-    )
+      classnames(
+        "zenflow5-col",
+        sharedColWidthClassnames(props),
+        sharedColOffsetsClassnames(props),
+        sharedtextAlignClassnames(props),
+        sharedDisplayClassnames(props),
+        sharedOrderClassnames(props),
+        sharedMarginClassnames(props),
+        sharedPaddingClassnames(props),
+        [
+          `${
+            props.attributes.textColorTheme !== undefined
+              ? `${props.attributes.textColorTheme}`
+              : ""
+          }`,
+        ],
+        [
+          `${
+            props.attributes.backgroundColorTheme !== undefined
+              ? `${props.attributes.backgroundColorTheme}`
+              : ""
+          }`,
+        ],
+        [
+          `${
+            props.attributes.backgroundImageTint !== undefined
+              ? `${props.attributes.backgroundImageTint}`
+              : ""
+          }`,
+        ],
+      )
     });
 
 
