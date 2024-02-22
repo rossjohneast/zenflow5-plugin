@@ -6,9 +6,8 @@ import {
 } from '@wordpress/block-editor';
 import classnames from "classnames";
 
-import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
-
-import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
+import sharedPaddingClassnames from "../../grid-blocks/shared/padding/padding-classnames.js";
+import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
 
 export default function save(props) {
 
@@ -76,7 +75,8 @@ export default function save(props) {
 		opacity: bgTintOpacity
 	};
 
-	const blockPropsClass = useBlockProps.save({
+	const blockPropsClass = useBlockProps.save(
+		{
 		className:
 			classnames(
 				'wp-block-zenflow5-card',

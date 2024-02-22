@@ -32,10 +32,10 @@ import { prependHTTP } from "@wordpress/url";
 import classnames from "classnames";
 import "./editor.scss";
 
-import sharedPaddingInspCnt from "../shared/padding/padding-insp-cnt.js";
-import sharedPaddingClassnames from "../shared/padding/padding-classnames.js";
-import sharedMarginInspCnt from "../shared/margin/margin-insp-cnt.js";
-import sharedMarginClassnames from "../shared/margin/margin-classnames.js";
+import sharedPaddingInspCnt from "../../grid-blocks/shared/padding/padding-insp-cnt.js";
+import sharedPaddingClassnames from "../../grid-blocks/shared/padding/padding-classnames.js";
+import sharedMarginInspCnt from "../../grid-blocks/shared/margin/margin-insp-cnt.js";
+import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
 
 import sharedColorsInspCnt from "../../grid-blocks/shared/colors/color-insp-cnt.js";
 
