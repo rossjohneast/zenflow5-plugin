@@ -18,7 +18,9 @@ import {
 	SelectControl,
 	TextControl,
 	Icon, 
-	Button
+	Button,
+	ToggleControl,
+	RangeControl
 } from '@wordpress/components';
 import { link, linkOff } from '@wordpress/icons';
 import { prependHTTP } from '@wordpress/url';
@@ -29,6 +31,8 @@ import classnames from 'classnames';
 import className from 'classnames';
 import sharedMarginInspCnt from "../../grid-blocks/shared/margin/margin-insp-cnt.js";
 import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
+import sharedPaddingInspCnt from "../../grid-blocks/shared/padding/padding-insp-cnt.js";
+import sharedPaddingClassnames from "../../grid-blocks/shared/padding/padding-classnames.js";
 
 import sharedIconInspCnt from "../shared/icon/icon-insp-cnt.js";
 import BsIconsRegular from '../bs-icons/regular';
@@ -44,7 +48,7 @@ export default function Edit(props) {
 		 * Code based on WordPress gutenberg/packages/block-library/src/button/
 		 * @link https://github.com/WordPress/gutenberg/tree/904f4ae6929fac8a915487ada6b5307eb9961577/packages/block-library/src/button
 		*/
-	const { linkTarget, rel, url, icon, iconSize } =
+	const { linkTarget, rel, url, icon, iconSize, iconBeforeText, borderRadius } =
 		attributes;
 
 	function onToggleOpenInNewTab(value) {
@@ -107,6 +111,13 @@ export default function Edit(props) {
 		}
 	}
 
+	const inlineStyles = {};
+
+	//If attributes has a value, assign property to the inlineStyles
+	if (attributes.borderRadius) {
+		inlineStyles.borderRadius = attributes.borderRadius + 'rem';
+	}
+
 	return (
 		<div {...useBlockProps()}>
 
@@ -131,6 +142,111 @@ export default function Edit(props) {
 
 				<Panel>
 					<PanelBody title={__('Button Settings', 'zenflow5')}>
+
+						{attributes.icon && (
+							<>
+								<PanelRow>
+									<ToggleControl
+										label={__("Icon before text")}
+										help={
+											attributes.iconBeforeText
+												? "Before"
+												: "After"
+										}
+										checked={attributes.iconBeforeText}
+										onChange={() =>
+											setAttributes({ iconBeforeText: !iconBeforeText })
+										}
+									/>
+								</PanelRow>
+
+							
+									<RangeControl
+										label={__("Icon Margin", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMargin}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMargin: new_val });
+										}}
+									/>
+
+									<RangeControl
+										label={__("Icon Margin Top", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMarginT}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMarginT: new_val });
+										}}
+									/>
+
+									<RangeControl
+										label={__("Icon Margin Bottom", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMarginB}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMarginB: new_val });
+										}}
+									/>
+
+									<RangeControl
+										label={__("Icon Margin Left", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMarginL}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMarginL: new_val });
+										}}
+									/>
+
+									<RangeControl
+										label={__("Icon Margin Right", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMarginR}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMarginR: new_val });
+										}}
+									/>
+
+									<RangeControl
+										label={__("Icon Margin X", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMarginX}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMarginX: new_val });
+										}}
+									/>
+
+									<RangeControl
+										label={__("Icon Margin Y", "zenflow5")}
+										min={0}
+										max={20}
+										allowReset={true}
+										resetFallbackValue={undefined}
+										value={props.attributes.iconMarginY}
+										onChange={(new_val) => {
+											props.setAttributes({ iconMarginY: new_val });
+										}}
+									/>
+							
+							</>
+						)}
 
 						<PanelRow className="w-100">
 							<SelectControl
@@ -157,6 +273,7 @@ export default function Edit(props) {
 									{ value: 'btn-outline-dark', label: 'Outline Dark' },
 									{ value: 'btn-outline-white', label: 'Outline White' },
 									{ value: 'btn-link', label: 'Link' },
+									{ value: 'btn', label: 'Plain button' },
 								]}
 								onChange={(new_val) => {
 									setAttributes({ btnStyle: new_val })
@@ -190,7 +307,20 @@ export default function Edit(props) {
 								}} />
 						</PanelRow>
 
-					</PanelBody>
+
+						<RangeControl
+								label={__('Button Border Radius', 'zenbuilder')}
+								min={0}
+								max={100}
+								step={0.05}
+								allowReset={true}
+								resetFallbackValue={undefined}
+								value={borderRadius}
+								onChange={(new_val) => {
+									setAttributes({ borderRadius: new_val })
+								}} />
+
+						</PanelBody>
 				
 					<PanelBody
 						title={__("Button display settings", "zenflow5")}
@@ -288,6 +418,7 @@ export default function Edit(props) {
 					</PanelBody>
 
 					{sharedMarginInspCnt(props)}
+					{sharedPaddingInspCnt(props)}
 
 				</Panel>
 				{/* 
@@ -295,7 +426,7 @@ export default function Edit(props) {
 		
 			</InspectorControls>
 
-			<span 		className={
+			<span className={
 						classnames(
 							'zenflow5-btn',
 							'btn',
@@ -326,8 +457,35 @@ export default function Edit(props) {
 									: ""
 								}`,
 							],
-							sharedMarginClassnames(props)
-						)}>
+							sharedMarginClassnames(props),
+							sharedPaddingClassnames(props)
+						)}
+						
+						style={{
+							...inlineStyles
+						}}
+						>
+
+
+				{icon && attributes.iconBeforeText ? (
+					<span
+						className={
+							classnames(
+								'btn-icon-wrapper',
+								[`${props.attributes.iconMargin !== undefined ? `m-${props.attributes.iconMargin}` : ''}`],
+								[`${props.attributes.iconMarginT !== undefined ? `mt-${props.attributes.iconMarginT}` : ''}`],
+								[`${props.attributes.iconMarginB !== undefined ? `mb-${props.attributes.iconMarginB}` : ''}`],
+								[`${props.attributes.iconMarginL !== undefined ? `ms-${props.attributes.iconMarginL}` : ''}`],
+								[`${props.attributes.iconMarginR !== undefined ? `me-${props.attributes.iconMarginR}` : 'me-1'}`],
+								[`${props.attributes.iconMarginX !== undefined ? `mx-${props.attributes.iconMarginX}` : ''}`],
+								[`${props.attributes.iconMarginY !== undefined ? `my-${props.attributes.iconMarginY}` : ''}`],
+							)
+						}
+					>
+						<Icon icon={BsIconsRegular[icon]} size={iconSize} />
+					</span>
+				) : null}
+
 				<RichText
 					{...useBlockProps()}
 			
@@ -345,11 +503,23 @@ export default function Edit(props) {
 					ref={setPopoverAnchor}
 				/>
 
-{icon && (
-				<span className='btn-icon-wrapper ms-1'>
-					<Icon icon={BsIconsRegular[icon]} size={iconSize} />
-				</span>
-)}
+				{icon && !attributes.iconBeforeText ? (
+					<span className={
+						classnames(
+							'btn-icon-wrapper',
+							[`${props.attributes.iconMargin !== undefined ? `m-${props.attributes.iconMargin}` : ''}`],
+							[`${props.attributes.iconMarginT !== undefined ? `mt-${props.attributes.iconMarginT}` : ''}`],
+							[`${props.attributes.iconMarginB !== undefined ? `mb-${props.attributes.iconMarginB}` : ''}`],
+							[`${props.attributes.iconMarginL !== undefined ? `ms-${props.attributes.iconMarginL}` : 'ms-1'}`],
+							[`${props.attributes.iconMarginR !== undefined ? `me-${props.attributes.iconMarginR}` : ''}`],
+							[`${props.attributes.iconMarginX !== undefined ? `mx-${props.attributes.iconMarginX}` : ''}`],
+							[`${props.attributes.iconMarginY !== undefined ? `my-${props.attributes.iconMarginY}` : ''}`],
+						)
+					}>
+						<Icon icon={BsIconsRegular[icon]} size={iconSize} />
+					</span>
+				) : null}
+
 
 			</span>
 

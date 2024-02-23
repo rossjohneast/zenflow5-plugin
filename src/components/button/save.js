@@ -1,7 +1,9 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 import { Icon } from '@wordpress/components';
+
 import classnames from 'classnames';
 import sharedMarginClassnames from "../../grid-blocks/shared/margin/margin-classnames.js";
+import sharedPaddingClassnames from "../../grid-blocks/shared/padding/padding-classnames.js";
 import BsIconsRegular from '../bs-icons/regular';
 
 export default function save( props ) {
@@ -23,9 +25,17 @@ export default function save( props ) {
 				[`${attributes.display || ''}`],
 				[`${attributes.justifyContent || ''}`],
 				[`${attributes.alignItems || ''}`],
-				sharedMarginClassnames(props)
+				sharedMarginClassnames(props),
+				sharedPaddingClassnames(props)
 			)
 	});
+
+	const inlineStyles = {};
+
+	//If attributes has a value, assign property to the inlineStyles
+	if (attributes.borderRadius) {
+		inlineStyles.borderRadius = attributes.borderRadius + 'rem';
+	}
 
 	return(
 		<a {...blockPropsClass}
@@ -49,13 +59,49 @@ export default function save( props ) {
 		{...attributes.animationMirror && attributes.animation  && {'data-aos-mirror' : attributes.animationMirror}}
 		{...attributes.animationPlacement && attributes.animation  && {'data-aos-anchor-placement' : attributes.animationPlacement}}
 		
+		style={{
+			...inlineStyles
+		}}
+
 		>
-			{ attributes.content }
-			{attributes.icon && (			
-				<span className='btn-icon-wrapper ms-1'>
-					<Icon icon={BsIconsRegular[attributes.icon]} size={attributes.iconSize}/>
+			
+			{attributes.icon && attributes.iconBeforeText ? (
+				<span className={
+					classnames(
+						'btn-icon-wrapper',
+						[`${props.attributes.iconMargin !== undefined ? `m-${props.attributes.iconMargin}` : ''}`],
+						[`${props.attributes.iconMarginT !== undefined ? `mt-${props.attributes.iconMarginT}` : ''}`],
+						[`${props.attributes.iconMarginB !== undefined ? `mb-${props.attributes.iconMarginB}` : ''}`],
+						[`${props.attributes.iconMarginL !== undefined ? `ms-${props.attributes.iconMarginL}` : ''}`],
+						[`${props.attributes.iconMarginR !== undefined ? `me-${props.attributes.iconMarginR}` : 'me-1'}`],
+						[`${props.attributes.iconMarginX !== undefined ? `mx-${props.attributes.iconMarginX}` : ''}`],
+						[`${props.attributes.iconMarginY !== undefined ? `my-${props.attributes.iconMarginY}` : ''}`],
+					)
+				}>
+					<Icon icon={BsIconsRegular[attributes.icon]} size={attributes.iconSize} />
 				</span>
-			)}
+			) : null}
+
+			
+			{ attributes.content }
+
+
+			{attributes.icon && !attributes.iconBeforeText ? (
+				<span className={
+					classnames(
+						'btn-icon-wrapper',
+						[`${props.attributes.iconMargin !== undefined ? `m-${props.attributes.iconMargin}` : ''}`],
+						[`${props.attributes.iconMarginT !== undefined ? `mt-${props.attributes.iconMarginT}` : ''}`],
+						[`${props.attributes.iconMarginB !== undefined ? `mb-${props.attributes.iconMarginB}` : ''}`],
+						[`${props.attributes.iconMarginL !== undefined ? `ms-${props.attributes.iconMarginL}` : 'ms-1'}`],
+						[`${props.attributes.iconMarginR !== undefined ? `me-${props.attributes.iconMarginR}` : ''}`],
+						[`${props.attributes.iconMarginX !== undefined ? `mx-${props.attributes.iconMarginX}` : ''}`],
+						[`${props.attributes.iconMarginY !== undefined ? `my-${props.attributes.iconMarginY}` : ''}`],
+					)
+				}>
+					<Icon icon={BsIconsRegular[attributes.icon]} size={attributes.iconSize} />
+				</span>
+			) : null}
 	
 		</a>
 	);
