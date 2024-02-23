@@ -595,9 +595,10 @@ div[data-type="zenflow5/col"]>div {
     align-items: center;
 }
 
-.col .block-editor-block-list__block {
+/* This breaks the layout of the default WP list block, bullets and wrapped text  */
+/* .col .block-editor-block-list__block {
     list-style: inside;
-}
+} */
 
 /* editor.style */
 .wp-block-zenflow5-section .wp-block-zenflow5-col,
