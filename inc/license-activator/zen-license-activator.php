@@ -13,8 +13,20 @@ define('THEMEZEN_ITEM_REFERENCE', 'ThemeZen themes and plugins'); //Rename this 
 add_action('admin_menu', 'themezen_license_menu');
 
 function themezen_license_menu() {
-    add_options_page('ThemeZen License Activation Menu', 'ZenFlow 5 License', 'manage_options', __FILE__, 'themezen_license_management_page');
+
+    // This has been moved to sit underneath the main ZenFlow Settings in the menu
+    // add_options_page(
+    //     'ThemeZen Licence Activation Menu', 
+    //     'ZenFlow Licence', 
+    //     'manage_options', 
+    //     __FILE__, 
+    //     'themezen_license_management_page'
+    // );
+
+    
 }
+
+
 
 function valid_themezen_license_check() {
     // Get the stored license key from the options table
@@ -34,6 +46,11 @@ function valid_themezen_license_check() {
 
 
 function live_valid_themezen_license_check() {
+
+    // Check if there's internet connectivity (Also checks the ThemeZen website is able to accessed)
+    if (!checkdnsrr('theme-zen.com')) { // Replace 'example.com' with a reliable domain
+        return false; // No internet connection or cant access ThemeZen website
+    }
     
     if (get_option('themezen_license_key')) {
 
