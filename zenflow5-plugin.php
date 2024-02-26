@@ -1258,13 +1258,6 @@ add_action( 'admin_init', 'zenflow5_plugin_update_check_with_license' );
 
 
 
-// Add lazy loading to all images, this should be toggled under options controls and moved to core theme
-function add_lazy_loading_to_images($content) {
-    // Add the loading="lazy" attribute to all <img> tags
-    $content = str_replace('<img ', '<img loading="lazy" ', $content);
-    return $content;
-}
-add_filter('the_content', 'add_lazy_loading_to_images');
 
 
 ?>
