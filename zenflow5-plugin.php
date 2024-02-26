@@ -5,7 +5,7 @@
  * Description:       The essential plugin you install for ZenFlow 5. Featuring a collection of premium quality blocks to build a professional website including the powerful Bootstrap 5 grid, buttons, cards, carousels and animations.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.0.19
+ * Version:           1.0.20
  * Author:            ThemeZen
  * Author URI:        https://www.theme-zen.com/
  * Text Domain:       zenflow5
@@ -19,10 +19,17 @@ if (!function_exists('add_action')) {
 	exit;
 }
 
+// Get the plugin file path
+$plugin_file = plugin_dir_path( __FILE__ ) . 'zenflow5-plugin.php';
+
+// Read the plugin file and extract version from header comments
+$plugin_data = get_file_data( $plugin_file, array( 'Version' => 'Version' ) );
+
+// Define the plugin version constant
+define( 'ZENFLOW_PLUGIN_VERSION', $plugin_data['Version'] );
+
 //Create a constant for referencing the plugin when enqueued
 define('ZENFLOW_PLUGIN_URL', __FILE__);
-
-// $zenflow5_plugin_version = '1.0.2';
 
 include_once('inc/license-activator/zen-license-activator.php');
 
@@ -69,7 +76,7 @@ function admin_style()
 		'admin-styles-bs-grid',
 		plugins_url('/assets/css/bootstrap-5-2/bootstrap-grid.css', ZENFLOW_PLUGIN_URL),
 		array(),
-		'1.0.2',
+		ZENFLOW_PLUGIN_VERSION,
 		'all'
 	);
 }
@@ -140,7 +147,7 @@ function admin_style_components()
 		'admin-styles-bs-components',
 		plugins_url('/assets/css/bootstrap-5-2/components.css', ZENFLOW_PLUGIN_URL),
 		array(),
-		'1.0.2',
+		ZENFLOW_PLUGIN_VERSION,
 		'all'
 	);
 }
@@ -149,7 +156,8 @@ add_action('admin_enqueue_scripts', 'admin_style_components');
 
 //Loaded in the block currently, view.js
 function zenflow5_fe_enqueue_scripts() {
-    wp_enqueue_script('zenflow5-front-end-script', plugins_url('assets/js/components.js', __FILE__), array('jquery'), '1.0', true);
+    wp_enqueue_script(
+		'zenflow5-front-end-script', plugins_url('assets/js/components.js', __FILE__), array('jquery'), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'zenflow5_fe_enqueue_scripts');
@@ -595,7 +603,7 @@ if ( ! class_exists('ZenBootstrapBlog') ) :
 			// vars
 			$this->settings = array(
 				'plugin'			=> 'Zen Bootstrap Blog',
-				'version'			=> '1.0.2',
+				'version'			=> ZENFLOW_PLUGIN_VERSION,
 				'url'				=> plugin_dir_url( __FILE__ ),
 				'path'				=> plugin_dir_path( __FILE__ ),
 			);
@@ -1225,6 +1233,7 @@ add_action( 'admin_init', 'zenflow5_plugin_update_check_with_license' );
 
 /*
  * Blacklist specific Gutenberg blocks
+ * Moved to Theme as could not use twice
  *
  * @author Misha Rudrastyh
  * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html#blacklist-blocks
